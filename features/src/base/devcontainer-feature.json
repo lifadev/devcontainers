@@ -1,0 +1,14 @@
+{
+  "id": "base",
+  "name": "base",
+  "version": "0.1.0",
+  "dependsOn": {},
+  "containerEnv": {
+    "LANG": "C.UTF-8"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["EditorConfig.EditorConfig"]
+    }
+  }
+}

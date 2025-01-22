@@ -1,0 +1,8 @@
+{
+  "default": {
+    "image": "debian:bookworm-20250113",
+    "features": {
+      "base": {}
+    }
+  }
+}
