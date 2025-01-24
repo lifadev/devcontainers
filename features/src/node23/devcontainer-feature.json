@@ -1,0 +1,18 @@
+{
+  "id": "node",
+  "name": "node",
+  "version": "0.1.0",
+  "dependsOn": {
+    "ghcr.io/lifadev/devcontainers/features/base:0": {}
+  },
+  "options": {
+    "npm-version": {
+      "type": "string",
+      "default": "11.0.0" //? https://github.com/npm/cli/tags
+    }
+  },
+  "containerEnv": {
+    "NODE_INSTALL_DIR": "/opt/node",
+    "NODE_BIN_DIR": "/opt/node/bin"
+  }
+}
