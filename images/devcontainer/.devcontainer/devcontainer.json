@@ -1,0 +1,28 @@
+{
+  "image": "debian:bookworm-20250113",
+  "features": {
+    "ghcr.io/lifadev/devcontainers/features/bash:0": {},
+    "ghcr.io/lifadev/devcontainers/features/node23:0": {}
+  },
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:${containerEnv:NODE_BIN_DIR}"
+  },
+  "customizations": {
+    "manifest": {
+      "name": "devcontainer",
+      "version": "0.1.0"
+    },
+    "vscode": {
+      "settings": {
+        "extensions.ignoreRecommendations": true,
+        "json.schemas": [
+          {
+            "fileMatch": ["*/devcontainer-feature.json"],
+            "url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"
+          }
+        ]
+      },
+      "extensions": []
+    }
+  }
+}
