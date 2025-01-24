@@ -1,6 +1,6 @@
 {
-  "id": "node",
-  "name": "node",
+  "id": "node23",
+  "name": "node23",
   "version": "0.1.0",
   "dependsOn": {
     "ghcr.io/lifadev/devcontainers/features/base:0": {}
