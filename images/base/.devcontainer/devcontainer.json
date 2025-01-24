@@ -1,0 +1,12 @@
+{
+  "image": "debian:bookworm-20250113",
+  "features": {
+    "ghcr.io/lifadev/devcontainers/features/base:0": {}
+  },
+  "customizations": {
+    "manifest": {
+      "name": "base",
+      "version": "0.1.0"
+    }
+  }
+}

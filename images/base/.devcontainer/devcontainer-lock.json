@@ -1,0 +1,9 @@
+{
+  "features": {
+    "ghcr.io/lifadev/devcontainers/features/base:0": {
+      "version": "0.1.0",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/base@sha256:d559cd16d7f5b2b0255d9e7e803326c3cc105254ff8ff43b408de28c60ba9e0f",
+      "integrity": "sha256:d559cd16d7f5b2b0255d9e7e803326c3cc105254ff8ff43b408de28c60ba9e0f"
+    }
+  }
+}
