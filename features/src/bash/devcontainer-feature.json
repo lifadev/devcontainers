@@ -1,0 +1,25 @@
+{
+  "id": "bash",
+  "name": "bash",
+  "version": "0.1.0",
+  "dependsOn": {
+    "ghcr.io/lifadev/devcontainers/features/base:0": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "shellcheck.executablePath": "/usr/local/bin/shellcheck",
+        "shellformat.path": "/usr/local/bin/shfmt",
+        "shellformat.useEditorConfig": true,
+        "[shellscript]": {
+          "editor.defaultFormatter": "foxundermoon.shell-format"
+        }
+      },
+      "extensions": [
+        "foxundermoon.shell-format",
+        "mads-hartmann.bash-ide-vscode",
+        "timonwong.shellcheck"
+      ]
+    }
+  }
+}
