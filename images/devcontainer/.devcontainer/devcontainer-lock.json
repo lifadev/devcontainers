@@ -11,6 +11,12 @@
       "integrity": "sha256:26b9ed6670f32b5b5621a6c0173412fa3ab5d6169cd1f8fab70383215fbfeced",
       "dependsOn": ["ghcr.io/lifadev/devcontainers/features/base:0"]
     },
+    "ghcr.io/lifadev/devcontainers/features/developer:0": {
+      "version": "0.1.0",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/developer@sha256:776a5e58c52229a169f9087b00edf31ace7aaae702423ea2a1e9e04ea0dd1d09",
+      "integrity": "sha256:776a5e58c52229a169f9087b00edf31ace7aaae702423ea2a1e9e04ea0dd1d09",
+      "dependsOn": ["ghcr.io/lifadev/devcontainers/features/base:0"]
+    },
     "ghcr.io/lifadev/devcontainers/features/node23:0": {
       "version": "0.1.0",
       "resolved": "ghcr.io/lifadev/devcontainers/features/node23@sha256:d9dd4d521edc495043121dba4b51a4b962fe89b0060eec2a4ef0ca8376fafb6e",

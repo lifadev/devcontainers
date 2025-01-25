@@ -2,15 +2,18 @@
   "image": "debian:bookworm-20250113",
   "features": {
     "ghcr.io/lifadev/devcontainers/features/bash:0": {},
+    "ghcr.io/lifadev/devcontainers/features/developer:0": {},
     "ghcr.io/lifadev/devcontainers/features/node23:0": {}
   },
+  "remoteUser": "developer",
+  "updateRemoteUserUID": true,
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}:${containerEnv:NODE_BIN_DIR}"
   },
   "customizations": {
     "manifest": {
       "name": "devcontainer",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     "vscode": {
       "settings": {
