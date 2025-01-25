@@ -1,0 +1,20 @@
+{
+  "preserve_uid": {
+    "image": "debian:bookworm-20250113",
+    "features": {
+      "base": {},
+      "developer": {}
+    },
+    "remoteUser": "developer",
+    "updateRemoteUserUID": false
+  },
+  "update_uid": {
+    "image": "debian:bookworm-20250113",
+    "features": {
+      "base": {},
+      "developer": {}
+    },
+    "remoteUser": "developer",
+    "updateRemoteUserUID": true
+  }
+}

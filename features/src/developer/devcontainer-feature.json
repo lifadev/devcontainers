@@ -1,0 +1,22 @@
+{
+  "id": "developer",
+  "name": "developer",
+  "version": "0.1.0",
+  "dependsOn": {
+    "ghcr.io/lifadev/devcontainers/features/base:0": {}
+  },
+  "options": {
+    "user-name": {
+      "type": "string",
+      "default": "developer"
+    },
+    "user-id": {
+      "type": "string",
+      "default": "1000"
+    },
+    "group-id": {
+      "type": "string",
+      "default": "1000"
+    }
+  }
+}
