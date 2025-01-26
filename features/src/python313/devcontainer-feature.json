@@ -1,0 +1,24 @@
+{
+  "id": "python313",
+  "name": "python313",
+  "version": "0.1.0",
+  "dependsOn": {
+    "ghcr.io/lifadev/devcontainers/features/base:0": {}
+  },
+  "options": {
+    "pip-version": {
+      "type": "string",
+      "default": "25.0" //? https://github.com/pypa/pip/tags
+    }
+  },
+  "containerEnv": {
+    "PYTHON_INSTALL_DIR": "/opt/python313",
+    "PYTHON_BIN_DIR": "/opt/python313/bin",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    }
+  }
+}
