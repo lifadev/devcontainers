@@ -13,6 +13,7 @@ APPS=(
   direnv
   dirmngr
   dot
+  dpkg-architecture
   g++
   gcc
   git

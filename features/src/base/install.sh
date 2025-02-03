@@ -29,6 +29,7 @@ apt install --yes --no-install-recommends \
   apt-transport-https \
   apt-utils \
   bash-completion \
+  build-essential \
   bzip2 \
   ca-certificates \
   cloc \
