@@ -46,8 +46,16 @@ curl -fLsS "$PACKAGE_URL" -o $PACKAGE
 echo "$PACKAGE_SUM $PACKAGE" | sha256sum -c
 mkdir -p "$NODE_INSTALL_DIR"
 tar -xJf $PACKAGE --strip-components 1 -C "$NODE_INSTALL_DIR"
+rm -f package.tar.xz
 
 export PATH=$NODE_BIN_DIR:$PATH
+
+# endregion
+
+# region `npm`
+
 npm install -g "npm@$NPM_VERSION"
+
+# endregion
 
 # endregion

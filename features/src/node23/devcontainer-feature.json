@@ -1,7 +1,7 @@
 {
   "id": "node23",
   "name": "node23",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependsOn": {
     "ghcr.io/lifadev/devcontainers/features/base:0": {}
   },
@@ -12,7 +12,7 @@
     }
   },
   "containerEnv": {
-    "NODE_INSTALL_DIR": "/opt/node",
-    "NODE_BIN_DIR": "/opt/node/bin"
+    "NODE_INSTALL_DIR": "/opt/node23",
+    "NODE_BIN_DIR": "/opt/node23/bin"
   }
 }
