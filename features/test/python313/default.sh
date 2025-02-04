@@ -2,7 +2,7 @@
 
 set -eux
 
-# source dev-container-features-test-lib
+source dev-container-features-test-lib
 
 APPS=(
   pip3
@@ -12,8 +12,7 @@ APPS=(
 )
 
 for APP in "${APPS[@]}"; do
-  # check "$APP"
-  which "$APP" >/dev/null
+  check "$APP" which "$APP" >/dev/null
 done
 
 LIBS=(
@@ -26,8 +25,9 @@ LIBS=(
 )
 
 for LIB in "${LIBS[@]}"; do
-  # check "$LIB"
-  python3.13 -c "import $LIB" >/dev/null
+  check "$LIB" python3.13 -c "import $LIB" >/dev/null
 done
 
-# reportResults
+check "clean" test ! -e /tmp/package*
+
+reportResults

@@ -41,6 +41,7 @@ PACKAGE=/tmp/package.tar.xz
 curl -fLsS "$PACKAGE_URL" -o $PACKAGE
 echo "$PACKAGE_SUM $PACKAGE" | sha256sum -c
 tar -xJf $PACKAGE --strip-components 1 -C $INSTALL_DIR/bin --wildcards "*/shellcheck"
+rm -f $PACKAGE
 
 # endregion
 
