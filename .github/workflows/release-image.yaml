@@ -9,6 +9,7 @@ on:
         options:
           - base
           - devcontainer
+          - python313
 
 jobs:
   release:

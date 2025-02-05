@@ -1,0 +1,18 @@
+{
+  "image": "debian:bookworm-20250113",
+  "features": {
+    "ghcr.io/lifadev/devcontainers/features/developer:0": {},
+    "ghcr.io/lifadev/devcontainers/features/python313:0": {}
+  },
+  "remoteUser": "developer",
+  "updateRemoteUserUID": true,
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:${containerEnv:PYTHON_BIN_DIR}"
+  },
+  "customizations": {
+    "manifest": {
+      "name": "python313",
+      "version": "0.1.0"
+    }
+  }
+}
