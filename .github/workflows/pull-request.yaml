@@ -13,10 +13,15 @@ jobs:
     needs: format
     uses: ./.github/workflows/test-features.yaml
 
-  test-images:
-    name: Test images
+  test-images-amd64:
+    name: Test images (amd64)
     needs: format
-    uses: ./.github/workflows/test-images.yaml
+    uses: ./.github/workflows/test-images-amd64.yaml
+
+  test-images-arm64:
+    name: Test images (arm64)
+    needs: format
+    uses: ./.github/workflows/test-images-arm64.yaml
 
   check:
     name: Check
@@ -24,7 +29,8 @@ jobs:
     needs:
       - format
       - test-features
-      - test-images
+      - test-images-amd64
+      - test-images-arm64
     runs-on: ubuntu-24.04
     steps:
       - run: exit ${{ (contains(needs.*.result, 'cancelled') || contains(needs.*.result, 'failure')) && 1 || 0 }}

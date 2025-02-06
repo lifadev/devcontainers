@@ -64,6 +64,6 @@ jobs:
       - name: Test images
         uses: devcontainers/ci@v0.3
         with:
-          platform: linux/amd64,linux/arm64
+          platform: linux/arm64
           push: never
           subFolder: ./images/${{ matrix.image.name }}
