@@ -6,10 +6,11 @@ on:
 jobs:
   format:
     name: Format
-    runs-on: ubuntu-24.04
 
     permissions:
       contents: read
+
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository

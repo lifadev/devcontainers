@@ -6,13 +6,11 @@ on:
 jobs:
   setup:
     name: Setup
-    runs-on: ubuntu-24.04
 
     permissions:
       contents: read
 
-    outputs:
-      matrix: ${{ steps.generate-matrix.outputs.matrix }}
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository
@@ -26,6 +24,11 @@ jobs:
           import json
           from pathlib import Path
 
+          os = [
+            { "name": "ubuntu-24.04", "platform": "linux/amd64" },
+            { "name": "ubuntu-24.04-arm", "platform": "linux/arm64" },
+          ]
+
           images = []
           for image in Path("images").iterdir():
             if not image.is_dir(): continue
@@ -37,13 +40,15 @@ jobs:
             images.append({ "name": name, "tags": ", ".join(tags) })
 
           if images:
-            print(f'matrix={json.dumps({"image": images})}')
+            print(f'matrix={json.dumps({"os": os, "image": images})}')
+
+    outputs:
+      matrix: ${{ steps.generate-matrix.outputs.matrix }}
 
   test:
     name: Test
     if: ${{ needs.setup.outputs.matrix != '' && toJson(fromJson(needs.setup.outputs.matrix)) != '{}' }}
     needs: setup
-    runs-on: ubuntu-24.04
 
     permissions:
       contents: read
@@ -51,12 +56,16 @@ jobs:
     strategy:
       matrix: ${{ fromJson(needs.setup.outputs.matrix) }}
 
+    runs-on: ${{ matrix.os.name }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+      - name: Install requirements
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install skopeo
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -64,6 +73,6 @@ jobs:
       - name: Test images
         uses: devcontainers/ci@v0.3
         with:
-          platform: linux/arm64
+          platform: ${{ matrix.os.platform }}
           push: never
           subFolder: ./images/${{ matrix.image.name }}
