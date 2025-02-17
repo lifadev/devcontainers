@@ -6,7 +6,6 @@
       "PYTHONDONTWRITEBYTECODE": "${containerEnv:PYTHONDONTWRITEBYTECODE}"
     },
     "features": {
-      "base": {},
       "python313": {}
     }
   }

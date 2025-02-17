@@ -1,17 +1,27 @@
 {
   "id": "python313",
   "name": "python313",
-  "version": "0.1.0",
-  "dependsOn": {
-    "ghcr.io/lifadev/devcontainers/features/base:0": {}
-  },
+  "version": "0.1.1",
   "options": {
+    "build-version": {
+      "type": "string",
+      "default": "1.2.2.post1"
+    },
     "pip-version": {
       "type": "string",
-      "default": "25.0"
+      "default": "25.0.1"
+    },
+    "setuptools-version": {
+      "type": "string",
+      "default": "75.8.0"
+    },
+    "wheel-version": {
+      "type": "string",
+      "default": "0.45.1"
     }
   },
   "containerEnv": {
+    "LANG": "C.UTF-8",
     "PYTHON_INSTALL_DIR": "/opt/python313",
     "PYTHON_BIN_DIR": "/opt/python313/bin",
     "PYTHONDONTWRITEBYTECODE": "1"

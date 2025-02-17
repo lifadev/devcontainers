@@ -4,7 +4,10 @@ set -eux
 
 # region Options
 
+BUILD_VERSION=${BUILD_VERSION:-undefined}
 PIP_VERSION=${PIP_VERSION:-undefined}
+SETUPTOOLS_VERSION=${SETUPTOOLS_VERSION:-undefined}
+WHEEL_VERSION=${WHEEL_VERSION:-undefined}
 
 # endregion
 
@@ -25,12 +28,20 @@ fi
 
 # region Installations
 
-# region `python`
+# region Python
 
 apt update --quiet
 apt install --yes --no-install-recommends \
+  build-essential \
+  ca-certificates \
+  curl \
+  pkg-config \
+  xz-utils \
+  \
   libbz2-dev \
   libffi-dev \
+  libgdbm-compat-dev \
+  libgdbm-dev \
   liblzma-dev \
   libreadline-dev \
   libsqlite3-dev \
@@ -58,14 +69,13 @@ rm -f $PACKAGE
 cd $PACKAGE_BUILD_DIR
 ./configure \
   --build="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" \
+  --prefix="$PYTHON_INSTALL_DIR" \
   --enable-loadable-sqlite-extensions \
   --enable-optimizations \
   --enable-option-checking=fatal \
   --enable-shared \
-  --prefix="$PYTHON_INSTALL_DIR" \
   --with-ensurepip \
-  --with-lto \
-  --with-readline=readline
+  --with-lto
 
 EXTRA_CFLAGS="$(dpkg-buildflags --get CFLAGS)"
 LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"
@@ -87,6 +97,13 @@ make -j "$(nproc)" \
   python
 make install
 
+#? Enable GDB to load debugging data
+#? https://github.com/docker-library/python/pull/701
+bin=$(readlink -ve $PYTHON_BIN_DIR/python3)
+dir=$(dirname "$bin")
+mkdir -p "/usr/share/gdb/auto-load/$dir"
+cp -vL Tools/gdb/libpython.py "/usr/share/gdb/auto-load/$bin-gdb.py"
+
 cd /
 rm -rf $PACKAGE_BUILD_DIR
 find "$PYTHON_INSTALL_DIR" -depth \
@@ -96,6 +113,22 @@ find "$PYTHON_INSTALL_DIR" -depth \
   \) -exec rm -rf '{}' +
 
 ldconfig
+
+export PATH=$PYTHON_BIN_DIR:$PATH
+
+# endregion
+
+# region Package managers
+
+#? https://github.com/pypa/build/tags
+#? https://github.com/pypa/pip/tags
+#? https://github.com/pypa/setuptools/tags
+#? https://github.com/pypa/wheel/tags
+python3 -m pip install --upgrade \
+  "build==$BUILD_VERSION" \
+  "pip==$PIP_VERSION" \
+  "setuptools==$SETUPTOOLS_VERSION" \
+  "wheel==$WHEEL_VERSION"
 
 # endregion
 

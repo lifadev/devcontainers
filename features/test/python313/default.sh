@@ -16,12 +16,20 @@ for APP in "${APPS[@]}"; do
 done
 
 LIBS=(
+  build
   bz2
+  ctypes
+  dbm
+  hashlib
   lzma
+  pip
   readline
+  setuptools
   sqlite3
   ssl
   uuid
+  wheel
+  zlib
 )
 
 for LIB in "${LIBS[@]}"; do
