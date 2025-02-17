@@ -61,11 +61,11 @@ jobs:
           cmd = ["git", "diff", "--name-only", f"{env['BASE']}...{env['HEAD']}"]
           changes = subprocess.check_output(cmd).decode('utf-8').strip().split("\n")
 
-          q = deque([
+          q = deque(set([
             g["feature"]
             for c in changes
             if (g := re.search("^features/src/(?P<feature>[^/]+)/", c))
-          ])
+          ]))
 
           features = []
           while q:
