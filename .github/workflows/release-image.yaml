@@ -27,10 +27,10 @@ jobs:
           python3 <<EOF >> $GITHUB_OUTPUT
 
           import json
-          from os import environ
+          from os import environ as env
           from pathlib import Path
 
-          image = Path("images") / environ["IMAGE"]
+          image = Path("images") / env["IMAGE"]
           config = json.loads((image / ".devcontainer" / "devcontainer.json").read_text())
           manifest = config["customizations"]["manifest"]
           name, version = manifest["name"], manifest["version"]
