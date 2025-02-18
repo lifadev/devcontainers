@@ -25,7 +25,14 @@ fi
 
 # region Installations
 
-# region `node`
+# region Node
+
+apt update --quiet
+apt install --yes --no-install-recommends \
+  ca-certificates \
+  curl \
+  xz-utils
+rm -rf /var/lib/apt/lists/*
 
 #? https://github.com/nodejs/node/tags
 #? SHASUMS256.txt
@@ -52,8 +59,9 @@ export PATH=$NODE_BIN_DIR:$PATH
 
 # endregion
 
-# region `npm`
+# region Package managers
 
+#? https://github.com/npm/cli/tags
 npm install -g "npm@$NPM_VERSION"
 
 # endregion

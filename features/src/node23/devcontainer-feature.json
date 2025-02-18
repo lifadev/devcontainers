@@ -2,13 +2,10 @@
   "id": "node23",
   "name": "node23",
   "version": "0.1.1",
-  "dependsOn": {
-    "ghcr.io/lifadev/devcontainers/features/base:0": {}
-  },
   "options": {
     "npm-version": {
       "type": "string",
-      "default": "11.0.0"
+      "default": "11.1.0"
     }
   },
   "containerEnv": {
