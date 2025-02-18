@@ -80,7 +80,7 @@ jobs:
       features: ${{ steps.config.outputs.features }}
 
   test:
-    name: Test features
+    name: Test feature
     needs: setup
     if: ${{ needs.setup.outputs.features != '' && toJson(fromJson(needs.setup.outputs.features)) != '[]' }}
 
@@ -91,3 +91,13 @@ jobs:
     uses: ./.github/workflows/test-feature.yaml
     with:
       feature: ${{ matrix.feature }}
+
+  done:
+    name: Test features
+    needs: test
+
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: No op
+        run: exit 0

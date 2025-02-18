@@ -51,7 +51,7 @@ jobs:
       images: ${{ steps.config.outputs.images }}
 
   test:
-    name: Test images
+    name: Test image
     needs: setup
     if: ${{ needs.setup.outputs.images != '' && toJson(fromJson(needs.setup.outputs.images)) != '[]' }}
 
@@ -62,3 +62,13 @@ jobs:
     uses: ./.github/workflows/test-image.yaml
     with:
       image: ${{ matrix.image }}
+
+  done:
+    name: Test images
+    needs: test
+
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: No op
+        run: exit 0
