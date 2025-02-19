@@ -5,7 +5,6 @@
       "PATH": "${containerEnv:PATH}:${containerEnv:NODE_BIN_DIR}"
     },
     "features": {
-      "base": {},
       "node23": {}
     }
   }
