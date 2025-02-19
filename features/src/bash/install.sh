@@ -15,11 +15,20 @@ if [ "$ARCH" != 'amd64' ] && [ "$ARCH" != 'arm64' ]; then
   exit 1
 fi
 
-INSTALL_DIR=/usr/local
+INSTALL_DIR=/opt
+BIN_DIR=$INSTALL_DIR/bin
+mkdir -p $BIN_DIR
 
 # endregion
 
 # region Installations
+
+apt update --quiet
+apt install --yes --no-install-recommends \
+  ca-certificates \
+  curl \
+  xz-utils
+rm -rf /var/lib/apt/lists/*
 
 # region `shellcheck`
 
@@ -40,7 +49,7 @@ esac
 PACKAGE=/tmp/package.tar.xz
 curl -fLsS "$PACKAGE_URL" -o $PACKAGE
 echo "$PACKAGE_SUM $PACKAGE" | sha256sum -c
-tar -xJf $PACKAGE --strip-components 1 -C $INSTALL_DIR/bin --wildcards "*/shellcheck"
+tar -xJf $PACKAGE --strip-components 1 -C $BIN_DIR --wildcards "*/shellcheck"
 rm -f $PACKAGE
 
 # endregion
@@ -64,8 +73,8 @@ esac
 PACKAGE=/tmp/package
 curl -fLsS "$PACKAGE_URL" -o "$PACKAGE"
 echo "$PACKAGE_SUM $PACKAGE" | sha256sum -c
-mv $PACKAGE $INSTALL_DIR/bin/shfmt
-chmod +x $INSTALL_DIR/bin/shfmt
+mv $PACKAGE $BIN_DIR/shfmt
+chmod +x $BIN_DIR/shfmt
 
 # endregion
 
