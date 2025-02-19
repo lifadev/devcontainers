@@ -3,6 +3,9 @@
     "image": "debian:bookworm-20250113",
     "features": {
       "base": {}
+    },
+    "remoteEnv": {
+      "PATH": "${containerEnv:PATH}:/opt/bin"
     }
   }
 }

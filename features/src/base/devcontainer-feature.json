@@ -2,7 +2,6 @@
   "id": "base",
   "name": "base",
   "version": "0.2.0",
-  "dependsOn": {},
   "containerEnv": {
     "LANG": "C.UTF-8"
   },

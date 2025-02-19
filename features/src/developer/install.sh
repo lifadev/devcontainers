@@ -23,6 +23,10 @@ if [ "$ARCH" != 'amd64' ] && [ "$ARCH" != 'arm64' ]; then
   exit 1
 fi
 
+INSTALL_DIR=/opt
+BIN_DIR=$INSTALL_DIR/bin
+mkdir -p $BIN_DIR
+
 # endregion
 
 # region Installations

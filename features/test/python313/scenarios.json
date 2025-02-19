@@ -1,12 +1,12 @@
 {
   "default": {
     "image": "debian:bookworm-20250113",
-    "remoteEnv": {
-      "PATH": "${containerEnv:PATH}:${containerEnv:PYTHON_BIN_DIR}",
-      "PYTHONDONTWRITEBYTECODE": "${containerEnv:PYTHONDONTWRITEBYTECODE}"
-    },
     "features": {
       "python313": {}
+    },
+    "remoteEnv": {
+      "PATH": "${containerEnv:PATH}:/opt/bin:${containerEnv:PYTHON_BIN_DIR}",
+      "PYTHONDONTWRITEBYTECODE": "${containerEnv:PYTHONDONTWRITEBYTECODE}"
     }
   }
 }
