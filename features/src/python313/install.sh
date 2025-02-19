@@ -56,9 +56,9 @@ rm -rf /var/lib/apt/lists/*
 
 #? https://github.com/python/cpython/tags
 #? https://github.com/docker-library/python/blob/master/3.13/bookworm/Dockerfile
-PACKAGE_VERSION=3.13.1
+PACKAGE_VERSION=3.13.2
 PACKAGE_URL="https://www.python.org/ftp/python/${PACKAGE_VERSION}/Python-${PACKAGE_VERSION}.tar.xz"
-PACKAGE_SUM=9cf9427bee9e2242e3877dd0f6b641c1853ca461f39d6503ce260a59c80bf0d9
+PACKAGE_SUM=d984bcc57cd67caab26f7def42e523b1c015bbc5dc07836cf4f0b63fa159eb56
 
 PACKAGE=/tmp/package.tar.xz
 curl -fLsS "$PACKAGE_URL" -o $PACKAGE
