@@ -1,21 +1,14 @@
 {
   "features": {
-    "ghcr.io/lifadev/devcontainers/features/base:0": {
-      "version": "0.2.0",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/base@sha256:69583ba2ddf45968f118eea77c7aa822fcb49b072f2ee9a50aa52268fc1f5e87",
-      "integrity": "sha256:69583ba2ddf45968f118eea77c7aa822fcb49b072f2ee9a50aa52268fc1f5e87"
-    },
     "ghcr.io/lifadev/devcontainers/features/developer:0": {
-      "version": "0.1.0",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/developer@sha256:776a5e58c52229a169f9087b00edf31ace7aaae702423ea2a1e9e04ea0dd1d09",
-      "integrity": "sha256:776a5e58c52229a169f9087b00edf31ace7aaae702423ea2a1e9e04ea0dd1d09",
-      "dependsOn": ["ghcr.io/lifadev/devcontainers/features/base:0"]
+      "version": "0.1.1",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/developer@sha256:399f5e86088614fa8bebf661f579903094b939ffb45c38ba872d9004e8393c51",
+      "integrity": "sha256:399f5e86088614fa8bebf661f579903094b939ffb45c38ba872d9004e8393c51"
     },
     "ghcr.io/lifadev/devcontainers/features/python313:0": {
-      "version": "0.1.0",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/python313@sha256:21abd0bc608e862848fa78d92096144db05005097cfb173f002d7484dd01effa",
-      "integrity": "sha256:21abd0bc608e862848fa78d92096144db05005097cfb173f002d7484dd01effa",
-      "dependsOn": ["ghcr.io/lifadev/devcontainers/features/base:0"]
+      "version": "0.2.0",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/python313@sha256:4b9f611feffb6df31cb49e983327af4fdb88b87ca4cd8b079c77c34848de0468",
+      "integrity": "sha256:4b9f611feffb6df31cb49e983327af4fdb88b87ca4cd8b079c77c34848de0468"
     }
   }
 }
