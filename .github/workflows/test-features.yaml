@@ -64,7 +64,7 @@ jobs:
           q = deque(set([
             g["feature"]
             for c in changes
-            if (g := re.search("^features/src/(?P<feature>[^/]+)/", c))
+            if (g := re.search("^features/(src|test)/(?P<feature>[^/]+)/", c))
           ]))
 
           features = []
