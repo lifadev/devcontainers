@@ -27,6 +27,11 @@ fi
 
 # region Installations
 
+apt update --quiet
+apt install --yes --no-install-recommends \
+  sudo
+rm -rf /var/lib/apt/lists/*
+
 groupadd \
   --gid "$GROUP_ID" \
   "$USER_NAME"

@@ -1,10 +1,7 @@
 {
   "id": "developer",
   "name": "developer",
-  "version": "0.1.0",
-  "dependsOn": {
-    "ghcr.io/lifadev/devcontainers/features/base:0": {}
-  },
+  "version": "0.1.1",
   "options": {
     "user-name": {
       "type": "string",
@@ -18,5 +15,8 @@
       "type": "string",
       "default": "1000"
     }
+  },
+  "containerEnv": {
+    "LANG": "C.UTF-8"
   }
 }
