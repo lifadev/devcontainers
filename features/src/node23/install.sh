@@ -40,15 +40,15 @@ rm -rf /var/lib/apt/lists/*
 
 #? https://github.com/nodejs/node/tags
 #? SHASUMS256.txt
-PACKAGE_VERSION=23.6.1
+PACKAGE_VERSION=23.8.0
 case $ARCH in
 amd64)
   PACKAGE_URL="https://nodejs.org/dist/v${PACKAGE_VERSION}/node-v${PACKAGE_VERSION}-linux-x64.tar.xz"
-  PACKAGE_SUM=9387c4bf8f175e81cb2f004f3f4b2cd96abfb708df3755142e878effe035fcc5
+  PACKAGE_SUM=78d24ff80a52f7dd3a94542d7598163624fcda7be1d4777bc9161d8c8d15267f
   ;;
 arm64)
   PACKAGE_URL="https://nodejs.org/dist/v${PACKAGE_VERSION}/node-v${PACKAGE_VERSION}-linux-arm64.tar.xz"
-  PACKAGE_SUM=e9a709ea4142c0c269d7e670e37e65cf549bf69d62342907cd15a49ba7da1748
+  PACKAGE_SUM=0be81418587eee8ef2d7537243d808d15e12f3f8a8461dd39728bcdcc91c9c72
   ;;
 esac
 
