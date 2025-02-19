@@ -1,6 +1,7 @@
 {
   "image": "debian:bookworm-20250203",
   "features": {
+    "ghcr.io/lifadev/devcontainers/features/base:0": {},
     "ghcr.io/lifadev/devcontainers/features/developer:0": {},
     "ghcr.io/lifadev/devcontainers/features/python313:0": {}
   },
@@ -12,7 +13,7 @@
   "customizations": {
     "manifest": {
       "name": "python313",
-      "version": "0.2.0"
+      "version": "0.2.1"
     }
   }
 }
