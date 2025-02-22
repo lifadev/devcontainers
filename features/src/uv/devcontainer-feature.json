@@ -1,0 +1,8 @@
+{
+  "id": "uv",
+  "name": "uv",
+  "version": "0.1.0",
+  "containerEnv": {
+    "LANG": "C.UTF-8"
+  }
+}

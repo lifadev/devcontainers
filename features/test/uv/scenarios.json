@@ -1,0 +1,11 @@
+{
+  "default": {
+    "image": "debian:bookworm-20250203",
+    "features": {
+      "uv": {}
+    },
+    "remoteEnv": {
+      "PATH": "${containerEnv:PATH}:/opt/bin"
+    }
+  }
+}
