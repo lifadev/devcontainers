@@ -35,6 +35,7 @@ APPS=(
   socat
   sponge
   ssh
+  stow
   strace
   sudo
   tree

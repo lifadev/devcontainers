@@ -70,6 +70,7 @@ apt install --yes --no-install-recommends \
   ripgrep \
   rsync \
   socat \
+  stow \
   strace \
   sudo \
   tree \
