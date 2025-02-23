@@ -29,7 +29,7 @@ apt install --yes --no-install-recommends \
   curl
 rm -rf /var/lib/apt/lists/*
 
-# region `uv`
+# region `ruff`
 
 #? https://github.com/astral-sh/ruff/tags
 #? .sha256
@@ -52,5 +52,15 @@ tar -xzf $PACKAGE --strip-components 1 -C $BIN_DIR
 rm -f $PACKAGE
 
 # endregion
+
+# endregion
+
+# region Shell integration
+
+mkdir -p /etc/bash_completion.d
+
+cat <<EOF >>/etc/bash_completion.d/ruff
+eval "\$(ruff generate-shell-completion bash)"
+EOF
 
 # endregion

@@ -71,3 +71,13 @@ npm install -g "npm@$NPM_VERSION"
 # endregion
 
 # endregion
+
+# region Shell integration
+
+mkdir -p /etc/bash_completion.d
+
+cat <<EOF >>/etc/bash_completion.d/npm
+eval "\$(npm completion)"
+EOF
+
+# endregion

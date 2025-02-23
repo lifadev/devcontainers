@@ -54,3 +54,17 @@ rm -f $PACKAGE
 # endregion
 
 # endregion
+
+# region Shell integration
+
+mkdir -p /etc/bash_completion.d
+
+cat <<EOF >>/etc/bash_completion.d/uv
+eval "\$(uv generate-shell-completion bash)"
+EOF
+
+cat <<EOF >>/etc/bash_completion.d/uvx
+eval "\$(uvx --generate-shell-completion bash)"
+EOF
+
+# endregion
