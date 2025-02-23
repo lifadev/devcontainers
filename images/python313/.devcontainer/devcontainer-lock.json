@@ -1,9 +1,9 @@
 {
   "features": {
     "ghcr.io/lifadev/devcontainers/features/base:0": {
-      "version": "0.2.0",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/base@sha256:0546d4fe53e8b36f06bd9f309a6d8eac6024bd71ec1770290b415b22f2c26a0e",
-      "integrity": "sha256:0546d4fe53e8b36f06bd9f309a6d8eac6024bd71ec1770290b415b22f2c26a0e"
+      "version": "0.2.1",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/base@sha256:ad7b345167dd7205e8499768b8879242b57728d5d07224a02f450ab54dce034a",
+      "integrity": "sha256:ad7b345167dd7205e8499768b8879242b57728d5d07224a02f450ab54dce034a"
     },
     "ghcr.io/lifadev/devcontainers/features/developer:0": {
       "version": "0.1.1",
@@ -16,14 +16,19 @@
       "integrity": "sha256:4b9f611feffb6df31cb49e983327af4fdb88b87ca4cd8b079c77c34848de0468"
     },
     "ghcr.io/lifadev/devcontainers/features/ruff:0": {
+      "version": "0.1.2",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:5417fb4a8fb7610b289b53a80c1f7f621e6f36dad1188462bb294960437b2a21",
+      "integrity": "sha256:5417fb4a8fb7610b289b53a80c1f7f621e6f36dad1188462bb294960437b2a21"
+    },
+    "ghcr.io/lifadev/devcontainers/features/starship:0": {
       "version": "0.1.1",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:784c74cd2817fda9600b560caefcfb7cb926756392752984f93f2efc92a5259e",
-      "integrity": "sha256:784c74cd2817fda9600b560caefcfb7cb926756392752984f93f2efc92a5259e"
+      "resolved": "ghcr.io/lifadev/devcontainers/features/starship@sha256:de2143d45bd77027e1342b2b4904c588bc489f3f8a5dc2193d1b1f07110061be",
+      "integrity": "sha256:de2143d45bd77027e1342b2b4904c588bc489f3f8a5dc2193d1b1f07110061be"
     },
     "ghcr.io/lifadev/devcontainers/features/uv:0": {
-      "version": "0.1.0",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:62e5c11da79c4f70d062a518261bd555661e7768c60829ee101d582fdcfe6536",
-      "integrity": "sha256:62e5c11da79c4f70d062a518261bd555661e7768c60829ee101d582fdcfe6536"
+      "version": "0.1.1",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:a0aa8726e0c007a8d40eaa3128de56dbb92b445ca554eca92e4be2a7430a59ad",
+      "integrity": "sha256:a0aa8726e0c007a8d40eaa3128de56dbb92b445ca554eca92e4be2a7430a59ad"
     }
   }
 }

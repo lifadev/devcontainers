@@ -1,9 +1,14 @@
 {
   "features": {
     "ghcr.io/lifadev/devcontainers/features/base:0": {
-      "version": "0.2.0",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/base@sha256:0546d4fe53e8b36f06bd9f309a6d8eac6024bd71ec1770290b415b22f2c26a0e",
-      "integrity": "sha256:0546d4fe53e8b36f06bd9f309a6d8eac6024bd71ec1770290b415b22f2c26a0e"
+      "version": "0.2.1",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/base@sha256:ad7b345167dd7205e8499768b8879242b57728d5d07224a02f450ab54dce034a",
+      "integrity": "sha256:ad7b345167dd7205e8499768b8879242b57728d5d07224a02f450ab54dce034a"
+    },
+    "ghcr.io/lifadev/devcontainers/features/starship:0": {
+      "version": "0.1.1",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/starship@sha256:de2143d45bd77027e1342b2b4904c588bc489f3f8a5dc2193d1b1f07110061be",
+      "integrity": "sha256:de2143d45bd77027e1342b2b4904c588bc489f3f8a5dc2193d1b1f07110061be"
     }
   }
 }

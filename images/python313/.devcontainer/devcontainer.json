@@ -4,8 +4,9 @@
     "ghcr.io/lifadev/devcontainers/features/base:0": {},
     "ghcr.io/lifadev/devcontainers/features/developer:0": {},
     "ghcr.io/lifadev/devcontainers/features/python313:0": {},
-    "ghcr.io/lifadev/devcontainers/features/uv:0": {},
-    "ghcr.io/lifadev/devcontainers/features/ruff:0": {}
+    "ghcr.io/lifadev/devcontainers/features/ruff:0": {},
+    "ghcr.io/lifadev/devcontainers/features/starship:0": {},
+    "ghcr.io/lifadev/devcontainers/features/uv:0": {}
   },
   "remoteUser": "developer",
   "updateRemoteUserUID": true,
@@ -15,7 +16,7 @@
   "customizations": {
     "manifest": {
       "name": "python313",
-      "version": "0.3.0"
+      "version": "0.3.1"
     }
   }
 }
