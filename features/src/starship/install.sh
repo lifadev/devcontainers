@@ -54,3 +54,13 @@ rm -f $PACKAGE
 # endregion
 
 # endregion
+
+# region Shell integration
+
+mkdir -p /etc/bashrc.d
+
+cat <<EOF >>/etc/bashrc.d/starship
+eval "\$(starship init bash)"
+EOF
+
+# endregion
