@@ -79,3 +79,21 @@ chmod +x $BIN_DIR/shfmt
 # endregion
 
 # endregion
+
+# region Shell integration
+
+mkdir -p /etc/bashrc.d
+
+cat <<EOF >>/etc/bash.bashrc
+if [ -d /etc/bashrc.d ]; then
+  for i in /etc/bashrc.d/*; do
+    if [ -r "\$i" ]; then
+      # shellcheck disable=SC1090
+      . "\$i"
+    fi
+  done
+  unset i
+fi
+EOF
+
+# endregion
