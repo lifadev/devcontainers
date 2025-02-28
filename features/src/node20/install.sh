@@ -77,7 +77,7 @@ npm install -g "npm@$NPM_VERSION"
 
 mkdir -p /etc/bash_completion.d
 
-cat <<EOF >>/etc/bash_completion.d/npm
+cat <<EOF >>/etc/bash_completion.d/node20-npm
 eval "\$(npm completion)"
 EOF
 
