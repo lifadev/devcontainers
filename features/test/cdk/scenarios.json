@@ -1,0 +1,24 @@
+{
+  "node20": {
+    "image": "debian:bookworm-20250203",
+    "features": {
+      "node20": {},
+      "cdk": {}
+    },
+    "overrideFeatureInstallOrder": ["./node20", "./cdk"],
+    "remoteEnv": {
+      "PATH": "${containerEnv:PATH}:/opt/bin:${containerEnv:NODE20_BIN_DIR}"
+    }
+  },
+  "node23": {
+    "image": "debian:bookworm-20250203",
+    "features": {
+      "node23": {},
+      "cdk": {}
+    },
+    "overrideFeatureInstallOrder": ["./node23", "./cdk"],
+    "remoteEnv": {
+      "PATH": "${containerEnv:PATH}:/opt/bin:${containerEnv:NODE23_BIN_DIR}"
+    }
+  }
+}
