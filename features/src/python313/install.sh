@@ -73,7 +73,7 @@ rm -f $PACKAGE
 cd $PACKAGE_BUILD_DIR
 ./configure \
   --build="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" \
-  --prefix="$PYTHON_INSTALL_DIR" \
+  --prefix="$PYTHON313_INSTALL_DIR" \
   --enable-loadable-sqlite-extensions \
   --enable-optimizations \
   --enable-option-checking=fatal \
@@ -103,14 +103,14 @@ make install
 
 #? Enable GDB to load debugging data
 #? https://github.com/docker-library/python/pull/701
-bin=$(readlink -ve $PYTHON_BIN_DIR/python3)
+bin=$(readlink -ve $PYTHON313_BIN_DIR/python3)
 dir=$(dirname "$bin")
 mkdir -p "/usr/share/gdb/auto-load/$dir"
 cp -vL Tools/gdb/libpython.py "/usr/share/gdb/auto-load/$bin-gdb.py"
 
 cd /
 rm -rf $PACKAGE_BUILD_DIR
-find "$PYTHON_INSTALL_DIR" -depth \
+find "$PYTHON313_INSTALL_DIR" -depth \
   \( \
   \( -type d -a \( -name test -o -name tests -o -name idle_test \) \) \
   -o \( -type f -a \( -name '*.pyc' -o -name '*.pyo' -o -name 'libpython*.a' \) \) \
@@ -118,7 +118,7 @@ find "$PYTHON_INSTALL_DIR" -depth \
 
 ldconfig
 
-export PATH=$PYTHON_BIN_DIR:$PATH
+export PATH=$PYTHON313_BIN_DIR:$PATH
 
 # endregion
 

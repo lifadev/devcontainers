@@ -1,7 +1,7 @@
 {
   "id": "python313",
   "name": "python313",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "options": {
     "build-version": {
       "type": "string",
@@ -22,8 +22,8 @@
   },
   "containerEnv": {
     "LANG": "C.UTF-8",
-    "PYTHON_INSTALL_DIR": "/opt/python313",
-    "PYTHON_BIN_DIR": "/opt/python313/bin",
+    "PYTHON313_INSTALL_DIR": "/opt/python313",
+    "PYTHON313_BIN_DIR": "/opt/python313/bin",
     "PYTHONDONTWRITEBYTECODE": "1"
   },
   "customizations": {
