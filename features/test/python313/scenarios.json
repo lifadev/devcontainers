@@ -3,10 +3,6 @@
     "image": "debian:bookworm-20250224",
     "features": {
       "python313": {}
-    },
-    "remoteEnv": {
-      "PATH": "${containerEnv:PATH}:/opt/bin:${containerEnv:PYTHON313_BIN_DIR}",
-      "PYTHONDONTWRITEBYTECODE": "${containerEnv:PYTHONDONTWRITEBYTECODE}"
     }
   }
 }

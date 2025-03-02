@@ -4,9 +4,6 @@
     "features": {
       "developer": {}
     },
-    "remoteEnv": {
-      "PATH": "${containerEnv:PATH}:/opt/bin"
-    },
     "remoteUser": "developer",
     "updateRemoteUserUID": false
   },
@@ -14,9 +11,6 @@
     "image": "debian:bookworm-20250224",
     "features": {
       "developer": {}
-    },
-    "remoteEnv": {
-      "PATH": "${containerEnv:PATH}:/opt/bin"
     },
     "remoteUser": "developer",
     "updateRemoteUserUID": true

@@ -1,10 +1,12 @@
 {
   "id": "cdk",
   "name": "cdk",
-  "version": "0.1.0",
-  "installsAfter": ["ghcr.io/lifadev/devcontainers/features/node20"],
+  "version": "0.1.1",
+  "installsAfter": [
+    "ghcr.io/lifadev/devcontainers/features/node20",
+    "ghcr.io/lifadev/devcontainers/features/node23"
+  ],
   "containerEnv": {
-    "LANG": "C.UTF-8",
     "JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION": "1"
   }
 }

@@ -2,8 +2,6 @@
 
 set -eux
 
-# region Prerequisites
-
 if [ "$UID" -ne 0 ]; then
   echo -e "(!) User must be root: $UID"
   exit 1
@@ -15,13 +13,7 @@ if [ "$ARCH" != 'amd64' ] && [ "$ARCH" != 'arm64' ]; then
   exit 1
 fi
 
-INSTALL_DIR=/opt
-BIN_DIR=$INSTALL_DIR/bin
-mkdir -p $BIN_DIR
-
-# endregion
-
-# region Installations
+#---
 
 apt update --quiet
 apt install --yes --no-install-recommends \
@@ -29,7 +21,7 @@ apt install --yes --no-install-recommends \
   curl
 rm -rf /var/lib/apt/lists/*
 
-# region `uv`
+#---
 
 #? https://github.com/starship/starship/tags
 #? .sha256
@@ -48,19 +40,16 @@ esac
 PACKAGE=/tmp/package.tar.gz
 curl -fLsS "$PACKAGE_URL" -o $PACKAGE
 echo "$PACKAGE_SUM $PACKAGE" | sha256sum -c
-tar -xzf $PACKAGE -C $BIN_DIR
+
+INSTALL_DIR=/opt/bin
+mkdir -p $INSTALL_DIR
+tar -xzf $PACKAGE -C $INSTALL_DIR
 rm -f $PACKAGE
 
-# endregion
-
-# endregion
-
-# region Shell integration
+#---
 
 mkdir -p /etc/bashrc.d
 
 cat <<EOF >>/etc/bashrc.d/starship
 eval "\$(starship init bash)"
 EOF
-
-# endregion

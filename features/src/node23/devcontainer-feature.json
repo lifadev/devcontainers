@@ -1,16 +1,8 @@
 {
   "id": "node23",
   "name": "node23",
-  "version": "0.2.4",
-  "options": {
-    "npm-version": {
-      "type": "string",
-      "default": "11.1.0"
-    }
-  },
+  "version": "0.2.5",
   "containerEnv": {
-    "LANG": "C.UTF-8",
-    "NODE23_INSTALL_DIR": "/opt/node23",
-    "NODE23_BIN_DIR": "/opt/node23/bin"
+    "PATH": "/opt/node23/bin:$PATH"
   }
 }

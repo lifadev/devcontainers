@@ -1,16 +1,8 @@
 {
   "id": "node20",
   "name": "node20",
-  "version": "0.1.1",
-  "options": {
-    "npm-version": {
-      "type": "string",
-      "default": "11.1.0"
-    }
-  },
+  "version": "0.1.2",
   "containerEnv": {
-    "LANG": "C.UTF-8",
-    "NODE20_INSTALL_DIR": "/opt/node20",
-    "NODE20_BIN_DIR": "/opt/node20/bin"
+    "PATH": "/opt/node20/bin:$PATH"
   }
 }

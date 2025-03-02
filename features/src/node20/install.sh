@@ -2,14 +2,6 @@
 
 set -eux
 
-# region Options
-
-NPM_VERSION=${NPM_VERSION:-undefined}
-
-# endregion
-
-# region Prerequisites
-
 if [ "$UID" -ne 0 ]; then
   echo -e "(!) User must be root: $UID"
   exit 1
@@ -21,15 +13,7 @@ if [ "$ARCH" != 'amd64' ] && [ "$ARCH" != 'arm64' ]; then
   exit 1
 fi
 
-INSTALL_DIR=/opt
-BIN_DIR=$INSTALL_DIR/bin
-mkdir -p $BIN_DIR
-
-# endregion
-
-# region Installations
-
-# region Node
+#---
 
 apt update --quiet
 apt install --yes --no-install-recommends \
@@ -38,10 +22,11 @@ apt install --yes --no-install-recommends \
   xz-utils
 rm -rf /var/lib/apt/lists/*
 
+#---
+
 #? https://github.com/nodejs/node/tags
 #? SHASUMS256.txt
 PACKAGE_VERSION=20.18.3
-
 case $ARCH in
 amd64)
   PACKAGE_URL="https://nodejs.org/dist/v${PACKAGE_VERSION}/node-v${PACKAGE_VERSION}-linux-x64.tar.xz"
@@ -56,29 +41,21 @@ esac
 PACKAGE=/tmp/package.tar.xz
 curl -fLsS "$PACKAGE_URL" -o $PACKAGE
 echo "$PACKAGE_SUM $PACKAGE" | sha256sum -c
-mkdir -p "$NODE20_INSTALL_DIR"
-tar -xJf $PACKAGE --strip-components 1 -C "$NODE20_INSTALL_DIR"
+
+INSTALL_DIR=/opt/node20
+mkdir -p $INSTALL_DIR
+tar -xJf $PACKAGE --strip-components 1 -C $INSTALL_DIR
 rm -f $PACKAGE
 
-export PATH=$NODE20_BIN_DIR:$PATH
-
-# endregion
-
-# region Package managers
+#---
 
 #? https://github.com/npm/cli/tags
-npm install -g "npm@$NPM_VERSION"
+npm install -g npm@11.1.0
 
-# endregion
-
-# endregion
-
-# region Shell integration
+#---
 
 mkdir -p /etc/bash_completion.d
 
 cat <<EOF >>/etc/bash_completion.d/node20-npm
 eval "\$(npm completion)"
 EOF
-
-# endregion

@@ -5,7 +5,7 @@
       "starship": {}
     },
     "remoteEnv": {
-      "PATH": "${containerEnv:PATH}:/opt/bin"
+      "PATH": "/opt/bin:${containerEnv:PATH}"
     }
   }
 }

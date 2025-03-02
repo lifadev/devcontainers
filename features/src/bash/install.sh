@@ -2,8 +2,6 @@
 
 set -eux
 
-# region Prerequisites
-
 if [ "$UID" -ne 0 ]; then
   echo -e "(!) User must be root: $UID"
   exit 1
@@ -15,13 +13,7 @@ if [ "$ARCH" != 'amd64' ] && [ "$ARCH" != 'arm64' ]; then
   exit 1
 fi
 
-INSTALL_DIR=/opt
-BIN_DIR=$INSTALL_DIR/bin
-mkdir -p $BIN_DIR
-
-# endregion
-
-# region Installations
+#---
 
 apt update --quiet
 apt install --yes --no-install-recommends \
@@ -30,7 +22,7 @@ apt install --yes --no-install-recommends \
   xz-utils
 rm -rf /var/lib/apt/lists/*
 
-# region `shellcheck`
+#---
 
 #? https://github.com/koalaman/shellcheck/tags
 #? manual checksum
@@ -49,12 +41,13 @@ esac
 PACKAGE=/tmp/package.tar.xz
 curl -fLsS "$PACKAGE_URL" -o $PACKAGE
 echo "$PACKAGE_SUM $PACKAGE" | sha256sum -c
-tar -xJf $PACKAGE --strip-components 1 -C $BIN_DIR --wildcards "*/shellcheck"
+
+INSTALL_DIR=/opt/bin
+mkdir -p $INSTALL_DIR
+tar -xJf $PACKAGE --strip-components 1 -C $INSTALL_DIR --wildcards "*/shellcheck"
 rm -f $PACKAGE
 
-# endregion
-
-# region `shfmt`
+#---
 
 #? https://github.com/mvdan/sh/tags
 #? sha256sums.txt
@@ -73,14 +66,13 @@ esac
 PACKAGE=/tmp/package
 curl -fLsS "$PACKAGE_URL" -o "$PACKAGE"
 echo "$PACKAGE_SUM $PACKAGE" | sha256sum -c
-mv $PACKAGE $BIN_DIR/shfmt
-chmod +x $BIN_DIR/shfmt
 
-# endregion
+INSTALL_DIR=/opt/bin
+mkdir -p $INSTALL_DIR
+mv $PACKAGE $INSTALL_DIR/shfmt
+chmod +x $INSTALL_DIR/shfmt
 
-# endregion
-
-# region Shell integration
+#---
 
 mkdir -p /etc/bashrc.d
 
@@ -95,5 +87,3 @@ if [ -d /etc/bashrc.d ]; then
   unset i
 fi
 EOF
-
-# endregion

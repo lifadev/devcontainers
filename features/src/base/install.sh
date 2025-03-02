@@ -2,8 +2,6 @@
 
 set -eux
 
-# region Prerequisites
-
 if [ "$UID" -ne 0 ]; then
   echo -e "(!) User must be root: $UID"
   exit 1
@@ -15,15 +13,7 @@ if [ "$ARCH" != 'amd64' ] && [ "$ARCH" != 'arm64' ]; then
   exit 1
 fi
 
-INSTALL_DIR=/opt
-BIN_DIR=$INSTALL_DIR/bin
-mkdir -p $BIN_DIR
-
-# endregion
-
-# region Installations
-
-#? https://hub.docker.com/_/debian/
+#---
 
 export DEBIAN_FRONTEND=noninteractive
 
@@ -81,5 +71,3 @@ apt install --yes --no-install-recommends \
   xz-utils \
   zip
 rm -rf /var/lib/apt/lists/*
-
-# endregion

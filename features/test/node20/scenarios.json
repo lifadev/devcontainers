@@ -3,9 +3,6 @@
     "image": "debian:bookworm-20250224",
     "features": {
       "node20": {}
-    },
-    "remoteEnv": {
-      "PATH": "${containerEnv:PATH}:/opt/bin:${containerEnv:NODE20_BIN_DIR}"
     }
   }
 }

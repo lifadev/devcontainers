@@ -3,9 +3,6 @@
     "image": "debian:bookworm-20250224",
     "features": {
       "node23": {}
-    },
-    "remoteEnv": {
-      "PATH": "${containerEnv:PATH}:/opt/bin:${containerEnv:NODE23_BIN_DIR}"
     }
   }
 }

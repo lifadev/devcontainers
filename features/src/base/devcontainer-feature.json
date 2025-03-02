@@ -1,10 +1,7 @@
 {
   "id": "base",
   "name": "base",
-  "version": "0.2.1",
-  "containerEnv": {
-    "LANG": "C.UTF-8"
-  },
+  "version": "0.2.2",
   "customizations": {
     "vscode": {
       "extensions": ["EditorConfig.EditorConfig"]

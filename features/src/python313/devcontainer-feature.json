@@ -1,29 +1,9 @@
 {
   "id": "python313",
   "name": "python313",
-  "version": "0.2.2",
-  "options": {
-    "build-version": {
-      "type": "string",
-      "default": "1.2.2.post1"
-    },
-    "pip-version": {
-      "type": "string",
-      "default": "25.0.1"
-    },
-    "setuptools-version": {
-      "type": "string",
-      "default": "75.8.2"
-    },
-    "wheel-version": {
-      "type": "string",
-      "default": "0.45.1"
-    }
-  },
+  "version": "0.2.3",
   "containerEnv": {
-    "LANG": "C.UTF-8",
-    "PYTHON313_INSTALL_DIR": "/opt/python313",
-    "PYTHON313_BIN_DIR": "/opt/python313/bin",
+    "PATH": "/opt/python313/bin:$PATH",
     "PYTHONDONTWRITEBYTECODE": "1"
   },
   "customizations": {

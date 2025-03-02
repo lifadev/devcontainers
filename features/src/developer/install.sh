@@ -2,15 +2,11 @@
 
 set -eux
 
-# region Options
-
 USER_NAME=${USER_NAME:-undefined}
 USER_ID=${USER_ID:-undefined}
 GROUP_ID=${GROUP_ID:-undefined}
 
-# endregion
-
-# region Prerequisites
+#---
 
 if [ "$UID" -ne 0 ]; then
   echo -e "(!) User must be root: $UID"
@@ -23,18 +19,14 @@ if [ "$ARCH" != 'amd64' ] && [ "$ARCH" != 'arm64' ]; then
   exit 1
 fi
 
-INSTALL_DIR=/opt
-BIN_DIR=$INSTALL_DIR/bin
-mkdir -p $BIN_DIR
-
-# endregion
-
-# region Installations
+#---
 
 apt update --quiet
 apt install --yes --no-install-recommends \
   sudo
 rm -rf /var/lib/apt/lists/*
+
+#---
 
 groupadd \
   --gid "$GROUP_ID" \
@@ -47,5 +39,3 @@ useradd \
 
 echo "$USER_NAME" ALL=\(root\) NOPASSWD:ALL >"/etc/sudoers.d/$USER_NAME"
 chmod 0440 "/etc/sudoers.d/$USER_NAME"
-
-# endregion
