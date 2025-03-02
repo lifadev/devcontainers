@@ -11,14 +11,14 @@
       "integrity": "sha256:399f5e86088614fa8bebf661f579903094b939ffb45c38ba872d9004e8393c51"
     },
     "ghcr.io/lifadev/devcontainers/features/python313:0": {
-      "version": "0.2.0",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/python313@sha256:4b9f611feffb6df31cb49e983327af4fdb88b87ca4cd8b079c77c34848de0468",
-      "integrity": "sha256:4b9f611feffb6df31cb49e983327af4fdb88b87ca4cd8b079c77c34848de0468"
+      "version": "0.2.2",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/python313@sha256:8eae364767f25cf09fe295bc28aef28242c1805a9b47588dc337b697bf758641",
+      "integrity": "sha256:8eae364767f25cf09fe295bc28aef28242c1805a9b47588dc337b697bf758641"
     },
     "ghcr.io/lifadev/devcontainers/features/ruff:0": {
-      "version": "0.1.2",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:5417fb4a8fb7610b289b53a80c1f7f621e6f36dad1188462bb294960437b2a21",
-      "integrity": "sha256:5417fb4a8fb7610b289b53a80c1f7f621e6f36dad1188462bb294960437b2a21"
+      "version": "0.1.3",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:fe11a8c9339ce347b27618faecd1dc80fc0b1ace97fc3fbd53ca704fef985718",
+      "integrity": "sha256:fe11a8c9339ce347b27618faecd1dc80fc0b1ace97fc3fbd53ca704fef985718"
     },
     "ghcr.io/lifadev/devcontainers/features/starship:0": {
       "version": "0.1.1",
@@ -26,9 +26,9 @@
       "integrity": "sha256:de2143d45bd77027e1342b2b4904c588bc489f3f8a5dc2193d1b1f07110061be"
     },
     "ghcr.io/lifadev/devcontainers/features/uv:0": {
-      "version": "0.1.1",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:a0aa8726e0c007a8d40eaa3128de56dbb92b445ca554eca92e4be2a7430a59ad",
-      "integrity": "sha256:a0aa8726e0c007a8d40eaa3128de56dbb92b445ca554eca92e4be2a7430a59ad"
+      "version": "0.1.2",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:dcd4aa4374a5f1c77f8086a5c8360fce7653ddfaa621c869dde5ef52e3404e25",
+      "integrity": "sha256:dcd4aa4374a5f1c77f8086a5c8360fce7653ddfaa621c869dde5ef52e3404e25"
     }
   }
 }

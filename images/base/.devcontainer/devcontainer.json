@@ -1,5 +1,5 @@
 {
-  "image": "debian:bookworm-20250203",
+  "image": "debian:bookworm-20250224",
   "features": {
     "ghcr.io/lifadev/devcontainers/features/base:0": {},
     "ghcr.io/lifadev/devcontainers/features/starship:0": {}
@@ -10,7 +10,7 @@
   "customizations": {
     "manifest": {
       "name": "base",
-      "version": "0.2.1"
+      "version": "0.2.2"
     }
   }
 }

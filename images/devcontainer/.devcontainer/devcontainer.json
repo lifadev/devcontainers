@@ -1,5 +1,5 @@
 {
-  "image": "debian:bookworm-20250203",
+  "image": "debian:bookworm-20250224",
   "features": {
     "ghcr.io/lifadev/devcontainers/features/base:0": {},
     "ghcr.io/lifadev/devcontainers/features/bash:0": {},
@@ -15,7 +15,7 @@
   "customizations": {
     "manifest": {
       "name": "devcontainer",
-      "version": "0.3.2"
+      "version": "0.3.3"
     },
     "vscode": {
       "settings": {
