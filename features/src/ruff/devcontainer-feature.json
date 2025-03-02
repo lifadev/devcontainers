@@ -1,7 +1,7 @@
 {
   "id": "ruff",
   "name": "ruff",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "containerEnv": {
     "LANG": "C.UTF-8"
   },

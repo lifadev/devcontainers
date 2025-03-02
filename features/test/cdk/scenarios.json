@@ -1,6 +1,6 @@
 {
   "node20": {
-    "image": "debian:bookworm-20250203",
+    "image": "debian:bookworm-20250224",
     "features": {
       "node20": {},
       "cdk": {}
@@ -11,7 +11,7 @@
     }
   },
   "node23": {
-    "image": "debian:bookworm-20250203",
+    "image": "debian:bookworm-20250224",
     "features": {
       "node23": {},
       "cdk": {}

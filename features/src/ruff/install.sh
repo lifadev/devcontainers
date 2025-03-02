@@ -33,15 +33,15 @@ rm -rf /var/lib/apt/lists/*
 
 #? https://github.com/astral-sh/ruff/tags
 #? .sha256
-PACKAGE_VERSION=0.9.7
+PACKAGE_VERSION=0.9.9
 case $ARCH in
 amd64)
   PACKAGE_URL="https://github.com/astral-sh/ruff/releases/download/${PACKAGE_VERSION}/ruff-x86_64-unknown-linux-gnu.tar.gz"
-  PACKAGE_SUM=902f9ed51f13ed04eb3dc855af99d70e682846c538521a1b2c1b04c170bb5a7d
+  PACKAGE_SUM=49592925719ee59a7e6675a95dc20e76c0b921b498500a54b1cce3c314fdf794
   ;;
 arm64)
   PACKAGE_URL="https://github.com/astral-sh/ruff/releases/download/${PACKAGE_VERSION}/ruff-aarch64-unknown-linux-gnu.tar.gz"
-  PACKAGE_SUM=95d2a031a3de3ea5ce99febcbb6891781ebb430213115c1f729578db83109416
+  PACKAGE_SUM=34b4ea311560d5e7f80597eaf3dede9ded194dffe131d7fee8841904792a644c
   ;;
 esac
 

@@ -33,15 +33,15 @@ rm -rf /var/lib/apt/lists/*
 
 #? https://github.com/astral-sh/uv/tags
 #? .sha256
-PACKAGE_VERSION=0.6.2
+PACKAGE_VERSION=0.6.3
 case $ARCH in
 amd64)
   PACKAGE_URL="https://github.com/astral-sh/uv/releases/download/${PACKAGE_VERSION}/uv-x86_64-unknown-linux-gnu.tar.gz"
-  PACKAGE_SUM=37ea31f099678a3bee56f8a757d73551aad43f8025d377a8dde80dd946c1b7f2
+  PACKAGE_SUM=b7a37a33d62cb7672716c695226450231e8c02a8eb2b468fa61cd28a8f86eab2
   ;;
 arm64)
   PACKAGE_URL="https://github.com/astral-sh/uv/releases/download/${PACKAGE_VERSION}/uv-aarch64-unknown-linux-gnu.tar.gz"
-  PACKAGE_SUM=ca4c08724764a2b6c8f2173c4e3ca9dcde0d9d328e73b4d725cfb6b17a925eed
+  PACKAGE_SUM=447726788204106ffd8ecc59396fccc75fae7aca998555265b5ea6950b00160c
   ;;
 esac
 
