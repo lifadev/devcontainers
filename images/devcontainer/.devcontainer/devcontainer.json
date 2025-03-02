@@ -10,12 +10,12 @@
   "remoteUser": "developer",
   "updateRemoteUserUID": true,
   "remoteEnv": {
-    "PATH": "${containerEnv:PATH}:/opt/bin:${containerEnv:NODE23_BIN_DIR}"
+    "PATH": "/opt/bin:${containerEnv:PATH}"
   },
   "customizations": {
     "manifest": {
       "name": "devcontainer",
-      "version": "0.3.4"
+      "version": "0.3.5"
     },
     "vscode": {
       "settings": {

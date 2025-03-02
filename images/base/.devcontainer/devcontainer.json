@@ -5,12 +5,12 @@
     "ghcr.io/lifadev/devcontainers/features/starship:0": {}
   },
   "remoteEnv": {
-    "PATH": "${containerEnv:PATH}:/opt/bin"
+    "PATH": "/opt/bin:${containerEnv:PATH}"
   },
   "customizations": {
     "manifest": {
       "name": "base",
-      "version": "0.2.2"
+      "version": "0.2.3"
     }
   }
 }

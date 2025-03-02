@@ -11,12 +11,12 @@
   "remoteUser": "developer",
   "updateRemoteUserUID": true,
   "remoteEnv": {
-    "PATH": "${containerEnv:PATH}:/opt/bin:${containerEnv:PYTHON_BIN_DIR}"
+    "PATH": "/opt/bin:${containerEnv:PATH}"
   },
   "customizations": {
     "manifest": {
       "name": "python313",
-      "version": "0.3.2"
+      "version": "0.3.3"
     }
   }
 }
