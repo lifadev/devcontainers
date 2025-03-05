@@ -1,0 +1,10 @@
+{
+  "python313": {
+    "image": "debian:bookworm-20250224",
+    "features": {
+      "python313": {},
+      "jupyter": {}
+    },
+    "overrideFeatureInstallOrder": ["./python313"]
+  }
+}

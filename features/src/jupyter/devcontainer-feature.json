@@ -1,0 +1,11 @@
+{
+  "id": "jupyter",
+  "name": "jupyter",
+  "version": "0.1.0",
+  "installsAfter": ["ghcr.io/lifadev/devcontainers/features/python313"],
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-toolsai.jupyter"]
+    }
+  }
+}
