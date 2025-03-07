@@ -1,7 +1,7 @@
 {
   "id": "jupyter",
   "name": "jupyter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/python313"],
   "customizations": {
     "vscode": {

@@ -6,6 +6,9 @@ source dev-container-features-test-lib
 
 LIBS=(
   ipykernel
+  ipympl
+  matplotlib
+  numpy
 )
 
 for LIB in "${LIBS[@]}"; do
