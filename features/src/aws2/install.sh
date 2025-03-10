@@ -52,3 +52,11 @@ rm -f $PACKAGE
 
 /tmp/aws2/aws/install -i $INSTALL_DIR -b $INSTALL_DIR_BIN
 rm -rf $UNPACK_DIR
+
+#---
+
+mkdir -p /etc/bash_completion.d
+
+cat <<EOF >>/etc/bash_completion.d/aws2
+eval "\$(complete -C 'aws_completer' aws)"
+EOF

@@ -6,6 +6,7 @@ source dev-container-features-test-lib
 
 APPS=(
   aws
+  aws_completer
 )
 
 for APP in "${APPS[@]}"; do
