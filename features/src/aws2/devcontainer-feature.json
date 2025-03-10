@@ -1,8 +1,5 @@
 {
   "id": "aws2",
   "name": "aws2",
-  "version": "0.1.0",
-  "containerEnv": {
-    "PATH": "/opt/aws2/bin:$PATH"
-  }
+  "version": "0.1.0"
 }

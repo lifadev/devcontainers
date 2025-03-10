@@ -3,6 +3,9 @@
     "image": "debian:bookworm-20250224",
     "features": {
       "aws2": {}
+    },
+    "remoteEnv": {
+      "PATH": "/opt/bin:${containerEnv:PATH}"
     }
   }
 }

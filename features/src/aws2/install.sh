@@ -25,9 +25,8 @@ rm -rf /var/lib/apt/lists/*
 #---
 
 #? https://github.com/aws/aws-cli/tags
-#? sha256sum /tmp/package.zip
+#? sha256sum
 PACKAGE_VERSION=2.24.19
-
 case $ARCH in
 amd64)
   PACKAGE_URL="https://awscli.amazonaws.com/awscli-exe-linux-x86_64-$PACKAGE_VERSION.zip"
@@ -40,23 +39,21 @@ arm64)
 esac
 
 PACKAGE=/tmp/package.zip
-UNPACK_DIR=/tmp/aws2
-INSTALL_DIR=/opt/aws2
-INSTALL_DIR_BIN="$INSTALL_DIR/bin"
-
 curl -fLsS "$PACKAGE_URL" -o $PACKAGE
 echo "$PACKAGE_SUM $PACKAGE" | sha256sum -c
 
-unzip -q $PACKAGE -d $UNPACK_DIR
+BUILD_DIR=/tmp/package
+unzip -q $PACKAGE -d $BUILD_DIR
 rm -f $PACKAGE
 
-/tmp/aws2/aws/install -i $INSTALL_DIR -b $INSTALL_DIR_BIN
-rm -rf $UNPACK_DIR
+INSTALL_DIR=/opt/aws2
+$BUILD_DIR/aws/install -i $INSTALL_DIR -b /opt/bin
+rm -rf $BUILD_DIR
 
 #---
 
 mkdir -p /etc/bash_completion.d
 
 cat <<EOF >>/etc/bash_completion.d/aws2
-eval "\$(complete -C 'aws_completer' aws)"
+complete -C '/opt/bin/aws_completer' aws
 EOF
