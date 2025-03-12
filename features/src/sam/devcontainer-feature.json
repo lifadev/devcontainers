@@ -1,6 +1,5 @@
 {
   "id": "sam",
   "name": "sam",
-  "version": "0.1.0",
-  "installsAfter": ["ghcr.io/lifadev/devcontainers/features/aws2"]
+  "version": "0.1.0"
 }

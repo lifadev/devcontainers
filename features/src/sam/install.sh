@@ -24,9 +24,9 @@ rm -rf /var/lib/apt/lists/*
 
 #---
 
-#? https://github.com/aws/aws-sam-cli/releases
+#? https://github.com/aws/aws-sam-cli/tags
+#? plain text
 PACKAGE_VERSION=1.135.0
-
 case $ARCH in
 amd64)
   PACKAGE_URL="https://github.com/aws/aws-sam-cli/releases/download/v${PACKAGE_VERSION}/aws-sam-cli-linux-x86_64.zip"
