@@ -1,0 +1,26 @@
+[
+  {
+    "name": "node",
+    "version": "20.18.3",
+    "hint": "tags",
+    "repository": "github.com/nodejs/node",
+    "artifacts": [
+      {
+        "architecture": "amd64",
+        "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-x64.tar.xz",
+        "checksum": "595bcc9a28e6d1ee5fc7277b5c3cb029275b98ec0524e162a0c566c992a7ee5c"
+      },
+      {
+        "architecture": "arm64",
+        "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-arm64.tar.xz",
+        "checksum": "c03412ab9c0ed30468e4d03e56d2e35c5ae761a98deb16727c7af2fe5be34700"
+      }
+    ]
+  },
+  {
+    "name": "npm",
+    "version": "11.1.0",
+    "hint": "npm",
+    "repository": "github.com/npm/cli"
+  }
+]
