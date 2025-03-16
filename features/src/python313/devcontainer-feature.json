@@ -1,7 +1,7 @@
 {
   "id": "python313",
   "name": "python313",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "containerEnv": {
     "PATH": "/opt/python313/bin:$PATH",
     "PYTHONDONTWRITEBYTECODE": "1"
