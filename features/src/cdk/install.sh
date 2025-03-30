@@ -2,28 +2,14 @@
 
 set -eux
 
-if [ "$UID" -ne 0 ]; then
-  echo -e "(!) User must be root: $UID"
-  exit 1
-fi
+# shellcheck source=../../lib/install.sh
+source dev-container-features-install-lib
 
-ARCH="$(dpkg --print-architecture)"
-if [ "$ARCH" != 'amd64' ] && [ "$ARCH" != 'arm64' ]; then
-  echo "(!) Unsupported architecture: $ARCH"
-  exit 1
-fi
-
-#---
-
-#? https://www.npmjs.com/package/cdk?activeTab=versions
-npm install -g cdk@2.1001.0
-
-#---
-
-mkdir -p /etc/bash_completion.d
+npm install -g \
+  "cdk@$(dc_version cdk)"
 
 #? https://github.com/aws/aws-cdk/discussions/24380#discussioncomment-5158176
-cat <<EOF >>/etc/bash_completion.d/cdk
+dc_bash_complete cdk <<EOF
 _cdk_yargs_completions() {
   local cur_word args type_list
 
