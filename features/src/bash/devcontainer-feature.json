@@ -1,7 +1,7 @@
 {
   "id": "bash",
   "name": "bash",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "customizations": {
     "vscode": {
       "settings": {
