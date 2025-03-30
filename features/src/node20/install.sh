@@ -15,7 +15,7 @@ npm install -g "npm@$(dc_version npm)"
 
 # shellcheck disable=SC2119
 dc_bash_complete node20-npm <<EOF
-eval "\$($INSTALL_DIR/npm completion)"
+eval "\$($INSTALL_DIR/bin/npm completion)"
 EOF
 
 rm -f /tmp/package*
