@@ -88,6 +88,10 @@ dc_bash_config() {
   echo "$SCRIPT" >>"$TARGET/$PACKAGE"
 }
 
+dc_cleanup() {
+  rm -rf /tmp/package*
+}
+
 dc_install \
   ca-certificates \
   curl \

@@ -59,3 +59,5 @@ dc_install \
   wget \
   xz-utils \
   zip
+
+dc_cleanup

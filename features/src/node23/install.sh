@@ -18,4 +18,4 @@ dc_bash_complete node23-npm <<EOF
 eval "\$($INSTALL_DIR/bin/npm completion)"
 EOF
 
-rm -f /tmp/package*
+dc_cleanup

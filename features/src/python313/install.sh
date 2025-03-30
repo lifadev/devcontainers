@@ -71,7 +71,6 @@ mkdir -p "/usr/share/gdb/auto-load/$dir"
 cp -vL Tools/gdb/libpython.py "/usr/share/gdb/auto-load/$bin-gdb.py"
 
 cd -
-rm -rf "$BUILD_DIR"
 find "$INSTALL_DIR" -depth \
   \( \
   \( -type d -a \( -name test -o -name tests -o -name idle_test \) \) \
@@ -86,4 +85,4 @@ python3 -m pip install --upgrade \
   "setuptools==$(dc_version setuptools)" \
   "wheel==$(dc_version wheel)"
 
-rm -f /tmp/package*
+dc_cleanup

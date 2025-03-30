@@ -15,4 +15,4 @@ dc_bash_complete starship <<EOF
 eval "\$(starship init bash)"
 EOF
 
-rm -rf /tmp/package*
+dc_cleanup

@@ -29,4 +29,4 @@ if [ -d /etc/bashrc.d ]; then
 fi
 EOF
 
-rm -f /tmp/package*
+dc_cleanup

@@ -19,4 +19,4 @@ dc_bash_complete uvx <<EOF
 eval "\$(uvx --generate-shell-completion bash)"
 EOF
 
-rm -f /tmp/package*
+dc_cleanup

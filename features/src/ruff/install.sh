@@ -15,4 +15,4 @@ dc_bash_complete ruff <<EOF
 eval "\$(ruff generate-shell-completion bash)"
 EOF
 
-rm -f /tmp/package*
+dc_cleanup
