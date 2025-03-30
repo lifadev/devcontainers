@@ -1,0 +1,20 @@
+[
+  {
+    "name": "starship",
+    "version": "1.22.1",
+    "hint": "tags",
+    "repository": "github.com/starship/starship",
+    "artifacts": [
+      {
+        "architecture": "amd64",
+        "url": "https://github.com/starship/starship/releases/download/v${VERSION}/starship-x86_64-unknown-linux-gnu.tar.gz",
+        "checksum": "e57db6f6497ee8a426c5e77b4d6f5c50734d3e9cca7a18a8aef46730505a3ae7"
+      },
+      {
+        "architecture": "arm64",
+        "url": "https://github.com/starship/starship/releases/download/v${VERSION}/starship-aarch64-unknown-linux-musl.tar.gz",
+        "checksum": "b82edd21060f3ed112460442c48a3a9545c8dbf3b564154441f4e6b58eacc387"
+      }
+    ]
+  }
+]
