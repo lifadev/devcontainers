@@ -2,24 +2,13 @@
 
 set -eux
 
-if [ "$UID" -ne 0 ]; then
-  echo -e "(!) User must be root: $UID"
-  exit 1
-fi
+# shellcheck source=../../lib/install.sh
+source dev-container-features-install-lib
 
-ARCH="$(dpkg --print-architecture)"
-if [ "$ARCH" != 'amd64' ] && [ "$ARCH" != 'arm64' ]; then
-  echo "(!) Unsupported architecture: $ARCH"
-  exit 1
-fi
-
-#---
-
+export LANG="C.UTF-8"
 export DEBIAN_FRONTEND=noninteractive
 
-apt update --quiet
-apt upgrade --yes
-apt install --yes --no-install-recommends \
+dc_install \
   apt-transport-https \
   apt-utils \
   bash-completion \
@@ -70,4 +59,3 @@ apt install --yes --no-install-recommends \
   wget \
   xz-utils \
   zip
-rm -rf /var/lib/apt/lists/*
