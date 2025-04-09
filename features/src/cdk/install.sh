@@ -30,5 +30,3 @@ _cdk_yargs_completions() {
 }
 complete -o default -F _cdk_yargs_completions cdk
 EOF
-
-dc_cleanup

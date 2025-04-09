@@ -30,10 +30,12 @@ _dc_package() {
   local NAME=$1
 
   local PACKAGE
-  PACKAGE="$(jq -r \
-    --arg NAME "$NAME" \
-    '.[] | select(.name == $NAME)' \
-    "$(dirname "$0")/dependencies.json")"
+  PACKAGE=$(
+    jq -r \
+      --arg NAME "$NAME" \
+      '.customizations.manifest.dependencies[] | select(.name == $NAME)' \
+      "$(dirname "$0")/devcontainer-feature.json"
+  )
 
   local VERSION
   VERSION=$(jq -r '.version' <<<"$PACKAGE")
@@ -47,10 +49,12 @@ dc_download() {
   local OUTPUT=$2
 
   local ARTIFACT
-  ARTIFACT=$(jq -r \
-    --arg ARCH "$ARCH" \
-    '.artifacts[] | select(.architecture | IN($ARCH, "universal"))' \
-    <<<"$(_dc_package "$PACKAGE")")
+  ARTIFACT=$(
+    jq -r \
+      --arg ARCH "$ARCH" \
+      '.artifacts[] | select(.architecture | IN($ARCH, "universal"))' \
+      <<<"$(_dc_package "$PACKAGE")"
+  )
 
   local URL
   URL=$(jq -r '.url' <<<"$ARTIFACT")
@@ -91,6 +95,8 @@ dc_bash_config() {
 dc_cleanup() {
   rm -rf /tmp/package*
 }
+
+trap dc_cleanup EXIT HUP INT TERM
 
 dc_install \
   ca-certificates \

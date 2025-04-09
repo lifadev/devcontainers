@@ -12,5 +12,3 @@ if command -v python3 >/dev/null 2>&1; then
     "matplotlib==$(dc_version matplotlib)" \
     "numpy==$(dc_version numpy)"
 fi
-
-dc_cleanup

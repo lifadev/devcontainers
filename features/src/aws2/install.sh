@@ -18,5 +18,3 @@ $BUILD_DIR/aws/install -i $INSTALL_DIR -b $BIN_DIR
 dc_bash_complete aws2 <<EOF
 complete -C '$BIN_DIR/aws_completer' aws
 EOF
-
-dc_cleanup

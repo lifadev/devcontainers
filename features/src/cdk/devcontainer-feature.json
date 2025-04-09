@@ -8,5 +8,17 @@
   ],
   "containerEnv": {
     "JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION": "1"
+  },
+  "customizations": {
+    "manifest": {
+      "dependencies": [
+        {
+          "name": "cdk",
+          "version": "2.1001.0",
+          "hint": "tags/aws-cdk@v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
+          "repository": "github.com/aws/aws-cdk-cli"
+        }
+      ]
+    }
   }
 }

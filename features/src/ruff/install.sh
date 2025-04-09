@@ -14,5 +14,3 @@ tar -xzf $PACKAGE --strip-components 1 -C "$INSTALL_DIR"
 dc_bash_complete ruff <<EOF
 eval "\$(ruff generate-shell-completion bash)"
 EOF
-
-dc_cleanup

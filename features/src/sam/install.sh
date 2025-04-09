@@ -16,5 +16,3 @@ unzip $PACKAGE -d $BUILD_DIR
 BIN_DIR=/opt/bin
 INSTALL_DIR=/opt/sam
 $BUILD_DIR/install -i $INSTALL_DIR -b $BIN_DIR
-
-dc_cleanup

@@ -28,5 +28,3 @@ if [ -d /etc/bashrc.d ]; then
   unset i
 fi
 EOF
-
-dc_cleanup

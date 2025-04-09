@@ -1,8 +1,0 @@
-[
-  {
-    "name": "cdk",
-    "version": "2.1001.0",
-    "hint": "tags",
-    "repository": "github.com/aws/aws-cdk-cli"
-  }
-]

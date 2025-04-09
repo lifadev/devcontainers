@@ -84,5 +84,3 @@ python3 -m pip install --upgrade \
   "pip==$(dc_version pip)" \
   "setuptools==$(dc_version setuptools)" \
   "wheel==$(dc_version wheel)"
-
-dc_cleanup

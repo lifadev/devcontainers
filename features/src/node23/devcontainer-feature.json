@@ -4,5 +4,35 @@
   "version": "0.2.6",
   "containerEnv": {
     "PATH": "/opt/node23/bin:$PATH"
+  },
+  "customizations": {
+    "manifest": {
+      "dependencies": [
+        {
+          "name": "node",
+          "version": "23.9.0",
+          "hint": "tags/v?23\\.[0-9]+(\\.[0-9]+)?",
+          "repository": "github.com/nodejs/node",
+          "artifacts": [
+            {
+              "architecture": "amd64",
+              "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-x64.tar.xz",
+              "checksum": "0b4ece2aa678e6891b9abf6118d5393867ab07b3e31c8d8c4c34e97840fa8749"
+            },
+            {
+              "architecture": "arm64",
+              "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-arm64.tar.xz",
+              "checksum": "dc0d93c5e4ae41c8fe75b64399c4d1fe3c15e2bfa3f55f92f8697bb16397585b"
+            }
+          ]
+        },
+        {
+          "name": "npm",
+          "version": "11.1.0",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
+          "repository": "github.com/npm/cli"
+        }
+      ]
+    }
   }
 }

@@ -17,5 +17,3 @@ npm install -g "npm@$(dc_version npm)"
 dc_bash_complete node23-npm <<EOF
 eval "\$($INSTALL_DIR/bin/npm completion)"
 EOF
-
-dc_cleanup

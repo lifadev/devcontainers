@@ -6,6 +6,34 @@
   "customizations": {
     "vscode": {
       "extensions": ["ms-toolsai.jupyter"]
+    },
+    "manifest": {
+      "dependencies": [
+        {
+          "name": "ipykernel",
+          "version": "6.29.5",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
+          "repository": "github.com/ipython/ipykernel"
+        },
+        {
+          "name": "ipympl",
+          "version": "0.9.7",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
+          "repository": "github.com/matplotlib/ipympl"
+        },
+        {
+          "name": "matplotlib",
+          "version": "3.10.1",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
+          "repository": "github.com/matplotlib/matplotlib"
+        },
+        {
+          "name": "numpy",
+          "version": "2.2.3",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
+          "repository": "github.com/numpy/numpy"
+        }
+      ]
     }
   }
 }

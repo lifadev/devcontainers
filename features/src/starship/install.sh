@@ -14,5 +14,3 @@ tar -xzf $PACKAGE -C "$INSTALL_DIR"
 dc_bash_complete starship <<EOF
 eval "\$(starship init bash)"
 EOF
-
-dc_cleanup

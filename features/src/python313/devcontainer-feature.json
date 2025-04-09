@@ -9,6 +9,47 @@
   "customizations": {
     "vscode": {
       "extensions": ["ms-python.python"]
+    },
+    "manifest": {
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.13.2",
+          "hint": "tags/v?3\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
+          "repository": "github.com/python/cpython",
+          "artifacts": [
+            {
+              "architecture": "universal",
+              "url": "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz",
+              "checksum": "d984bcc57cd67caab26f7def42e523b1c015bbc5dc07836cf4f0b63fa159eb56"
+            }
+          ]
+        },
+        {
+          "name": "build",
+          "version": "1.2.2.post1",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
+          "repository": "github.com/pypa/build"
+        },
+        {
+          "name": "pip",
+          "version": "25.0.1",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
+          "repository": "github.com/pypa/pip"
+        },
+        {
+          "name": "setuptools",
+          "version": "75.8.2",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
+          "repository": "github.com/pypa/setuptools"
+        },
+        {
+          "name": "wheel",
+          "version": "0.45.1",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
+          "repository": "github.com/pypa/wheel"
+        }
+      ]
     }
   }
 }

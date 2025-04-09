@@ -19,5 +19,3 @@ useradd \
 
 echo "$USER_NAME" ALL=\(root\) NOPASSWD:ALL >"/etc/sudoers.d/$USER_NAME"
 chmod 0440 "/etc/sudoers.d/$USER_NAME"
-
-dc_cleanup

@@ -42,6 +42,7 @@ dc_install \
   moreutils \
   ncdu \
   openssh-client \
+  parallel \
   pkg-config \
   procps \
   psmisc \
@@ -59,5 +60,3 @@ dc_install \
   wget \
   xz-utils \
   zip
-
-dc_cleanup

@@ -18,5 +18,3 @@ EOF
 dc_bash_complete uvx <<EOF
 eval "\$(uvx --generate-shell-completion bash)"
 EOF
-
-dc_cleanup
