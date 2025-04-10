@@ -1,7 +1,7 @@
 {
   "id": "gh",
   "name": "gh",
-  "version": "2025-04-10",
+  "version": "0.1.0",
   "customizations": {
     "manifest": {
       "dependencies": [
