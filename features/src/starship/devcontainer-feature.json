@@ -1,7 +1,7 @@
 {
   "id": "starship",
   "name": "starship",
-  "version": "0.1.3",
+  "version": "2025.4.12",
   "customizations": {
     "manifest": {
       "dependencies": [
