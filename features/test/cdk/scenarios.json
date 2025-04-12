@@ -1,6 +1,6 @@
 {
   "node20": {
-    "image": "debian:bookworm-20250224",
+    "image": "debian:bookworm-20250407",
     "features": {
       "node20": {},
       "cdk": {}
@@ -8,7 +8,7 @@
     "overrideFeatureInstallOrder": ["./node20", "./cdk"]
   },
   "node23": {
-    "image": "debian:bookworm-20250224",
+    "image": "debian:bookworm-20250407",
     "features": {
       "node23": {},
       "cdk": {}

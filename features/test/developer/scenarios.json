@@ -1,6 +1,6 @@
 {
   "preserve_uid": {
-    "image": "debian:bookworm-20250224",
+    "image": "debian:bookworm-20250407",
     "features": {
       "developer": {}
     },
@@ -8,7 +8,7 @@
     "updateRemoteUserUID": false
   },
   "update_uid": {
-    "image": "debian:bookworm-20250224",
+    "image": "debian:bookworm-20250407",
     "features": {
       "developer": {}
     },
