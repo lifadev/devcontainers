@@ -1,7 +1,7 @@
 {
   "id": "node23",
   "name": "node23",
-  "version": "0.2.6",
+  "version": "2025.4.12",
   "containerEnv": {
     "PATH": "/opt/node23/bin:$PATH"
   },
@@ -10,25 +10,25 @@
       "dependencies": [
         {
           "name": "node",
-          "version": "23.9.0",
+          "version": "23.11.0",
           "hint": "tags/v?23\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/nodejs/node",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-x64.tar.xz",
-              "checksum": "0b4ece2aa678e6891b9abf6118d5393867ab07b3e31c8d8c4c34e97840fa8749"
+              "checksum": "fa9ae28d8796a6cfb7057397e1eea30ca1c61002b42b8897f354563a254e7cf5"
             },
             {
               "architecture": "arm64",
               "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-arm64.tar.xz",
-              "checksum": "dc0d93c5e4ae41c8fe75b64399c4d1fe3c15e2bfa3f55f92f8697bb16397585b"
+              "checksum": "85915f885fe7eab2be4a6e3de840cb83db4fc53749274d31383a0e1721a883c6"
             }
           ]
         },
         {
           "name": "npm",
-          "version": "11.1.0",
+          "version": "11.3.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/npm/cli"
         }
