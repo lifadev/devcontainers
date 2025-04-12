@@ -1,7 +1,7 @@
 {
   "id": "python313",
   "name": "python313",
-  "version": "0.2.4",
+  "version": "2025.4.12",
   "containerEnv": {
     "PATH": "/opt/python313/bin:$PATH",
     "PYTHONDONTWRITEBYTECODE": "1"
@@ -14,14 +14,14 @@
       "dependencies": [
         {
           "name": "python",
-          "version": "3.13.2",
+          "version": "3.13.3",
           "hint": "tags/v?3\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/python/cpython",
           "artifacts": [
             {
               "architecture": "universal",
               "url": "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz",
-              "checksum": "d984bcc57cd67caab26f7def42e523b1c015bbc5dc07836cf4f0b63fa159eb56"
+              "checksum": "40f868bcbdeb8149a3149580bb9bfd407b3321cd48f0be631af955ac92c0e041"
             }
           ]
         },
@@ -39,13 +39,13 @@
         },
         {
           "name": "setuptools",
-          "version": "75.8.2",
+          "version": "78.1.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/pypa/setuptools"
         },
         {
           "name": "wheel",
-          "version": "0.45.1",
+          "version": "0.46.1",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/pypa/wheel"
         }
