@@ -1,10 +1,10 @@
 {
   "id": "base",
   "name": "base",
-  "version": "0.2.3",
+  "version": "2025.4.12",
   "customizations": {
     "vscode": {
-      "extensions": ["EditorConfig.EditorConfig"]
+      "extensions": ["EditorConfig.EditorConfig", "tamasfe.even-better-toml"]
     }
   }
 }

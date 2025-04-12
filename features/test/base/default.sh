@@ -27,6 +27,7 @@ APPS=(
   make
   man
   ncdu
+  parallel
   ping
   ps
   pwgen
