@@ -1,0 +1,59 @@
+name: Update feature
+
+on:
+  workflow_dispatch:
+    inputs:
+      feature: { type: string, required: true }
+
+jobs:
+  test:
+    name: Update
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Install requirements
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install moreutils parallel uuid
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Update feature
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FEATURE: ${{ inputs.feature }}
+        run: |
+          set -euo pipefail
+
+          git checkout -b "$FEATURE/$(uuid -v4 | cut -d- -f2)"
+
+          bash ./features/bin/update.sh "$FEATURE"
+          npx -y prettier -w "features/src/$FEATURE"
+
+          if git diff --quiet && git diff --cached --quiet; then
+            exit 0
+          fi
+
+          git commit -am "feature/$FEATURE: update dependencies"
+          git push -u origin HEAD
+
+      - name: Create pull request
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN }}
+          FEATURE: ${{ inputs.feature }}
+        run: |
+          gh pr create \
+            --title "feature/$FEATURE: update dependencies" --body "" \
+            --base main
