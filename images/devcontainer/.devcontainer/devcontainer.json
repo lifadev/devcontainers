@@ -1,11 +1,11 @@
 {
-  "image": "debian:bookworm-20250224",
+  "image": "debian:bookworm-20250407",
   "features": {
-    "ghcr.io/lifadev/devcontainers/features/base:0": {},
-    "ghcr.io/lifadev/devcontainers/features/bash:0": {},
-    "ghcr.io/lifadev/devcontainers/features/developer:0": {},
-    "ghcr.io/lifadev/devcontainers/features/node23:0": {},
-    "ghcr.io/lifadev/devcontainers/features/starship:0": {}
+    "ghcr.io/lifadev/devcontainers/features/base": {},
+    "ghcr.io/lifadev/devcontainers/features/developer": {},
+    "ghcr.io/lifadev/devcontainers/features/starship:2025": {},
+    "ghcr.io/lifadev/devcontainers/features/bash": {},
+    "ghcr.io/lifadev/devcontainers/features/node23": {}
   },
   "remoteUser": "developer",
   "updateRemoteUserUID": true,
@@ -13,10 +13,6 @@
     "PATH": "/opt/bin:${containerEnv:PATH}"
   },
   "customizations": {
-    "manifest": {
-      "name": "devcontainer",
-      "version": "0.3.6"
-    },
     "vscode": {
       "settings": {
         "extensions.ignoreRecommendations": true,
@@ -26,8 +22,11 @@
             "url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"
           }
         ]
-      },
-      "extensions": []
+      }
+    },
+    "manifest": {
+      "name": "devcontainer",
+      "version": "2025.4.12"
     }
   }
 }
