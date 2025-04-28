@@ -1,25 +1,25 @@
 {
   "id": "starship",
   "name": "starship",
-  "version": "2025.4.12",
+  "version": "2025.4.28",
   "customizations": {
     "manifest": {
       "dependencies": [
         {
           "name": "starship",
-          "version": "1.22.1",
+          "version": "1.23.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/starship/starship",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/starship/starship/releases/download/v${VERSION}/starship-x86_64-unknown-linux-gnu.tar.gz",
-              "checksum": "e57db6f6497ee8a426c5e77b4d6f5c50734d3e9cca7a18a8aef46730505a3ae7"
+              "checksum": "cef41df04378c6f692913c5d9c1032d3b9a4369a1d2f3296c8300ed8838c2197"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/starship/starship/releases/download/v${VERSION}/starship-aarch64-unknown-linux-musl.tar.gz",
-              "checksum": "b82edd21060f3ed112460442c48a3a9545c8dbf3b564154441f4e6b58eacc387"
+              "checksum": "d37040138c68b5f3334bbe16d4615f0a83829deebecc5d014e779c302e8270d8"
             }
           ]
         }
