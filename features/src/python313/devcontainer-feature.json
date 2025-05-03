@@ -1,7 +1,7 @@
 {
   "id": "python313",
   "name": "python313",
-  "version": "2025.5.1",
+  "version": "2025.5.3",
   "containerEnv": {
     "PATH": "/opt/python313/bin:$PATH",
     "PYTHONDONTWRITEBYTECODE": "1"
@@ -33,7 +33,7 @@
         },
         {
           "name": "pip",
-          "version": "25.1",
+          "version": "25.1.1",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/pypa/pip"
         },
