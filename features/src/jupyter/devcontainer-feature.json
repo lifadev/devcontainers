@@ -1,7 +1,7 @@
 {
   "id": "jupyter",
   "name": "jupyter",
-  "version": "2025.4.20",
+  "version": "2025.5.9",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/python313"],
   "customizations": {
     "vscode": {
@@ -23,7 +23,7 @@
         },
         {
           "name": "matplotlib",
-          "version": "3.10.1",
+          "version": "3.10.3",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/matplotlib/matplotlib"
         },
