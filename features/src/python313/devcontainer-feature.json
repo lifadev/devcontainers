@@ -1,7 +1,7 @@
 {
   "id": "python313",
   "name": "python313",
-  "version": "2025.5.10",
+  "version": "2025.5.15",
   "containerEnv": {
     "PATH": "/opt/python313/bin:$PATH",
     "PYTHONDONTWRITEBYTECODE": "1"
@@ -39,7 +39,7 @@
         },
         {
           "name": "setuptools",
-          "version": "80.4.0",
+          "version": "80.7.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/pypa/setuptools"
         },
