@@ -1,7 +1,7 @@
 {
   "id": "jupyter",
   "name": "jupyter",
-  "version": "2025.5.9",
+  "version": "2025.5.18",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/python313"],
   "customizations": {
     "vscode": {
@@ -29,7 +29,7 @@
         },
         {
           "name": "numpy",
-          "version": "2.2.5",
+          "version": "2.2.6",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/numpy/numpy"
         }
