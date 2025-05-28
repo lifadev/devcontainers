@@ -8,12 +8,12 @@ source dev-container-features-install-lib
 PACKAGE=/tmp/package.tar.xz
 dc_download node $PACKAGE
 
-INSTALL_DIR=$(dc_mkdir /opt/node23)
+INSTALL_DIR=$(dc_mkdir /opt/node24)
 tar -xJf $PACKAGE --strip-components 1 -C "$INSTALL_DIR"
 
 npm install -g "npm@$(dc_version npm)"
 
 # shellcheck disable=SC2119
-dc_bash_complete node23-npm <<EOF
+dc_bash_complete node24-npm <<EOF
 eval "\$($INSTALL_DIR/bin/npm completion)"
 EOF

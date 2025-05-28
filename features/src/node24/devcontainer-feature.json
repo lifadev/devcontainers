@@ -1,28 +1,28 @@
 {
-  "id": "node23",
-  "name": "node23",
-  "version": "2025.5.23",
+  "id": "node24",
+  "name": "node24",
+  "version": "2025.5.28",
   "containerEnv": {
-    "PATH": "/opt/node23/bin:$PATH"
+    "PATH": "/opt/node24/bin:$PATH"
   },
   "customizations": {
     "manifest": {
       "dependencies": [
         {
           "name": "node",
-          "version": "23.11.1",
-          "hint": "tags/v?23\\.[0-9]+(\\.[0-9]+)?",
+          "version": "24.1.0",
+          "hint": "tags/v?24\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/nodejs/node",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-x64.tar.xz",
-              "checksum": "64220ef391e74bb8feafe51a17764eff908f0cfd7f6c2c184fe8361fb8520a44"
+              "checksum": "76b77c43f97a7c4cf60917e24c5e212faaf8ca664e433759ef98d12f268b6b49"
             },
             {
               "architecture": "arm64",
               "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-arm64.tar.xz",
-              "checksum": "3a0297c7f177d0fc06ea35c71909fbca6cdd891074c265a432c84971ebad4f7b"
+              "checksum": "ff5a3a68781794a473f59a727f35314723785eff6f48aaf983361fadf0eadf36"
             }
           ]
         },

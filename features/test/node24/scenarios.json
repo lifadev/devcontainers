@@ -2,7 +2,7 @@
   "default": {
     "image": "debian:bookworm-20250520",
     "features": {
-      "node23": {}
+      "node24": {}
     }
   }
 }
