@@ -41,7 +41,7 @@ jobs:
           images = list(set([
             g["image"]
             for c in changes
-            if (g := re.search("^images/(?P<image>[^/]+)/", c))
+            if (g := re.search("^images/src/(?P<image>[^/]+)/", c))
           ]))
 
           print(f"images={json.dumps(images)}")

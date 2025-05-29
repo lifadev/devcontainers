@@ -30,7 +30,7 @@ jobs:
           from os import environ as env
           from pathlib import Path
 
-          image = Path("images") / env["IMAGE"]
+          image = Path("images") / "src" / env["IMAGE"]
           config = json.loads((image / ".devcontainer" / "devcontainer.json").read_text())
           manifest = config["customizations"]["manifest"]
           name, version = manifest["name"], manifest["version"]
@@ -126,7 +126,7 @@ jobs:
 
           npx -y @devcontainers/cli build \
             --experimental-lockfile \
-            --workspace-folder ./images/$IMAGE \
+            --workspace-folder ./images/src/$IMAGE \
             --image-name "$REGISTRY/$NAMESPACE/$IMAGE:$VERSION-$ARCH" \
             --cache-from "$REGISTRY/$NAMESPACE/$IMAGE:latest" \
             --cache-from "$REGISTRY/$NAMESPACE/$IMAGE:$MAJOR" \
