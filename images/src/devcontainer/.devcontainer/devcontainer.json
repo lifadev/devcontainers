@@ -1,5 +1,5 @@
 {
-  "image": "debian:bookworm-20250407",
+  "image": "debian:bookworm-20250520",
   "features": {
     "ghcr.io/lifadev/devcontainers/features/bash": {},
     "ghcr.io/lifadev/devcontainers/features/starship": {},
@@ -28,7 +28,7 @@
     },
     "manifest": {
       "name": "devcontainer",
-      "version": "2025.5.29"
+      "version": "2025.5.29-1"
     }
   }
 }
