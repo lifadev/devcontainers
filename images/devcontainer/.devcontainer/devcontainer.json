@@ -3,9 +3,13 @@
   "features": {
     "ghcr.io/lifadev/devcontainers/features/base": {},
     "ghcr.io/lifadev/devcontainers/features/developer": {},
-    "ghcr.io/lifadev/devcontainers/features/starship:2025": {},
     "ghcr.io/lifadev/devcontainers/features/bash": {},
-    "ghcr.io/lifadev/devcontainers/features/node23": {}
+    "ghcr.io/lifadev/devcontainers/features/starship": {},
+    "ghcr.io/lifadev/devcontainers/features/gh": {},
+    "ghcr.io/lifadev/devcontainers/features/node24": {},
+    "ghcr.io/lifadev/devcontainers/features/python313": {},
+    "ghcr.io/lifadev/devcontainers/features/ruff": {},
+    "ghcr.io/lifadev/devcontainers/features/uv": {}
   },
   "remoteUser": "developer",
   "updateRemoteUserUID": true,
