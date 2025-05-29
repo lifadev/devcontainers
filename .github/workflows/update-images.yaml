@@ -1,0 +1,65 @@
+name: Update images
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "25 2 * * *" # at 02:25 UTC
+
+jobs:
+  setup:
+    name: Setup
+
+    permissions:
+      contents: read
+
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Load config
+        id: config
+        run: |
+          python3 <<EOF >> $GITHUB_OUTPUT
+
+          import json
+          from pathlib import Path
+
+          images = [
+            image.name
+            for image in Path("images").iterdir()
+            if image.is_dir() and (image / ".devcontainer").is_dir()
+          ]
+
+          print(f"images={json.dumps(images)}")
+          EOF
+
+    outputs:
+      images: ${{ steps.config.outputs.images }}
+
+  update:
+    name: Update image
+    needs: setup
+    if: ${{ needs.setup.outputs.images != '' && toJson(fromJson(needs.setup.outputs.images)) != '[]' }}
+
+    strategy:
+      matrix:
+        image: ${{ fromJSON(needs.setup.outputs.images) }}
+
+    uses: ./.github/workflows/update-image.yaml
+    with:
+      image: ${{ matrix.image }}
+    secrets:
+      token: ${{ secrets.token }}
+
+  done:
+    name: Update images
+    needs: update
+
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: No op
+        run: exit 0
