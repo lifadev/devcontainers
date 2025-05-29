@@ -18,7 +18,9 @@
         "extensions.ignoreRecommendations": true,
         "json.schemas": [
           {
-            "fileMatch": ["*/devcontainer-feature.json"],
+            "fileMatch": [
+              "*/devcontainer-feature.json"
+            ],
             "url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"
           }
         ]
@@ -26,7 +28,7 @@
     },
     "manifest": {
       "name": "devcontainer",
-      "version": "2025.4.12"
+      "version": "2025.5.29"
     }
   }
 }
