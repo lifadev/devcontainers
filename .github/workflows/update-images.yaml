@@ -1,9 +1,9 @@
-name: Release images
+name: Update images
 
 on:
-  pull_request:
-    types: [closed]
-    paths: ["images/src/**"]
+  workflow_dispatch:
+  schedule:
+    - cron: "25 2 * * *" # at 02:25 UTC
 
 jobs:
   setup:
@@ -39,14 +39,27 @@ jobs:
     outputs:
       images: ${{ steps.config.outputs.images }}
 
-  release:
-    name: Release
+  update:
+    name: Update image
     needs: setup
+    if: ${{ needs.setup.outputs.images != '' && toJson(fromJson(needs.setup.outputs.images)) != '[]' }}
 
     strategy:
       matrix:
         image: ${{ fromJSON(needs.setup.outputs.images) }}
 
-    uses: ./.github/workflows/release-image.yaml
+    uses: ./.github/workflows/update-image.yaml
     with:
       image: ${{ matrix.image }}
+    secrets:
+      token: ${{ secrets.token }}
+
+  done:
+    name: Update images
+    needs: update
+
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: No op
+        run: exit 0
