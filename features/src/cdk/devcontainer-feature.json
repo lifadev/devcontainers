@@ -4,7 +4,7 @@
   "version": "2025.5.29",
   "installsAfter": [
     "ghcr.io/lifadev/devcontainers/features/node20",
-    "ghcr.io/lifadev/devcontainers/features/node23"
+    "ghcr.io/lifadev/devcontainers/features/node24"
   ],
   "containerEnv": {
     "JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION": "1"
