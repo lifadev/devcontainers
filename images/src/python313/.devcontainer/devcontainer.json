@@ -17,7 +17,7 @@
   "customizations": {
     "manifest": {
       "name": "python313",
-      "version": "2025.5.30"
+      "version": "2025.5.31"
     }
   }
 }
