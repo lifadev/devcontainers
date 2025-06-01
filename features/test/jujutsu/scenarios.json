@@ -1,0 +1,11 @@
+{
+  "default": {
+    "image": "debian:bookworm-20250520",
+    "features": {
+      "jujutsu": {}
+    },
+    "remoteEnv": {
+      "PATH": "/opt/bin:${containerEnv:PATH}"
+    }
+  }
+}

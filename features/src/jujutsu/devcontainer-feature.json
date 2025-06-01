@@ -1,0 +1,32 @@
+{
+  "id": "jujutsu",
+  "name": "jujutsu",
+  "version": "2025.6.1",
+  "customizations": {
+    "vscode": {
+      "extensions": ["jjk.jjk"]
+    },
+    "manifest": {
+      "dependencies": [
+        {
+          "name": "jujutsu",
+          "version": "0.29.0",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
+          "repository": "github.com/jj-vcs/jj",
+          "artifacts": [
+            {
+              "architecture": "amd64",
+              "url": "https://github.com/jj-vcs/jj/releases/download/v${VERSION}/jj-v${VERSION}-x86_64-unknown-linux-musl.tar.gz",
+              "checksum": "0b2d7ca5f77ec6b109fc5b6f9328c8d764825d3976f874c99236481f5461a8a3"
+            },
+            {
+              "architecture": "arm64",
+              "url": "https://github.com/jj-vcs/jj/releases/download/v${VERSION}/jj-v${VERSION}-aarch64-unknown-linux-musl.tar.gz",
+              "checksum": "4974ea98fcaaf9a546560b38c4cfbc6f04c6ac660c09d4f878e28d64131eebcf"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
