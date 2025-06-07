@@ -1,0 +1,48 @@
+{
+  "id": "rust",
+  "name": "rust",
+  "version": "2025.6.7",
+  "containerEnv": {
+    "PATH": "/opt/rust/bin:$PATH"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["rust-lang.rust-analyzer"]
+    },
+    "manifest": {
+      "dependencies": [
+        {
+          "name": "rust",
+          "version": "1.87.0",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
+          "repository": "github.com/rust-lang/rust",
+          "artifacts": [
+            {
+              "architecture": "amd64",
+              "url": "https://static.rust-lang.org/dist/rust-${VERSION}-x86_64-unknown-linux-gnu.tar.xz",
+              "checksum": "9720bf4ffdd5e6112f8fc93a645d50bfdc64f95cb76d41561be196e1721b4b69"
+            },
+            {
+              "architecture": "arm64",
+              "url": "https://static.rust-lang.org/dist/rust-${VERSION}-aarch64-unknown-linux-gnu.tar.xz",
+              "checksum": "0bd04d32129f03465c1d2cae66f99d8c1c6d33c070b0e19b80a66b2b31ae6b9e"
+            }
+          ]
+        },
+        {
+          "name": "rust-src",
+          "version": "1.87.0",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
+          "repository": "github.com/rust-lang/rust",
+          "artifacts": [
+            {
+              "architecture": "universal",
+              "url": "https://github.com/rust-lang/rust/archive/refs/tags/${VERSION}.tar.gz",
+              "checksum": "dffb7e7bdffbb8f31e61737e987b9579fafc6b1a8fc04d3cb8a278707a4a1ea0"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
