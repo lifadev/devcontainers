@@ -1,7 +1,7 @@
 {
   "id": "node24",
   "name": "node24",
-  "version": "2025.5.28",
+  "version": "2025.6.9",
   "containerEnv": {
     "PATH": "/opt/node24/bin:$PATH"
   },
@@ -10,19 +10,19 @@
       "dependencies": [
         {
           "name": "node",
-          "version": "24.1.0",
+          "version": "24.2.0",
           "hint": "tags/v?24\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/nodejs/node",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-x64.tar.xz",
-              "checksum": "76b77c43f97a7c4cf60917e24c5e212faaf8ca664e433759ef98d12f268b6b49"
+              "checksum": "91a0794f4dbc94bc4a9296139ed9101de21234982bae2b325e37ebd3462273e5"
             },
             {
               "architecture": "arm64",
               "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-arm64.tar.xz",
-              "checksum": "ff5a3a68781794a473f59a727f35314723785eff6f48aaf983361fadf0eadf36"
+              "checksum": "cd4f25d2f05d0750159a209915267af6f9970ade4702a8810641120404bf54ee"
             }
           ]
         },
