@@ -16,9 +16,9 @@
       "integrity": "sha256:9e38d3ced665510ec1315decd4225b8e60a2c5e2cd91702be953f5b7fc9614eb"
     },
     "ghcr.io/lifadev/devcontainers/features/python313": {
-      "version": "2025.6.3",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/python313@sha256:3c4fb4656370c4db40fceb647816d96131bce2a0f86f9bb151b442416ad1112a",
-      "integrity": "sha256:3c4fb4656370c4db40fceb647816d96131bce2a0f86f9bb151b442416ad1112a"
+      "version": "2025.6.11",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/python313@sha256:0a6eb62fae191086d3fe7a72c035eca302103030d103231d41afebecbd10f013",
+      "integrity": "sha256:0a6eb62fae191086d3fe7a72c035eca302103030d103231d41afebecbd10f013"
     },
     "ghcr.io/lifadev/devcontainers/features/ruff": {
       "version": "2025.6.5",
