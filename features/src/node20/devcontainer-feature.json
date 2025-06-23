@@ -1,7 +1,7 @@
 {
   "id": "node20",
   "name": "node20",
-  "version": "2025.6.12",
+  "version": "2025.6.23",
   "containerEnv": {
     "PATH": "/opt/node20/bin:$PATH"
   },
@@ -10,19 +10,19 @@
       "dependencies": [
         {
           "name": "node",
-          "version": "20.19.2",
+          "version": "20.19.3",
           "hint": "tags/v?20\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/nodejs/node",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-x64.tar.xz",
-              "checksum": "cbe59620b21732313774df4428586f7222a84af29e556f848abf624ba41caf90"
+              "checksum": "c210e1a547efad55e93af1e04fb80d2f7131b13872f2de4e9ebdfecb8e06caad"
             },
             {
               "architecture": "arm64",
               "url": "https://nodejs.org/dist/v${VERSION}/node-v${VERSION}-linux-arm64.tar.xz",
-              "checksum": "0d0c4a1c3a5aa657b76873eaa962936c7dc7a45047bd3957322544967713dc72"
+              "checksum": "72a3036618fb47d8aaa3050477d9577747a9e550c39be46b53202a3b3e797e83"
             }
           ]
         },
