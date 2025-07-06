@@ -1,7 +1,7 @@
 {
   "id": "bash",
   "name": "bash",
-  "version": "2025.4.12",
+  "version": "2025.7.6",
   "customizations": {
     "vscode": {
       "settings": {
@@ -40,19 +40,19 @@
         },
         {
           "name": "shfmt",
-          "version": "3.11.0",
+          "version": "3.12.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/mvdan/sh",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/mvdan/sh/releases/download/v${VERSION}/shfmt_v${VERSION}_linux_amd64",
-              "checksum": "1904ec6bac715c1d05cd7f6612eec8f67a625c3749cb327e5bfb4127d09035ff"
+              "checksum": "d9fbb2a9c33d13f47e7618cf362a914d029d02a6df124064fff04fd688a745ea"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/mvdan/sh/releases/download/v${VERSION}/shfmt_v${VERSION}_linux_arm64",
-              "checksum": "b3976121710fd4b12bf641b0a7fb2686da598fb0da9f148c641b61b54cfa3407"
+              "checksum": "5f3fe3fa6a9f766e6a182ba79a94bef8afedafc57db0b1ad32b0f67fae971ba4"
             }
           ]
         }
