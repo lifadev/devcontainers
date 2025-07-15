@@ -31,9 +31,9 @@
       "integrity": "sha256:6566b0d9b94bb0567ea6022624f34f07b850fdbd97b29f45d6e0e44c5a969fef"
     },
     "ghcr.io/lifadev/devcontainers/features/uv": {
-      "version": "2025.7.9",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:4bd3a9333dc75623a29d1c0bdd9a839e89e47a02a9b2f20da4a02d8e87179a3e",
-      "integrity": "sha256:4bd3a9333dc75623a29d1c0bdd9a839e89e47a02a9b2f20da4a02d8e87179a3e"
+      "version": "2025.7.14",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:329b016b555808b1f267e88cefe4c68c31bb20a7b25a838a6c01e3796af9c226",
+      "integrity": "sha256:329b016b555808b1f267e88cefe4c68c31bb20a7b25a838a6c01e3796af9c226"
     }
   }
 }
