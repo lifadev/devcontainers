@@ -1,7 +1,7 @@
 {
   "id": "cdk",
   "name": "cdk",
-  "version": "2025.7.3",
+  "version": "2025.7.16",
   "installsAfter": [
     "ghcr.io/lifadev/devcontainers/features/node20",
     "ghcr.io/lifadev/devcontainers/features/node24"
@@ -14,7 +14,7 @@
       "dependencies": [
         {
           "name": "cdk",
-          "version": "2.1020.2",
+          "version": "2.1021.0",
           "hint": "tags/aws-cdk@v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/aws/aws-cdk-cli"
         }
