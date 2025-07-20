@@ -3,6 +3,7 @@
 FEATURE="$1"
 SCRIPTDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 CONFIG=$SCRIPTDIR/../src/$FEATURE/devcontainer-feature.json
+SCENARIOS=$SCRIPTDIR/../test/$FEATURE/scenarios.json
 
 DEBUG=${DEBUG:-0}
 export DEBUG
@@ -24,6 +25,21 @@ die() {
   exit 1
 }
 export -f die
+
+update_image() {
+  CURRENT=$(grep -Poh 'debian:[^"]+' "$SCENARIOS" | uniq)
+  LATEST=$(
+    curl -fLsS "https://hub.docker.com/v2/repositories/library/debian" |
+      grep -Poh "\[[^\]]+\`latest\`\]" |
+      sed 's/`/"/g' | jq -r '"debian:" + .[1]'
+  )
+  if [ "$CURRENT" != "$LATEST" ]; then
+    echo "🐳 $CURRENT -> $LATEST"
+    sed -i -e "s/$CURRENT/$LATEST/g" "$SCENARIOS"
+  else
+    echo "🐳 $CURRENT"
+  fi
+}
 
 update_artifact() {
   set -eu
@@ -152,6 +168,8 @@ update_dependency() {
   echo "✅ $REPO: $LATEST"
 }
 export -f update_dependency
+
+update_image
 
 i=0
 INDEX=$TMPDIR/dependencies
