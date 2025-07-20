@@ -1,6 +1,6 @@
 {
   "python313": {
-    "image": "debian:bookworm-20250520",
+    "image": "debian:bookworm-20250630",
     "features": {
       "python313": {},
       "jupyter": {}
