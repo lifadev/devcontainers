@@ -1,7 +1,7 @@
 {
   "id": "jupyter",
   "name": "jupyter",
-  "version": "2025.6.21",
+  "version": "2025.7.21",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/python313"],
   "customizations": {
     "vscode": {
@@ -11,7 +11,7 @@
       "dependencies": [
         {
           "name": "ipykernel",
-          "version": "6.29.5",
+          "version": "6.30.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/ipython/ipykernel"
         },
