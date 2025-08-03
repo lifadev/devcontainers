@@ -1,5 +1,5 @@
 {
-  "image": "ghcr.io/lifadev/devcontainers/devcontainer:2025.7.25",
+  "image": "ghcr.io/lifadev/devcontainers/devcontainer:2025.8.2",
   "workspaceFolder": "/workspace",
   "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/workspace,consistency=cached"
 }
