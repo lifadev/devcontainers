@@ -11,14 +11,14 @@
       "integrity": "sha256:9fdc2762f0e4da0b0038f25e6a6b70c3e643d164002f90ba0957deb0c975330f"
     },
     "ghcr.io/lifadev/devcontainers/features/jupyter": {
-      "version": "2025.7.31",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/jupyter@sha256:2c4016f8f0b7c1b1236f7289e91d94100f937af7bf6f778288f8818b2ae04530",
-      "integrity": "sha256:2c4016f8f0b7c1b1236f7289e91d94100f937af7bf6f778288f8818b2ae04530"
+      "version": "2025.8.5",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/jupyter@sha256:cbe1dea75d7b063a5ab0cf155e3462c72bdea93d84df5f245d2a0231b514799b",
+      "integrity": "sha256:cbe1dea75d7b063a5ab0cf155e3462c72bdea93d84df5f245d2a0231b514799b"
     },
     "ghcr.io/lifadev/devcontainers/features/python313": {
-      "version": "2025.8.2",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/python313@sha256:b1188d65834023e799ea4787d64f9c73ff15728127bdcc9e4514a49a42a7b326",
-      "integrity": "sha256:b1188d65834023e799ea4787d64f9c73ff15728127bdcc9e4514a49a42a7b326"
+      "version": "2025.8.6",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/python313@sha256:21412cba26a595f8d7f7bede66151b631e98af868cf09c8a66499615691aead2",
+      "integrity": "sha256:21412cba26a595f8d7f7bede66151b631e98af868cf09c8a66499615691aead2"
     },
     "ghcr.io/lifadev/devcontainers/features/ruff": {
       "version": "2025.7.31",
@@ -31,9 +31,9 @@
       "integrity": "sha256:6566b0d9b94bb0567ea6022624f34f07b850fdbd97b29f45d6e0e44c5a969fef"
     },
     "ghcr.io/lifadev/devcontainers/features/uv": {
-      "version": "2025.7.31",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:03006b9d510f98f2629496364d798bac9d4c9fc22979c55112ca48a602b20978",
-      "integrity": "sha256:03006b9d510f98f2629496364d798bac9d4c9fc22979c55112ca48a602b20978"
+      "version": "2025.8.5",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:413e189a6683723ea4e479f9adcf68bf745f29add521025a33ab7f0de5eca637",
+      "integrity": "sha256:413e189a6683723ea4e479f9adcf68bf745f29add521025a33ab7f0de5eca637"
     }
   }
 }
