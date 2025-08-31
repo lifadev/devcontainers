@@ -11,9 +11,9 @@
       "integrity": "sha256:9fdc2762f0e4da0b0038f25e6a6b70c3e643d164002f90ba0957deb0c975330f"
     },
     "ghcr.io/lifadev/devcontainers/features/jupyter": {
-      "version": "2025.8.5",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/jupyter@sha256:cbe1dea75d7b063a5ab0cf155e3462c72bdea93d84df5f245d2a0231b514799b",
-      "integrity": "sha256:cbe1dea75d7b063a5ab0cf155e3462c72bdea93d84df5f245d2a0231b514799b"
+      "version": "2025.8.30",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/jupyter@sha256:4cd2446b6dad5436671e1b03a47a15eb34ca983cb5a2db797a4f2ae1062beb0d",
+      "integrity": "sha256:4cd2446b6dad5436671e1b03a47a15eb34ca983cb5a2db797a4f2ae1062beb0d"
     },
     "ghcr.io/lifadev/devcontainers/features/python313": {
       "version": "2025.8.14",
