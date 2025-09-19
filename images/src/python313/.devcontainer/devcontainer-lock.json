@@ -21,9 +21,9 @@
       "integrity": "sha256:bf6210eb11e595be342554ddfebe26ecd1d9f3eccdaa98b1bb7b0953f7c4419a"
     },
     "ghcr.io/lifadev/devcontainers/features/ruff": {
-      "version": "2025.9.10",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:1de24fb505b564ae12dd873ca435a4678c50d137f68efcddc466f6b6044f6fa0",
-      "integrity": "sha256:1de24fb505b564ae12dd873ca435a4678c50d137f68efcddc466f6b6044f6fa0"
+      "version": "2025.9.18",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:b15447d2ec9e7938096da445e519e78597d870d87bba80de7ba590da15b6258f",
+      "integrity": "sha256:b15447d2ec9e7938096da445e519e78597d870d87bba80de7ba590da15b6258f"
     },
     "ghcr.io/lifadev/devcontainers/features/starship": {
       "version": "2025.4.28",
