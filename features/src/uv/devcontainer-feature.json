@@ -1,25 +1,25 @@
 {
   "id": "uv",
   "name": "uv",
-  "version": "2025.9.17",
+  "version": "2025.9.19",
   "customizations": {
     "manifest": {
       "dependencies": [
         {
           "name": "uv",
-          "version": "0.8.18",
+          "version": "0.8.19",
           "hint": "releases/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/astral-sh/uv",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/astral-sh/uv/releases/download/${VERSION}/uv-x86_64-unknown-linux-gnu.tar.gz",
-              "checksum": "59ad1a1809fa47019b86cf339fff161cb7b00ad3d8d42354eea57d0d91aeb44c"
+              "checksum": "cfc674e9b83d1becfca4d70386e5f7ace4c1fa8c47c518abeebb8ef2b30da4b8"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/astral-sh/uv/releases/download/${VERSION}/uv-aarch64-unknown-linux-gnu.tar.gz",
-              "checksum": "164363f88618f4e8e175faf9fcf5172321c221fce93d64cec8e9ab3339511dad"
+              "checksum": "ffd29feed13cdd30b27def8e80e64223325fbe4f7cfc4d4c906ec2531f746bde"
             }
           ]
         }
