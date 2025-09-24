@@ -1,7 +1,7 @@
 {
   "id": "node24",
   "name": "node24",
-  "version": "2025.9.10",
+  "version": "2025.9.24",
   "containerEnv": {
     "PATH": "/opt/node24/bin:$PATH"
   },
@@ -28,7 +28,7 @@
         },
         {
           "name": "npm",
-          "version": "11.6.0",
+          "version": "11.6.1",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/npm/cli"
         }
