@@ -1,7 +1,7 @@
 {
   "id": "node20",
   "name": "node20",
-  "version": "2025.9.3",
+  "version": "2025.9.24",
   "containerEnv": {
     "PATH": "/opt/node20/bin:$PATH"
   },
@@ -28,7 +28,7 @@
         },
         {
           "name": "npm",
-          "version": "11.6.0",
+          "version": "11.6.1",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/npm/cli"
         }
