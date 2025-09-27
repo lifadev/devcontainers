@@ -1,0 +1,11 @@
+{
+  "default": {
+    "image": "debian:trixie-20250908",
+    "features": {
+      "cloudflared": {}
+    },
+    "remoteEnv": {
+      "PATH": "/opt/bin:${containerEnv:PATH}"
+    }
+  }
+}
