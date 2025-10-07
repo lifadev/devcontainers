@@ -1,7 +1,7 @@
 {
   "id": "go",
   "name": "go",
-  "version": "2025.9.3",
+  "version": "2025.10.7",
   "containerEnv": {
     "PATH": "/opt/go/bin:$PATH"
   },
@@ -16,19 +16,19 @@
       "dependencies": [
         {
           "name": "go",
-          "version": "1.25.1",
+          "version": "1.25.2",
           "hint": "tags/gov?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/golang/go",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://go.dev/dl/go${VERSION}.linux-amd64.tar.gz",
-              "checksum": "7716a0d940a0f6ae8e1f3b3f4f36299dc53e31b16840dbd171254312c41ca12e"
+              "checksum": "d7fa7f8fbd16263aa2501d681b11f972a5fd8e811f7b10cb9b26d031a3d7454b"
             },
             {
               "architecture": "arm64",
               "url": "https://go.dev/dl/go${VERSION}.linux-arm64.tar.gz",
-              "checksum": "65a3e34fb2126f55b34e1edfc709121660e1be2dee6bdf405fc399a63a95a87d"
+              "checksum": "9aaeb044bf8dbf50ca2fbf0edc5ebc98b90d5bda8c6b2911526df76f61232919"
             }
           ]
         },
