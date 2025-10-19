@@ -15,7 +15,7 @@
         {
           "name": "python",
           "version": "3.13.7",
-          "hint": "tags/v?3\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
+          "hint": "tags/v?3\\.13(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/python/cpython",
           "artifacts": [
             {
