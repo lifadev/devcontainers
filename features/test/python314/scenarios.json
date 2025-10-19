@@ -1,0 +1,8 @@
+{
+  "default": {
+    "image": "debian:trixie-20250929",
+    "features": {
+      "python314": {}
+    }
+  }
+}

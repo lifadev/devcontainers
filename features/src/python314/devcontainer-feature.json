@@ -1,0 +1,55 @@
+{
+  "id": "python314",
+  "name": "python314",
+  "version": "2025.10.19",
+  "containerEnv": {
+    "PATH": "/opt/python314/bin:$PATH",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    },
+    "manifest": {
+      "dependencies": [
+        {
+          "name": "python",
+          "version": "3.14.0",
+          "hint": "tags/v?3\\.14(\\.[0-9]+)?(\\.post[0-9]+)?",
+          "repository": "github.com/python/cpython",
+          "artifacts": [
+            {
+              "architecture": "universal",
+              "url": "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz",
+              "checksum": "2299dae542d395ce3883aca00d3c910307cd68e0b2f7336098c8e7b7eee9f3e9"
+            }
+          ]
+        },
+        {
+          "name": "build",
+          "version": "1.3.0",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
+          "repository": "github.com/pypa/build"
+        },
+        {
+          "name": "pip",
+          "version": "25.2",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
+          "repository": "github.com/pypa/pip"
+        },
+        {
+          "name": "setuptools",
+          "version": "80.9.0",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
+          "repository": "github.com/pypa/setuptools"
+        },
+        {
+          "name": "wheel",
+          "version": "0.46.1",
+          "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
+          "repository": "github.com/pypa/wheel"
+        }
+      ]
+    }
+  }
+}
