@@ -7,7 +7,7 @@
     "ghcr.io/lifadev/devcontainers/features/starship": {},
     "ghcr.io/lifadev/devcontainers/features/gh": {},
     "ghcr.io/lifadev/devcontainers/features/node24": {},
-    "ghcr.io/lifadev/devcontainers/features/python313": {},
+    "ghcr.io/lifadev/devcontainers/features/python314": {},
     "ghcr.io/lifadev/devcontainers/features/ruff": {},
     "ghcr.io/lifadev/devcontainers/features/uv": {}
   },
@@ -30,7 +30,7 @@
     },
     "manifest": {
       "name": "devcontainer",
-      "version": "2025.10.19-1"
+      "version": "2025.10.19-2"
     }
   }
 }
