@@ -1,7 +1,7 @@
 {
   "id": "jupyter",
   "name": "jupyter",
-  "version": "2025.10.19",
+  "version": "2025.10.19-1",
   "installsAfter": [
     "ghcr.io/lifadev/devcontainers/features/python313",
     "ghcr.io/lifadev/devcontainers/features/python314"
