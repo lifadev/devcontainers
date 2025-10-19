@@ -6,5 +6,13 @@
       "jupyter": {}
     },
     "overrideFeatureInstallOrder": ["./python313"]
+  },
+  "python314": {
+    "image": "debian:trixie-20250929",
+    "features": {
+      "python314": {},
+      "jupyter": {}
+    },
+    "overrideFeatureInstallOrder": ["./python314"]
   }
 }
