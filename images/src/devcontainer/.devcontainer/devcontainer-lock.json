@@ -25,10 +25,10 @@
       "resolved": "ghcr.io/lifadev/devcontainers/features/node24@sha256:2d9d7f550f7362d200073d99907c14a2bd0cd926c4f83b2ed923268e93f610cc",
       "integrity": "sha256:2d9d7f550f7362d200073d99907c14a2bd0cd926c4f83b2ed923268e93f610cc"
     },
-    "ghcr.io/lifadev/devcontainers/features/python313": {
+    "ghcr.io/lifadev/devcontainers/features/python314": {
       "version": "2025.10.19",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/python313@sha256:29f6ddcb1c3a0da573920d37e990d5995f87b2683bd84ef01edf9415ee9f1e6a",
-      "integrity": "sha256:29f6ddcb1c3a0da573920d37e990d5995f87b2683bd84ef01edf9415ee9f1e6a"
+      "resolved": "ghcr.io/lifadev/devcontainers/features/python314@sha256:5dcbab62f0afb3ab4aaab675a2075dfae3aae4371885a27821148305f42fda34",
+      "integrity": "sha256:5dcbab62f0afb3ab4aaab675a2075dfae3aae4371885a27821148305f42fda34"
     },
     "ghcr.io/lifadev/devcontainers/features/ruff": {
       "version": "2025.10.19",
