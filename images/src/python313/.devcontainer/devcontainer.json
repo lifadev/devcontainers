@@ -1,5 +1,5 @@
 {
-  "image": "debian:trixie-20250929",
+  "image": "debian:trixie-20251020",
   "features": {
     "ghcr.io/lifadev/devcontainers/features/base": {},
     "ghcr.io/lifadev/devcontainers/features/developer": {},
@@ -17,7 +17,7 @@
   "customizations": {
     "manifest": {
       "name": "python313",
-      "version": "2025.10.19-1"
+      "version": "2025.10.22"
     }
   }
 }
