@@ -1,7 +1,7 @@
 {
   "id": "jupyter",
   "name": "jupyter",
-  "version": "2025.10.19-1",
+  "version": "2025.10.27",
   "installsAfter": [
     "ghcr.io/lifadev/devcontainers/features/python313",
     "ghcr.io/lifadev/devcontainers/features/python314"
@@ -14,7 +14,7 @@
       "dependencies": [
         {
           "name": "ipykernel",
-          "version": "7.0.1",
+          "version": "7.1.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/ipython/ipykernel"
         },
