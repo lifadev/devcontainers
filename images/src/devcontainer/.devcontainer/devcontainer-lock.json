@@ -26,9 +26,9 @@
       "integrity": "sha256:2d9d7f550f7362d200073d99907c14a2bd0cd926c4f83b2ed923268e93f610cc"
     },
     "ghcr.io/lifadev/devcontainers/features/python314": {
-      "version": "2025.10.19",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/python314@sha256:5dcbab62f0afb3ab4aaab675a2075dfae3aae4371885a27821148305f42fda34",
-      "integrity": "sha256:5dcbab62f0afb3ab4aaab675a2075dfae3aae4371885a27821148305f42fda34"
+      "version": "2025.10.25",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/python314@sha256:8f1513a64fbefdb84674816041fab49316d5f300b8d294d2f3cdd1148ef96f5c",
+      "integrity": "sha256:8f1513a64fbefdb84674816041fab49316d5f300b8d294d2f3cdd1148ef96f5c"
     },
     "ghcr.io/lifadev/devcontainers/features/ruff": {
       "version": "2025.10.23",
@@ -36,9 +36,9 @@
       "integrity": "sha256:5464c75575dba8aaa6b1132c53c66c909925badbc23a0b4a76aaeba879622167"
     },
     "ghcr.io/lifadev/devcontainers/features/starship": {
-      "version": "2025.4.28",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/starship@sha256:6566b0d9b94bb0567ea6022624f34f07b850fdbd97b29f45d6e0e44c5a969fef",
-      "integrity": "sha256:6566b0d9b94bb0567ea6022624f34f07b850fdbd97b29f45d6e0e44c5a969fef"
+      "version": "2025.10.25",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/starship@sha256:f59ea33777699082bfc66c737e62c10606744ecb5cc61fa2c715c22519e32077",
+      "integrity": "sha256:f59ea33777699082bfc66c737e62c10606744ecb5cc61fa2c715c22519e32077"
     },
     "ghcr.io/lifadev/devcontainers/features/uv": {
       "version": "2025.10.22",
