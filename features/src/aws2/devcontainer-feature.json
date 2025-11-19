@@ -1,25 +1,25 @@
 {
   "id": "aws2",
   "name": "aws2",
-  "version": "2025.11.18",
+  "version": "2025.11.19",
   "customizations": {
     "manifest": {
       "dependencies": [
         {
           "name": "cli",
-          "version": "2.31.39",
+          "version": "2.32.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/aws/aws-cli",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-${VERSION}.zip",
-              "checksum": "5a2ad4e63f8f687d735f8e7a132b3622a1cf08fa884c53e3423c9b83a3c0d663"
+              "checksum": "2e57ed5587de3789d39841c0f309134ccc13a215af597c7739f7102deca30dad"
             },
             {
               "architecture": "arm64",
               "url": "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-${VERSION}.zip",
-              "checksum": "84917b5dfe88d151b10ab1e91c8c80c90bee435c423f083c83f85c809e8eaf71"
+              "checksum": "3070c0f6cc12e63ca5723085d71dfcb9c26369e29060d997d62c0d5ee6b48d3d"
             }
           ]
         }
