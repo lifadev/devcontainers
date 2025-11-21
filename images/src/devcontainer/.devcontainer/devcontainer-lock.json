@@ -21,9 +21,9 @@
       "integrity": "sha256:006ee4e4b30eac5e689e7a9c1f9a6bfb43a7388d026310d8183bafda40476a56"
     },
     "ghcr.io/lifadev/devcontainers/features/node24": {
-      "version": "2025.11.11",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/node24@sha256:85a94a4c50489578928c76717fd602c886d3048cf2d92dc9f45f3fae9766b51d",
-      "integrity": "sha256:85a94a4c50489578928c76717fd602c886d3048cf2d92dc9f45f3fae9766b51d"
+      "version": "2025.11.19",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/node24@sha256:845f5b741f7e6e569e92e5787bc9c5ef2f3c625246914f2dbe75d50ca6eab9cd",
+      "integrity": "sha256:845f5b741f7e6e569e92e5787bc9c5ef2f3c625246914f2dbe75d50ca6eab9cd"
     },
     "ghcr.io/lifadev/devcontainers/features/python314": {
       "version": "2025.10.25",
