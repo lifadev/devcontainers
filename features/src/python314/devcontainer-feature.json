@@ -1,7 +1,7 @@
 {
   "id": "python314",
   "name": "python314",
-  "version": "2025.10.25",
+  "version": "2025.12.4",
   "containerEnv": {
     "PATH": "/opt/python314/bin:$PATH",
     "PYTHONDONTWRITEBYTECODE": "1"
@@ -14,14 +14,14 @@
       "dependencies": [
         {
           "name": "python",
-          "version": "3.14.0",
+          "version": "3.14.1",
           "hint": "tags/v?3\\.14(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/python/cpython",
           "artifacts": [
             {
               "architecture": "universal",
               "url": "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz",
-              "checksum": "2299dae542d395ce3883aca00d3c910307cd68e0b2f7336098c8e7b7eee9f3e9"
+              "checksum": "8dfa08b1959d9d15838a1c2dab77dc8d8ff4a553a1ed046dfacbc8095c6d42fc"
             }
           ]
         },
