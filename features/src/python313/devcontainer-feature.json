@@ -1,7 +1,7 @@
 {
   "id": "python313",
   "name": "python313",
-  "version": "2025.10.25",
+  "version": "2025.12.21",
   "containerEnv": {
     "PATH": "/opt/python313/bin:$PATH",
     "PYTHONDONTWRITEBYTECODE": "1"
@@ -14,14 +14,14 @@
       "dependencies": [
         {
           "name": "python",
-          "version": "3.13.9",
+          "version": "3.13.11",
           "hint": "tags/v?3\\.13(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/python/cpython",
           "artifacts": [
             {
               "architecture": "universal",
               "url": "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz",
-              "checksum": "ed5ef34cda36cfa2f3a340f07cac7e7814f91c7f3c411f6d3562323a866c5c66"
+              "checksum": "16ede7bb7cdbfa895d11b0642fa0e523f291e6487194d53cf6d3b338c3a17ea2"
             }
           ]
         },
