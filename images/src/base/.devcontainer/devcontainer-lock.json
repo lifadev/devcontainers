@@ -11,9 +11,9 @@
       "integrity": "sha256:9fdc2762f0e4da0b0038f25e6a6b70c3e643d164002f90ba0957deb0c975330f"
     },
     "ghcr.io/lifadev/devcontainers/features/starship": {
-      "version": "2025.11.16",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/starship@sha256:5db17989250bdb27dd232b13a652485ff10f44f7665592de3961a2e9cb2b710d",
-      "integrity": "sha256:5db17989250bdb27dd232b13a652485ff10f44f7665592de3961a2e9cb2b710d"
+      "version": "2025.12.30",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/starship@sha256:42b087359e4118f75f2d7399bdc7e5866d8db0a4f14e82bd67f93e43d6536b81",
+      "integrity": "sha256:42b087359e4118f75f2d7399bdc7e5866d8db0a4f14e82bd67f93e43d6536b81"
     }
   }
 }
