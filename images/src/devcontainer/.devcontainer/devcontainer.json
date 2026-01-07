@@ -30,7 +30,7 @@
     },
     "manifest": {
       "name": "devcontainer",
-      "version": "2026.1.1"
+      "version": "2026.1.7"
     }
   }
 }
