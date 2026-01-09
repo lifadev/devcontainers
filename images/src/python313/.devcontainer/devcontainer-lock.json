@@ -16,14 +16,14 @@
       "integrity": "sha256:3eb0852c938d031adb0861a9d5d5efef68d75bffc29b92985870345f7134af91"
     },
     "ghcr.io/lifadev/devcontainers/features/python313": {
-      "version": "2025.12.23",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/python313@sha256:46c649ab9de7d06e74e6e64a9439d269a8334c27e19da7ff4dd42c4fcda0bb08",
-      "integrity": "sha256:46c649ab9de7d06e74e6e64a9439d269a8334c27e19da7ff4dd42c4fcda0bb08"
+      "version": "2026.1.8",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/python313@sha256:a4b2b6935b51fbe8c701b5da52682084fdeba3fe27d5f417325636a862e8165a",
+      "integrity": "sha256:a4b2b6935b51fbe8c701b5da52682084fdeba3fe27d5f417325636a862e8165a"
     },
     "ghcr.io/lifadev/devcontainers/features/ruff": {
-      "version": "2025.12.23",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:81f7ee78603cdbf1673a0b56c39acb403beb4fc54a18d4b4bfb5a64c777de7cd",
-      "integrity": "sha256:81f7ee78603cdbf1673a0b56c39acb403beb4fc54a18d4b4bfb5a64c777de7cd"
+      "version": "2026.1.8",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:779f90192d647e16321ea8edf9fd993d4081804ceeec9b91f082dd82e0d29a98",
+      "integrity": "sha256:779f90192d647e16321ea8edf9fd993d4081804ceeec9b91f082dd82e0d29a98"
     },
     "ghcr.io/lifadev/devcontainers/features/starship": {
       "version": "2025.12.30",
