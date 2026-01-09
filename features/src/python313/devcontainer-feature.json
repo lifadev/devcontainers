@@ -1,7 +1,7 @@
 {
   "id": "python313",
   "name": "python313",
-  "version": "2025.12.23",
+  "version": "2026.1.8",
   "containerEnv": {
     "PATH": "/opt/python313/bin:$PATH",
     "PYTHONDONTWRITEBYTECODE": "1"
@@ -27,7 +27,7 @@
         },
         {
           "name": "build",
-          "version": "1.3.0",
+          "version": "1.4.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/pypa/build"
         },
