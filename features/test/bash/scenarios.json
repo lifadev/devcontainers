@@ -7,5 +7,18 @@
     "remoteEnv": {
       "PATH": "/opt/bin:${containerEnv:PATH}"
     }
+  },
+  "history": {
+    "image": "debian:trixie-20260112",
+    "features": {
+      "developer": {},
+      "bash": {}
+    },
+    "overrideFeatureInstallOrder": ["./developer"],
+    "remoteUser": "developer",
+    "updateRemoteUserUID": false,
+    "remoteEnv": {
+      "PATH": "/opt/bin:${containerEnv:PATH}"
+    }
   }
 }
