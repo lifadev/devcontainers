@@ -14,5 +14,14 @@
     },
     "remoteUser": "developer",
     "updateRemoteUserUID": true
+  },
+  "sudo_command": {
+    "image": "debian:trixie-20260112",
+    "features": {
+      "developer": {
+        "sudo-command": "/usr/bin/echo"
+      }
+    },
+    "remoteUser": "developer"
   }
 }
