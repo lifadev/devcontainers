@@ -6,9 +6,9 @@
       "integrity": "sha256:d083d0f6d166afaebcb771e9adfa8f957bf27f3449a383fc2655aded11de9846"
     },
     "ghcr.io/lifadev/devcontainers/features/bash": {
-      "version": "2025.8.5",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/bash@sha256:60d40712be7402e24462f0d4312fbf9d5b4a72549323a211a47795e062b7caa5",
-      "integrity": "sha256:60d40712be7402e24462f0d4312fbf9d5b4a72549323a211a47795e062b7caa5"
+      "version": "2026.1.21",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/bash@sha256:0ea1048e66b4019e99a3a1052a2c603a5da2afcf4e0def45632506ffeebf562a",
+      "integrity": "sha256:0ea1048e66b4019e99a3a1052a2c603a5da2afcf4e0def45632506ffeebf562a"
     },
     "ghcr.io/lifadev/devcontainers/features/developer": {
       "version": "2025.4.12",
