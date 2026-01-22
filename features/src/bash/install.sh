@@ -28,3 +28,17 @@ if [ -d /etc/bashrc.d ]; then
   unset i
 fi
 EOF
+
+dc_bash_config bash <<EOF
+HISTSIZE=50000
+HISTFILESIZE=200000
+shopt -s histappend
+PROMPT_COMMAND='history -a; history -n'
+HISTCONTROL=ignoreboth:erasedups
+HISTIGNORE='ls:ls -la:pwd:cd:cd -:exit:history'
+HISTTIMEFORMAT='%F %T '
+EOF
+
+dc_mkdir "$(dirname "$HISTFILE")"
+touch "$HISTFILE"
+chown "$_REMOTE_USER:$_REMOTE_USER" "$HISTFILE"

@@ -1,7 +1,18 @@
 {
   "id": "bash",
   "name": "bash",
-  "version": "2025.8.5",
+  "version": "2026.1.21",
+  "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
+  "containerEnv": {
+    "HISTFILE": "/bash-history/.bash_history"
+  },
+  "mounts": [
+    {
+      "source": "bash-history-${devcontainerId}",
+      "target": "/bash-history",
+      "type": "volume"
+    }
+  ],
   "customizations": {
     "vscode": {
       "settings": {
