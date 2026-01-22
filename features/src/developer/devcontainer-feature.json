@@ -1,7 +1,7 @@
 {
   "id": "developer",
   "name": "developer",
-  "version": "2025.4.12",
+  "version": "2026.1.22",
   "options": {
     "user-name": {
       "type": "string",
@@ -14,6 +14,10 @@
     "group-id": {
       "type": "string",
       "default": "1000"
+    },
+    "sudo-command": {
+      "type": "string",
+      "default": "ALL"
     }
   },
   "containerEnv": {

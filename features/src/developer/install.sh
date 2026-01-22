@@ -17,5 +17,5 @@ useradd \
   --create-home "$USER_NAME" \
   --shell /bin/bash
 
-echo "$USER_NAME" ALL=\(root\) NOPASSWD:ALL >"/etc/sudoers.d/$USER_NAME"
+echo "$USER_NAME ALL=(root) NOPASSWD: $SUDO_COMMAND" >"/etc/sudoers.d/$USER_NAME"
 chmod 0440 "/etc/sudoers.d/$USER_NAME"
