@@ -1,7 +1,7 @@
 {
   "id": "jupyter",
   "name": "jupyter",
-  "version": "2026.1.10",
+  "version": "2026.1.22",
   "installsAfter": [
     "ghcr.io/lifadev/devcontainers/features/python313",
     "ghcr.io/lifadev/devcontainers/features/python314"
@@ -20,7 +20,7 @@
         },
         {
           "name": "ipympl",
-          "version": "0.9.8",
+          "version": "0.10.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/matplotlib/ipympl"
         },
