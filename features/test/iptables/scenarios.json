@@ -1,0 +1,17 @@
+{
+  "default": {
+    "image": "debian:trixie-20260112",
+    "features": {
+      "developer": {
+        "sudo-commands": "/opt/init/iptables.sh"
+      },
+      "iptables": {}
+    },
+    "overrideFeatureInstallOrder": ["./developer"],
+    "remoteEnv": {
+      "DOMAIN_ALLOWLIST": "github.com,registry.npmjs.org"
+    },
+    "runArgs": ["--cap-add=NET_ADMIN"],
+    "waitFor": "postStartCommand"
+  }
+}

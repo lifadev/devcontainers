@@ -1,0 +1,7 @@
+{
+  "id": "iptables",
+  "name": "iptables",
+  "version": "2026.1.22",
+  "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
+  "postStartCommand": "sudo -E /opt/init/iptables.sh"
+}
