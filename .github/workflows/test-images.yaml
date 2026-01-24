@@ -35,7 +35,7 @@ jobs:
           import re
           import subprocess
 
-          cmd = ["git", "diff", "--name-only", f"{env['BASE']}...{env['HEAD']}"]
+          cmd = ["git", "diff", "--diff-filter=d", "--name-only", f"{env['BASE']}...{env['HEAD']}"]
           changes = subprocess.check_output(cmd).decode('utf-8').strip().split("\n")
 
           images = list(set([
