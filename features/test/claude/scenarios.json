@@ -1,0 +1,15 @@
+{
+  "default": {
+    "image": "debian:trixie-20260112",
+    "features": {
+      "developer": {},
+      "claude": {}
+    },
+    "overrideFeatureInstallOrder": ["./developer"],
+    "remoteUser": "developer",
+    "updateRemoteUserUID": false,
+    "remoteEnv": {
+      "PATH": "/home/developer/.local/bin:${containerEnv:PATH}"
+    }
+  }
+}
