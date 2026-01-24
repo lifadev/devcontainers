@@ -45,7 +45,7 @@ jobs:
           bash ./features/bin/update.sh "$FEATURE"
           npx -y prettier -w "features/src/$FEATURE"
 
-          if git diff --quiet && git diff --cached --quiet; then
+          if git diff --diff-filter=d --quiet && git diff --diff-filter=d --cached --quiet; then
             echo "skip=1" >>$GITHUB_OUTPUT
             exit 0
           fi
