@@ -2,8 +2,7 @@
   "image": "debian:trixie-20260112",
   "features": {
     "ghcr.io/lifadev/devcontainers/features/base": {},
-    "ghcr.io/lifadev/devcontainers/features/developer": {},
-    "ghcr.io/lifadev/devcontainers/features/starship": {}
+    "ghcr.io/lifadev/devcontainers/features/developer": {}
   },
   "remoteUser": "developer",
   "updateRemoteUserUID": true,
@@ -13,7 +12,7 @@
   "customizations": {
     "manifest": {
       "name": "base",
-      "version": "2026.1.23"
+      "version": "2026.1.24"
     }
   }
 }
