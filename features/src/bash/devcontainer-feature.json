@@ -1,15 +1,15 @@
 {
   "id": "bash",
   "name": "bash",
-  "version": "2026.1.21",
+  "version": "2026.1.24",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
   "containerEnv": {
-    "HISTFILE": "/bash-history/.bash_history"
+    "HISTFILE": "/bash/.bash_history"
   },
   "mounts": [
     {
-      "source": "bash-history-${devcontainerId}",
-      "target": "/bash-history",
+      "source": "bash-${devcontainerId}",
+      "target": "/mnt/bash",
       "type": "volume"
     }
   ],
