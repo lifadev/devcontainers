@@ -92,6 +92,9 @@ jobs:
         feature: ${{ fromJSON(needs.setup.outputs.features) }}
 
     uses: ./.github/workflows/test-feature.yaml
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
     with:
       feature: ${{ matrix.feature }}
 

@@ -2,6 +2,9 @@ name: Test feature
 
 on:
   workflow_call:
+    secrets:
+      DOCKER_USERNAME: { required: true }
+      DOCKER_TOKEN: { required: true }
     inputs:
       feature: { type: string, required: true }
 
@@ -35,6 +38,13 @@ jobs:
           registry: ${{ vars.CONTAINER_REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Login to Docker Hardened Images Registry
+        uses: docker/login-action@5e57cd118135c172c3672efd75eb46360885c0ef
+        with:
+          registry: ${{ vars.DHI_CONTAINER_REGISTRY }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Test feature
         env:

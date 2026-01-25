@@ -1,6 +1,6 @@
 {
   "node20": {
-    "image": "debian:trixie-20260112",
+    "image": "dhi.io/debian-base:trixie",
     "features": {
       "node20": {},
       "cdk": {}
@@ -8,7 +8,7 @@
     "overrideFeatureInstallOrder": ["./node20", "./cdk"]
   },
   "node24": {
-    "image": "debian:trixie-20260112",
+    "image": "dhi.io/debian-base:trixie",
     "features": {
       "node24": {},
       "cdk": {}

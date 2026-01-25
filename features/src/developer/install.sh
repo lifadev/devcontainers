@@ -6,6 +6,7 @@ set -eux
 source dev-container-features-install-lib
 
 dc_install \
+  passwd \
   sudo
 
 groupadd \

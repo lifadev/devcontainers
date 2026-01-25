@@ -1,6 +1,6 @@
 {
   "python313": {
-    "image": "debian:trixie-20260112",
+    "image": "dhi.io/debian-base:trixie",
     "features": {
       "python313": {},
       "jupyter": {}
@@ -8,7 +8,7 @@
     "overrideFeatureInstallOrder": ["./python313"]
   },
   "python314": {
-    "image": "debian:trixie-20260112",
+    "image": "dhi.io/debian-base:trixie",
     "features": {
       "python314": {},
       "jupyter": {}
