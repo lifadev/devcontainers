@@ -17,83 +17,97 @@ dc_install() {
   apt update --quiet
   apt install --yes --no-install-recommends "$@"
   rm -rf /var/lib/apt/lists/*
+  return 0
 }
 
 dc_mkdir() {
-  TARGET=$1
+  local target=$1
 
-  mkdir -p "$TARGET"
-  echo "$TARGET"
+  mkdir -p "$target"
+  echo "$target"
+
+  return 0
 }
 
 _dc_package() {
-  local NAME=$1
+  local name=$1
 
-  local PACKAGE
-  PACKAGE=$(
+  local package
+  package=$(
     jq -r \
-      --arg NAME "$NAME" \
+      --arg NAME "$name" \
       '.customizations.manifest.dependencies[] | select(.name == $NAME)' \
       "$(dirname "$0")/devcontainer-feature.json"
   )
 
-  local VERSION
-  VERSION=$(jq -r '.version' <<<"$PACKAGE")
-  export VERSION
+  local version
+  version=$(jq -r '.version' <<<"$package")
+  export VERSION=$version
 
-  echo "$PACKAGE" | envsubst
+  echo "$package" | envsubst
+
+  return 0
 }
 
 dc_download() {
-  local PACKAGE=$1
-  local OUTPUT=$2
+  local package=$1
+  local output=$2
 
-  local ARTIFACT
-  ARTIFACT=$(
+  local artifact
+  artifact=$(
     jq -r \
       --arg ARCH "$ARCH" \
       '.artifacts[] | select(.architecture | IN($ARCH, "universal"))' \
-      <<<"$(_dc_package "$PACKAGE")"
+      <<<"$(_dc_package "$package")"
   )
 
-  local URL
-  URL=$(jq -r '.url' <<<"$ARTIFACT")
+  local url
+  url=$(jq -r '.url' <<<"$artifact")
 
-  local CHECKSUM
-  CHECKSUM=$(jq -r '.checksum' <<<"$ARTIFACT")
+  local checksum
+  checksum=$(jq -r '.checksum' <<<"$artifact")
 
-  curl -fLsS "$URL" -o "$OUTPUT"
-  echo "$CHECKSUM $OUTPUT" | sha256sum -c
+  curl -fLsS "$url" -o "$output"
+  echo "$checksum $output" | sha256sum -c
+
+  return 0
 }
 
 dc_version() {
-  local PACKAGE=$1
+  local package=$1
 
-  jq -r '.version' <<<"$(_dc_package "$PACKAGE")"
+  jq -r '.version' <<<"$(_dc_package "$package")"
 }
 
 dc_bash_complete() {
-  local PACKAGE=$1
+  local package=$1
 
-  local SCRIPT
-  SCRIPT=$(cat)
+  local script
+  script=$(cat)
 
-  TARGET=$(dc_mkdir /etc/bash_completion.d)
-  echo "$SCRIPT" >>"$TARGET/$PACKAGE"
+  local target
+  target=$(dc_mkdir /etc/bash_completion.d)
+  echo "$script" >>"$target/$package"
+
+  return 0
 }
 
 dc_bash_config() {
-  local PACKAGE=$1
+  local package=$1
 
-  local SCRIPT
-  SCRIPT=$(cat)
+  local script
+  script=$(cat)
 
-  TARGET=$(dc_mkdir /etc/bashrc.d)
-  echo "$SCRIPT" >>"$TARGET/$PACKAGE"
+  local target
+  target=$(dc_mkdir /etc/bashrc.d)
+  echo "$script" >>"$target/$package"
+
+  return 0
 }
 
 dc_cleanup() {
   rm -rf /tmp/package*
+  return 0
 }
 
 trap dc_cleanup EXIT HUP INT TERM
