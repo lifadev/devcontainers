@@ -67,7 +67,7 @@ dc_download() {
   local checksum
   checksum=$(jq -r '.checksum' <<<"$artifact")
 
-  curl -fLsS "$url" -o "$output"
+  curl --proto "=https" --tlsv1.2 -fLsS "$url" -o "$output"
   echo "$checksum $output" | sha256sum -c
 
   return 0

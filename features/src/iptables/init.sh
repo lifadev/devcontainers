@@ -18,7 +18,7 @@ ipset flush allowlist
 
 tr ',' '\n' <<<"$DOMAIN_ALLOWLIST" | while IFS= read -r domain; do
   if [[ "$domain" == "github.com" ]]; then
-    curl -fsSL https://api.github.com/meta |
+    curl --proto "=https" --tlsv1.2 -fsSL https://api.github.com/meta |
       jq -r '(.web + .api + .git)[]' |
       aggregate -q |
       while read -r cidr; do ipset add allowlist "$cidr" -exist; done
