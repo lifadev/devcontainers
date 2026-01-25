@@ -27,56 +27,63 @@ die() {
 export -f die
 
 update_image() {
-  CURRENT=$(grep -Poh 'debian:[^"]+' "$SCENARIOS" | uniq)
-  LATEST=$(
+  local current
+  current=$(grep -Poh 'debian:[^"]+' "$SCENARIOS" | uniq)
+
+  local latest
+  latest=$(
     curl -fLsS "https://hub.docker.com/v2/repositories/library/debian" |
       grep -Poh "\[[^\]]+\`latest\`\]" |
       sed 's/`/"/g' | jq -r '"debian:" + .[1]'
   )
-  if [[ "$CURRENT" != "$LATEST" ]]; then
-    echo "🐳 $CURRENT -> $LATEST"
-    sed -i -e "s/$CURRENT/$LATEST/g" "$SCENARIOS"
+  if [[ "$current" != "$latest" ]]; then
+    echo "🐳 $current -> $latest"
+    sed -i -e "s/$current/$latest/g" "$SCENARIOS"
   else
-    echo "🐳 $CURRENT"
+    echo "🐳 $current"
   fi
+
+  return 0
 }
 
 update_artifact() {
   set -eu
   [[ "$DEBUG" == 1 ]] && set -x
 
-  local REPO="$1"
+  local repo="$1"
   local i="$2"
   local j="$3"
-  local VERSION="$4"
+  local version="$4"
 
-  local INPUT="$TMPDIR/in/dependency.${i}.artifact.${j}.json"
-  local OUTPUT="$TMPDIR/out/dependency.${i}.artifact.${j}.json"
+  local input="$TMPDIR/in/dependency.${i}.artifact.${j}.json"
+  local output="$TMPDIR/out/dependency.${i}.artifact.${j}.json"
 
-  local ARTIFACT
-  ARTIFACT=$(<"$INPUT")
+  local artifact
+  artifact=$(<"$input")
 
-  local ARCH
-  ARCH=$(echo "$ARTIFACT" | jq -r '.architecture')
+  local arch
+  arch=$(echo "$artifact" | jq -r '.architecture')
 
-  local URL
-  URL=$(
+  local url
+  url=$(
     jq -r \
-      --arg VERSION "$VERSION" \
+      --arg VERSION "$version" \
       '.url | gsub("\\${VERSION}"; $VERSION)' \
-      <<<"$ARTIFACT"
+      <<<"$artifact"
   )
 
-  local PACKAGE
-  PACKAGE=$(mktemp "$TMPDIR/pkg/package.XXXXXXXX")
-  echo "⬇  $REPO""[$ARCH]: $URL"
-  curl -fLsS "$URL" -o "$PACKAGE"
-  local CHECKSUM
-  CHECKSUM=$(sha256sum -b "$PACKAGE" | cut -d' ' -f1)
-  ARTIFACT=$(echo "$ARTIFACT" | jq --arg CHECKSUM "$CHECKSUM" '.checksum = $CHECKSUM')
+  local package
+  package=$(mktemp "$TMPDIR/pkg/package.XXXXXXXX")
+  echo "⬇  $repo""[$arch]: $url"
+  curl -fLsS "$url" -o "$package"
+  local checksum
+  checksum=$(sha256sum -b "$package" | cut -d' ' -f1)
+  artifact=$(echo "$artifact" | jq --arg CHECKSUM "$checksum" '.checksum = $CHECKSUM')
 
-  echo "$ARTIFACT" >"$OUTPUT"
-  echo "🔑 $REPO""[$ARCH]: $CHECKSUM"
+  echo "$artifact" >"$output"
+  echo "🔑 $repo""[$arch]: $checksum"
+
+  return 0
 }
 export -f update_artifact
 
@@ -88,67 +95,67 @@ update_dependency() {
 
   local i="$1"
 
-  local INPUT="$TMPDIR/in/dependency.${i}.json"
-  local OUTPUT="$TMPDIR/out/dependency.${i}.json"
+  local input="$TMPDIR/in/dependency.${i}.json"
+  local output="$TMPDIR/out/dependency.${i}.json"
 
-  local DEPENDENCY
-  DEPENDENCY=$(<"$INPUT")
+  local dependency
+  dependency=$(<"$input")
 
-  local CURRENT
-  CURRENT=$(echo "$DEPENDENCY" | jq -r '.version')
+  local current
+  current=$(echo "$dependency" | jq -r '.version')
 
-  local REPO
-  REPO=$(echo "$DEPENDENCY" | jq -r '.repository')
+  local repo
+  repo=$(echo "$dependency" | jq -r '.repository')
 
-  local HINT
-  HINT=$(echo "$DEPENDENCY" | jq -r '.hint')
+  local hint
+  hint=$(echo "$dependency" | jq -r '.hint')
 
-  [[ "$REPO" == github.com/* ]] || die "Unsupported repository: $REPO"
-  [[ "$HINT" == tags/* || "$HINT" == releases/* ]] || die "Unsupported hint: $HINT"
+  [[ "$repo" == github.com/* ]] || die "Unsupported repository: $repo"
+  [[ "$hint" == tags/* || "$hint" == releases/* ]] || die "Unsupported hint: $hint"
 
-  local LATEST=""
-  local PAGE=1
-  while [[ -z "$LATEST" ]]; do
-    LATEST=$(
+  local latest=""
+  local page=1
+  while [[ -z "$latest" ]]; do
+    latest=$(
       gh api \
         -H "Accept: application/vnd.github+json" \
         -H "X-GitHub-Api-Version: 2022-11-28" \
-        "/repos/${REPO#github.com/}/${HINT%%/*}?page=$PAGE&per_page=100" 2>/dev/null ||
-        die "GitHub API call failed: $REPO"
-    ) || die "Failed to retrieve ${HINT%%/*} from GitHub"
-    LATEST=$(
-      echo "$LATEST" |
+        "/repos/${repo#github.com/}/${hint%%/*}?page=$page&per_page=100" 2>/dev/null ||
+        die "GitHub API call failed: $repo"
+    ) || die "Failed to retrieve ${hint%%/*} from GitHub"
+    latest=$(
+      echo "$latest" |
         jq -r '.[].name' |
-        grep -E "^${HINT#*/}$" |
+        grep -E "^${hint#*/}$" |
         sed 's/^[^0-9]*//' |
         sort -rV |
         head -1
     )
-    ((PAGE++))
+    ((page++))
   done
 
-  if dpkg --compare-versions "$LATEST" le "$CURRENT"; then
-    echo "✅ $REPO: $LATEST"
-    echo "$DEPENDENCY" >"$OUTPUT"
-    return
+  if dpkg --compare-versions "$latest" le "$current"; then
+    echo "✅ $repo: $latest"
+    echo "$dependency" >"$output"
+    return 0
   fi
 
-  echo "🔄 $REPO: $CURRENT -> $LATEST"
-  DEPENDENCY=$(echo "$DEPENDENCY" | jq --arg VERSION "$LATEST" '.version = $VERSION')
+  echo "🔄 $repo: $current -> $latest"
+  dependency=$(echo "$dependency" | jq --arg VERSION "$latest" '.version = $VERSION')
 
-  if echo "$DEPENDENCY" | jq -e 'has("artifacts")' >/dev/null; then
+  if echo "$dependency" | jq -e 'has("artifacts")' >/dev/null; then
     j=0
     INDEX=$TMPDIR/dependency.${i}.artifacts
     while read -r ART; do
       echo "$ART" >"$TMPDIR/in/dependency.${i}.artifact.${j}.json"
       echo "$j"
       j=$((j + 1))
-    done < <(echo "$DEPENDENCY" | jq -c '.artifacts[]') >"$INDEX"
+    done < <(echo "$dependency" | jq -c '.artifacts[]') >"$INDEX"
     parallel \
       "${PARALLEL_OPTS[@]}" \
       --halt now,fail=1 \
       --jobs "$(nproc)" \
-      update_artifact ::: "$REPO" ::: "${i}" ::: "$(<"$INDEX")" ::: "$LATEST"
+      update_artifact ::: "$repo" ::: "${i}" ::: "$(<"$INDEX")" ::: "$latest"
     mapfile -t ARTIFACT_PARTS < <(
       find "$TMPDIR/out" \
         -name "dependency.${i}.artifact.*.json" |
@@ -156,16 +163,18 @@ update_dependency() {
     )
     ARTIFACTS=$(jq -s '.' "${ARTIFACT_PARTS[@]}")
 
-    DEPENDENCY=$(
+    dependency=$(
       jq -n \
-        --argjson DEPENDENCY "$DEPENDENCY" \
+        --argjson DEPENDENCY "$dependency" \
         --argjson ARTIFACTS "$ARTIFACTS" \
         '$DEPENDENCY | .artifacts = $ARTIFACTS'
     )
   fi
 
-  echo "$DEPENDENCY" >"$OUTPUT"
-  echo "✅ $REPO: $LATEST"
+  echo "$dependency" >"$output"
+  echo "✅ $repo: $latest"
+
+  return 0
 }
 export -f update_dependency
 
