@@ -12,10 +12,10 @@ export DEBUG
 set -eu
 [[ "$DEBUG" == 1 ]] && set -x
 
-PREV_SUM=$(cat "$CONFIG" "$LOCK" | md5sum)
+PREV_SUM=$(cat "$CONFIG" "$LOCK" | sha256sum)
 
 IMAGE=$(
-  curl -fLsS "https://hub.docker.com/v2/repositories/library/debian" |
+  curl --proto "=https" --tlsv1.2 -fLsS "https://hub.docker.com/v2/repositories/library/debian" |
     grep -Poh "\[[^\]]+\`latest\`\]" |
     sed 's/`/"/g' | jq -r '"debian:" + .[1]'
 )
@@ -28,7 +28,7 @@ rm -f "$LOCK"
 npx -y @devcontainers/cli upgrade --workspace-folder "$WORKSPACE"
 npx -y prettier -w "$WORKSPACE"
 
-NEW_SUM=$(cat "$CONFIG" "$LOCK" | md5sum)
+NEW_SUM=$(cat "$CONFIG" "$LOCK" | sha256sum)
 
 UPDATED=$(
   jq -n \

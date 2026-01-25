@@ -32,7 +32,7 @@ update_image() {
 
   local latest
   latest=$(
-    curl -fLsS "https://hub.docker.com/v2/repositories/library/debian" |
+    curl --proto "=https" --tlsv1.2 -fLsS "https://hub.docker.com/v2/repositories/library/debian" |
       grep -Poh "\[[^\]]+\`latest\`\]" |
       sed 's/`/"/g' | jq -r '"debian:" + .[1]'
   )
@@ -75,7 +75,8 @@ update_artifact() {
   local package
   package=$(mktemp "$TMPDIR/pkg/package.XXXXXXXX")
   echo "⬇  $repo""[$arch]: $url"
-  curl -fLsS "$url" -o "$package"
+  curl --proto "=https" --tlsv1.2 -fLsS "$url" -o "$package"
+
   local checksum
   checksum=$(sha256sum -b "$package" | cut -d' ' -f1)
   artifact=$(echo "$artifact" | jq --arg CHECKSUM "$checksum" '.checksum = $CHECKSUM')
