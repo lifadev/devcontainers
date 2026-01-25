@@ -33,7 +33,7 @@ update_image() {
       grep -Poh "\[[^\]]+\`latest\`\]" |
       sed 's/`/"/g' | jq -r '"debian:" + .[1]'
   )
-  if [ "$CURRENT" != "$LATEST" ]; then
+  if [[ "$CURRENT" != "$LATEST" ]]; then
     echo "🐳 $CURRENT -> $LATEST"
     sed -i -e "s/$CURRENT/$LATEST/g" "$SCENARIOS"
   else
