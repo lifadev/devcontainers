@@ -3,6 +3,7 @@
 set -eux
 
 source dev-container-features-test-lib
+OK="ok" KO="ko"
 
 ALLOWED=(
   https://api.github.com/
@@ -10,9 +11,9 @@ ALLOWED=(
 )
 
 for URL in "${ALLOWED[@]}"; do
-  check "allowed: $URL" test "$(curl --connect-timeout 5 "$URL" >/dev/null 2>&1 && echo "expected" || echo "unexpected")" = "expected"
+  check "allowed: $URL" test "$(curl --connect-timeout 5 "$URL" >/dev/null 2>&1 && echo $OK || echo $KO)" = $OK
 done
 
-check restricted test "$(curl --connect-timeout 5 https://example.com >/dev/null 2>&1 && echo "unexpected" || echo "expected")" = "expected"
+check restricted test "$(curl --connect-timeout 5 https://example.com >/dev/null 2>&1 && echo $KO || echo $OK)" = $OK
 
 reportResults

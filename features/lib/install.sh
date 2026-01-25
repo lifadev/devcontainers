@@ -77,6 +77,8 @@ dc_version() {
   local package=$1
 
   jq -r '.version' <<<"$(_dc_package "$package")"
+
+  return 0
 }
 
 dc_bash_complete() {
