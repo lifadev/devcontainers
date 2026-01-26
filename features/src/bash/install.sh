@@ -39,6 +39,6 @@ HISTIGNORE='ls:ls -la:pwd:cd:cd -:exit:history'
 HISTTIMEFORMAT='%F %T '
 EOF
 
-dc_mkdir "$(dirname "$HISTFILE")"
-touch "$HISTFILE"
-chown "$_REMOTE_USER:$_REMOTE_USER" "$HISTFILE"
+BASH_CONFIG_DIR=$(dirname "$HISTFILE")
+dc_mkdir "$BASH_CONFIG_DIR"
+chown "$_REMOTE_USER:$_REMOTE_USER" "$BASH_CONFIG_DIR"
