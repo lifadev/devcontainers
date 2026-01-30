@@ -1,0 +1,14 @@
+{
+  "default": {
+    "image": "debian:trixie-20260112",
+    "features": {
+      "developer": {},
+      "docker": {}
+    },
+    "overrideFeatureInstallOrder": ["./developer", "./docker"],
+    "remoteUser": "developer",
+    "remoteEnv": {
+      "PATH": "/opt/bin:${containerEnv:PATH}"
+    }
+  }
+}
