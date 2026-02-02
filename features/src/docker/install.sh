@@ -36,6 +36,3 @@ groupadd docker
 usermod --append \
   --groups docker \
   "$_REMOTE_USER"
-
-RUN_DIR=$(dirname "${DOCKER_HOST#unix://}")
-dc_mkdir "$RUN_DIR"

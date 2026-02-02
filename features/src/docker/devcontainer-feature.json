@@ -1,17 +1,14 @@
 {
   "id": "docker",
   "name": "docker",
-  "version": "2026.2.1",
+  "version": "2026.2.1-1",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
   "privileged": true,
   "postStartCommand": "sudo -E /opt/init/docker.sh",
-  "containerEnv": {
-    "DOCKER_HOST": "unix:///mnt/docker/docker.sock"
-  },
   "mounts": [
     {
       "source": "docker-${devcontainerId}",
-      "target": "/mnt/docker",
+      "target": "/var/lib/docker",
       "type": "volume"
     }
   ],
