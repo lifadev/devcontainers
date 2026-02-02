@@ -1,7 +1,7 @@
 {
   "id": "iptables",
   "name": "iptables",
-  "version": "2026.2.1",
+  "version": "2026.2.2",
   "installsAfter": [
     "ghcr.io/lifadev/devcontainers/features/developer",
     "ghcr.io/lifadev/devcontainers/features/docker"
