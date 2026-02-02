@@ -7,7 +7,7 @@ OK="ok" KO="ko"
 
 ALLOWED=(
   https://api.github.com/
-  http://registry.npmjs.org/
+  https://registry.npmjs.org/
 )
 
 for URL in "${ALLOWED[@]}"; do
@@ -15,5 +15,7 @@ for URL in "${ALLOWED[@]}"; do
 done
 
 check restricted test "$(curl --connect-timeout 5 https://example.com >/dev/null 2>&1 && echo $KO || echo $OK)" = $OK
+
+check "clean" test ! -e /tmp/package*
 
 reportResults

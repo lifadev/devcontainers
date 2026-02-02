@@ -1,7 +1,11 @@
 {
   "id": "iptables",
   "name": "iptables",
-  "version": "2026.1.22",
-  "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
+  "version": "2026.2.1",
+  "installsAfter": [
+    "ghcr.io/lifadev/devcontainers/features/developer",
+    "ghcr.io/lifadev/devcontainers/features/docker"
+  ],
+  "privileged": true,
   "postStartCommand": "sudo -E /opt/init/iptables.sh"
 }
