@@ -2,6 +2,8 @@
 
 set -eux
 
+sleep 5 #! wait for iptables to fill up (e.g., dockerd)
+
 ALLOW_DOMAINS="${ALLOW_DOMAINS-}"
 ALLOW_CIDR="${ALLOW_CIDR-}"
 
