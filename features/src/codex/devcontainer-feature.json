@@ -1,7 +1,7 @@
 {
   "id": "codex",
   "name": "codex",
-  "version": "2026.2.5",
+  "version": "2026.2.11",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
   "containerEnv": {
     "CODEX_HOME": "/mnt/codex"
@@ -21,19 +21,19 @@
       "dependencies": [
         {
           "name": "cli",
-          "version": "0.98.0",
+          "version": "0.99.0",
           "hint": "releases/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/openai/codex",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/openai/codex/releases/download/rust-v${VERSION}/codex-x86_64-unknown-linux-gnu.tar.gz",
-              "checksum": "b26679771164155751651b3a67fbfb48b668bdefd352c1a156cb035383490d40"
+              "checksum": "cc987f8a741c09a220d340069b2cd2c740d26df0b21227544fd7c1a4beedbedb"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/openai/codex/releases/download/rust-v${VERSION}/codex-aarch64-unknown-linux-gnu.tar.gz",
-              "checksum": "2b0ecd9c4810e718472e441dbe3e76086ad03a6933afc040501059a718464701"
+              "checksum": "8be85203c2db7494a25576d880e97406b4627fb04adc5da3498380e773275c40"
             }
           ]
         }
