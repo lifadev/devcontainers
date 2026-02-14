@@ -2,10 +2,7 @@
   "id": "jupyter",
   "name": "jupyter",
   "version": "2026.2.6",
-  "installsAfter": [
-    "ghcr.io/lifadev/devcontainers/features/python313",
-    "ghcr.io/lifadev/devcontainers/features/python314"
-  ],
+  "installsAfter": ["ghcr.io/lifadev/devcontainers/features/python314"],
   "customizations": {
     "vscode": {
       "extensions": ["ms-toolsai.jupyter"]
