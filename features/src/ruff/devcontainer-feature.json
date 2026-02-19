@@ -1,7 +1,7 @@
 {
   "id": "ruff",
   "name": "ruff",
-  "version": "2026.2.13",
+  "version": "2026.2.19",
   "customizations": {
     "vscode": {
       "settings": {
@@ -16,19 +16,19 @@
       "dependencies": [
         {
           "name": "ruff",
-          "version": "0.15.1",
+          "version": "0.15.2",
           "hint": "releases/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/astral-sh/ruff",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/astral-sh/ruff/releases/download/${VERSION}/ruff-x86_64-unknown-linux-gnu.tar.gz",
-              "checksum": "f63d467b81ef1a7a8552fef001784215bb2fc4d7a7e32216c48aaa3bad066779"
+              "checksum": "278b307eccb4eef6a153d811466dd8170d4fd74970cc4a44c793b40bd897e403"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/astral-sh/ruff/releases/download/${VERSION}/ruff-aarch64-unknown-linux-gnu.tar.gz",
-              "checksum": "003848ac89a6d2ca1a2ce4e663daec4f90212fc9fd6f338d7cd692c7c8ae9480"
+              "checksum": "4bef1a53089b3ae92cb271d3fd170cfb4834eff7c738d4faae379bb872b9a8e6"
             }
           ]
         }
