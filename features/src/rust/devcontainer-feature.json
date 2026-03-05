@@ -1,7 +1,7 @@
 {
   "id": "rust",
   "name": "rust",
-  "version": "2026.2.12",
+  "version": "2026.3.5",
   "containerEnv": {
     "PATH": "/opt/rust/bin:$PATH"
   },
@@ -13,32 +13,32 @@
       "dependencies": [
         {
           "name": "rust",
-          "version": "1.93.1",
+          "version": "1.94.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/rust-lang/rust",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://static.rust-lang.org/dist/rust-${VERSION}-x86_64-unknown-linux-gnu.tar.xz",
-              "checksum": "518872275a3648f735471d7add854d39171c5a6b17f423c4d7f931f52120c2af"
+              "checksum": "e8fa4185f3ef6ae32725ff638b1ecdbff28f5d651dc0b3111e2539350d03b15a"
             },
             {
               "architecture": "arm64",
               "url": "https://static.rust-lang.org/dist/rust-${VERSION}-aarch64-unknown-linux-gnu.tar.xz",
-              "checksum": "701d55b62286bed013ceb2393ff7687d0953205605afaa15c62e2cd18024c32c"
+              "checksum": "c6fd6d1c925ed986df3b2c0b89bbc90ce15afb62e4d522a054e7d50c856b3c1a"
             }
           ]
         },
         {
           "name": "rust-src",
-          "version": "1.93.1",
+          "version": "1.94.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/rust-lang/rust",
           "artifacts": [
             {
               "architecture": "universal",
               "url": "https://github.com/rust-lang/rust/archive/refs/tags/${VERSION}.tar.gz",
-              "checksum": "dc930d298d7b64446d44128ae2229cff1b51e5c4a945c2a32e02539d69977b89"
+              "checksum": "bbec810a64c4469d5c2b33817487869504094450725f3a65e8ab0ad9f75fb79d"
             }
           ]
         }
