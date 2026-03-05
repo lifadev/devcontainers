@@ -1,7 +1,7 @@
 {
   "id": "docker",
   "name": "docker",
-  "version": "2026.2.24",
+  "version": "2026.3.5",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
   "privileged": true,
   "postStartCommand": "sudo -E /opt/init/docker.sh",
@@ -20,37 +20,37 @@
       "dependencies": [
         {
           "name": "cli",
-          "version": "29.2.1",
+          "version": "29.3.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/docker/cli",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://download.docker.com/linux/static/test/x86_64/docker-${VERSION}.tgz",
-              "checksum": "995b1d0b51e96d551a3b49c552c0170bc6ce9f8b9e0866b8c15bbc67d1cf93a3"
+              "checksum": "b5dfdfa29d974747f64a68756be9c9b133ec246063725cf4f492ef05c5b42840"
             },
             {
               "architecture": "arm64",
               "url": "https://download.docker.com/linux/static/test/aarch64/docker-${VERSION}.tgz",
-              "checksum": "236c5064473295320d4bf732fbbfc5b11b6b2dc446e8bc7ebb9222015fb36857"
+              "checksum": "e15bc1f006c41098cb760766cc248dc7b4e350a88b8c1e99e4af4ac2227a5971"
             }
           ]
         },
         {
           "name": "buildx",
-          "version": "0.31.1",
+          "version": "0.32.1",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/docker/buildx",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/docker/buildx/releases/download/v${VERSION}/buildx-v${VERSION}.linux-amd64",
-              "checksum": "dc8eaffbf29138123b4874d852522b12303c61246a5073fa0f025e4220317b1e"
+              "checksum": "2bbc1b8ebc9a05287b01bc2fe6633ec5e2f53d58ee955ae69756d668e7098e5e"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/docker/buildx/releases/download/v${VERSION}/buildx-v${VERSION}.linux-arm64",
-              "checksum": "963c674c558dad2eefd42304a09020329a196ed16819b72396e7657eb69f031b"
+              "checksum": "f03767cb0149759d409cd600b915bce764175ffda6eb3e86e14cc84a5637176a"
             }
           ]
         },
