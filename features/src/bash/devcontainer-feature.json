@@ -1,7 +1,7 @@
 {
   "id": "bash",
   "name": "bash",
-  "version": "2026.1.25",
+  "version": "2026.3.9",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
   "containerEnv": {
     "HISTFILE": "/mnt/bash/.bash_history"
@@ -51,19 +51,19 @@
         },
         {
           "name": "shfmt",
-          "version": "3.12.0",
+          "version": "3.13.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/mvdan/sh",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/mvdan/sh/releases/download/v${VERSION}/shfmt_v${VERSION}_linux_amd64",
-              "checksum": "d9fbb2a9c33d13f47e7618cf362a914d029d02a6df124064fff04fd688a745ea"
+              "checksum": "70aa99784703a8d6569bbf0b1e43e1a91906a4166bf1a79de42050a6d0de7551"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/mvdan/sh/releases/download/v${VERSION}/shfmt_v${VERSION}_linux_arm64",
-              "checksum": "5f3fe3fa6a9f766e6a182ba79a94bef8afedafc57db0b1ad32b0f67fae971ba4"
+              "checksum": "2091a31afd47742051a77bf7cfd175533ab07e924c20ef3151cd108fa1cab5b0"
             }
           ]
         }
