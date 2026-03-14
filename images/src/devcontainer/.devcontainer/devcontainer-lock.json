@@ -1,9 +1,9 @@
 {
   "features": {
     "ghcr.io/lifadev/devcontainers/features/aws2": {
-      "version": "2026.3.12",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:6c4850f5a2f0f8996a9ad138ed547fddf2af3b632c069ac99f770fd7c9df5348",
-      "integrity": "sha256:6c4850f5a2f0f8996a9ad138ed547fddf2af3b632c069ac99f770fd7c9df5348"
+      "version": "2026.3.13",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:7032a80d3cf820cc927b708ad9abcc55e60c14af480bd6cf2d5003591e87f3cb",
+      "integrity": "sha256:7032a80d3cf820cc927b708ad9abcc55e60c14af480bd6cf2d5003591e87f3cb"
     },
     "ghcr.io/lifadev/devcontainers/features/base": {
       "version": "2025.4.12",
@@ -56,9 +56,9 @@
       "integrity": "sha256:f3247481f31499a876cae14fe41f13eb7e80719306e1fb536655386a1548f445"
     },
     "ghcr.io/lifadev/devcontainers/features/ruff": {
-      "version": "2026.3.6",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:c1141a3966428d5a8d94410717190db8795b00e64e3133c9209478cd82bae91f",
-      "integrity": "sha256:c1141a3966428d5a8d94410717190db8795b00e64e3133c9209478cd82bae91f"
+      "version": "2026.3.13",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:79974410eba8f9e596ca973407a53812b3692515e6a8f9264737bafd1627609d",
+      "integrity": "sha256:79974410eba8f9e596ca973407a53812b3692515e6a8f9264737bafd1627609d"
     },
     "ghcr.io/lifadev/devcontainers/features/rust": {
       "version": "2026.3.6",
@@ -71,9 +71,9 @@
       "integrity": "sha256:42b087359e4118f75f2d7399bdc7e5866d8db0a4f14e82bd67f93e43d6536b81"
     },
     "ghcr.io/lifadev/devcontainers/features/uv": {
-      "version": "2026.3.6",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:2367b53170da20ff0e5248a72c29dfcc251e6eae68f264c55f355c627315e517",
-      "integrity": "sha256:2367b53170da20ff0e5248a72c29dfcc251e6eae68f264c55f355c627315e517"
+      "version": "2026.3.13",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:4021ae305670ba14131fbdd66dfe85e9d20b1cef12d29330914f5177ea392bcb",
+      "integrity": "sha256:4021ae305670ba14131fbdd66dfe85e9d20b1cef12d29330914f5177ea392bcb"
     }
   }
 }
