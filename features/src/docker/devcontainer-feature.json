@@ -1,7 +1,7 @@
 {
   "id": "docker",
   "name": "docker",
-  "version": "2026.3.6",
+  "version": "2026.3.27",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
   "privileged": true,
   "postStartCommand": "sudo -E /opt/init/docker.sh",
@@ -20,19 +20,19 @@
       "dependencies": [
         {
           "name": "cli",
-          "version": "29.3.0",
+          "version": "29.3.1",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/docker/cli",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://download.docker.com/linux/static/test/x86_64/docker-${VERSION}.tgz",
-              "checksum": "b5dfdfa29d974747f64a68756be9c9b133ec246063725cf4f492ef05c5b42840"
+              "checksum": "653965a027971307147c1164d44ca96e61c714e7a924a2a9fcba22ca037728cf"
             },
             {
               "architecture": "arm64",
               "url": "https://download.docker.com/linux/static/test/aarch64/docker-${VERSION}.tgz",
-              "checksum": "e15bc1f006c41098cb760766cc248dc7b4e350a88b8c1e99e4af4ac2227a5971"
+              "checksum": "847584cec43ec05bfb0485824f3f3d458dd57cd287017c672b8a9ccdede34c58"
             }
           ]
         },
@@ -56,19 +56,19 @@
         },
         {
           "name": "compose",
-          "version": "5.1.0",
+          "version": "5.1.1",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/docker/compose",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/docker/compose/releases/download/v${VERSION}/docker-compose-linux-x86_64",
-              "checksum": "5633cb21e06a7c88c7ca48a9334d3d0f7f892e9605ae9e9a45f9a095d4ffceb8"
+              "checksum": "2ac954c9d506b912a12477d72f01601dc72ec918c429c7bae48fd707bdf0f3e5"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/docker/compose/releases/download/v${VERSION}/docker-compose-linux-aarch64",
-              "checksum": "da671ae15b4d7c68c38b572a2e9ceba89f09657d2682c2d2e34ad6db828e7442"
+              "checksum": "4b5c42952b7dd81f508d01a771df2a9e5dbffe9b8c5c7d983e738504ad38f056"
             }
           ]
         }
