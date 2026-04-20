@@ -1,7 +1,7 @@
 {
   "id": "docker",
   "name": "docker",
-  "version": "2026.4.17",
+  "version": "2026.4.20",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
   "privileged": true,
   "postStartCommand": "sudo -E /opt/init/docker.sh",
@@ -20,19 +20,19 @@
       "dependencies": [
         {
           "name": "cli",
-          "version": "29.4.0",
+          "version": "29.4.1",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/docker/cli",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://download.docker.com/linux/static/test/x86_64/docker-${VERSION}.tgz",
-              "checksum": "56c90317a05d86bd84f2bf8d086faefce6f31f82e8c92880de7710dd5f8ce5b7"
+              "checksum": "0fb3d2b72414ab862d68517f0b17b78c93c149d1c5c461acb969aacde1a2189d"
             },
             {
               "architecture": "arm64",
               "url": "https://download.docker.com/linux/static/test/aarch64/docker-${VERSION}.tgz",
-              "checksum": "f3b260fd888b12b34dc01b92c1e4d2576b1167a7d7e60e923d5782798fbefeb7"
+              "checksum": "53cfa1de79155f27643014a84f1de94e2185239726b179b5c30523d62e565bb0"
             }
           ]
         },
