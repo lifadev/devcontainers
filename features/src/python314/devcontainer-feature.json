@@ -1,7 +1,7 @@
 {
   "id": "python314",
   "name": "python314",
-  "version": "2026.4.17",
+  "version": "2026.4.22",
   "containerEnv": {
     "PATH": "/opt/python314/bin:$PATH",
     "PYTHONDONTWRITEBYTECODE": "1"
@@ -27,7 +27,7 @@
         },
         {
           "name": "build",
-          "version": "1.4.3",
+          "version": "1.4.4",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/pypa/build"
         },
@@ -45,7 +45,7 @@
         },
         {
           "name": "wheel",
-          "version": "0.46.3",
+          "version": "0.47.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/pypa/wheel"
         }
