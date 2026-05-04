@@ -26,9 +26,9 @@
       "integrity": "sha256:ee97423622b3931d1ef48e5ed54d2b4cd3c3dc07cc6a3462e13acdf9466b9fcd"
     },
     "ghcr.io/lifadev/devcontainers/features/docker": {
-      "version": "2026.4.20",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/docker@sha256:9906571feb55022b3d9490169b53d83c92fe2e52fbdba8c8c976ef7e2c5f467e",
-      "integrity": "sha256:9906571feb55022b3d9490169b53d83c92fe2e52fbdba8c8c976ef7e2c5f467e"
+      "version": "2026.5.2",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/docker@sha256:89489e34d9e21e34bd44fc77750636b96bd24173f9ce63008951d54506e90ccb",
+      "integrity": "sha256:89489e34d9e21e34bd44fc77750636b96bd24173f9ce63008951d54506e90ccb"
     },
     "ghcr.io/lifadev/devcontainers/features/gh": {
       "version": "2026.4.28",
