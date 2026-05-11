@@ -41,9 +41,9 @@
       "integrity": "sha256:5805b7b09a4e165db55549ecc3b0b1b0ea53b0a88ff2a9719c75b00e15011165"
     },
     "ghcr.io/lifadev/devcontainers/features/jujutsu": {
-      "version": "2026.4.17",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/jujutsu@sha256:bc1e638003c741cff63b6a2a58c009768104fedb16385e6e4c2dc4c7331ae835",
-      "integrity": "sha256:bc1e638003c741cff63b6a2a58c009768104fedb16385e6e4c2dc4c7331ae835"
+      "version": "2026.5.9",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/jujutsu@sha256:ff9ecf926de9fc4423937bd2c09d00312c7534248e72842579195f3ed9c1cbb3",
+      "integrity": "sha256:ff9ecf926de9fc4423937bd2c09d00312c7534248e72842579195f3ed9c1cbb3"
     },
     "ghcr.io/lifadev/devcontainers/features/node24": {
       "version": "2026.5.8",
