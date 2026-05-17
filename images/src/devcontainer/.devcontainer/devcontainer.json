@@ -4,6 +4,7 @@
     "ghcr.io/lifadev/devcontainers/features/aws2": {},
     "ghcr.io/lifadev/devcontainers/features/base": {},
     "ghcr.io/lifadev/devcontainers/features/bash": {},
+    "ghcr.io/lifadev/devcontainers/features/claude": {},
     "ghcr.io/lifadev/devcontainers/features/codex": {},
     "ghcr.io/lifadev/devcontainers/features/developer": {},
     "ghcr.io/lifadev/devcontainers/features/docker": {},
