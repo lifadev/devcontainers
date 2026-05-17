@@ -4,6 +4,7 @@
     "ghcr.io/lifadev/devcontainers/features/aws2": {},
     "ghcr.io/lifadev/devcontainers/features/base": {},
     "ghcr.io/lifadev/devcontainers/features/bash": {},
+    "ghcr.io/lifadev/devcontainers/features/claude": {},
     "ghcr.io/lifadev/devcontainers/features/codex": {},
     "ghcr.io/lifadev/devcontainers/features/developer": {},
     "ghcr.io/lifadev/devcontainers/features/docker": {},
@@ -20,7 +21,7 @@
   "remoteUser": "developer",
   "updateRemoteUserUID": true,
   "remoteEnv": {
-    "PATH": "/opt/bin:${containerEnv:PATH}"
+    "PATH": "/home/developer/.local/bin:/opt/bin:${containerEnv:PATH}"
   },
   "customizations": {
     "vscode": {
@@ -36,7 +37,7 @@
     },
     "manifest": {
       "name": "devcontainer",
-      "version": "2026.5.17"
+      "version": "2026.5.17-1"
     }
   }
 }
