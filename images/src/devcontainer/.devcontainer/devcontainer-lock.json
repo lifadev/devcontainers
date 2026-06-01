@@ -16,9 +16,9 @@
       "integrity": "sha256:520cff3b6f1ddb09c430f7349e260b387e2b26736f87878d1feb8702b42149f7"
     },
     "ghcr.io/lifadev/devcontainers/features/claude": {
-      "version": "2026.5.30",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:31db9e2de811c133bb78411dbd11040c97048430c7cb7d131c9508049cba975c",
-      "integrity": "sha256:31db9e2de811c133bb78411dbd11040c97048430c7cb7d131c9508049cba975c"
+      "version": "2026.5.31",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:b2ab63a1362a6f6ed7048d0f425d6faeb7bb392df2bff2add7f82750db265460",
+      "integrity": "sha256:b2ab63a1362a6f6ed7048d0f425d6faeb7bb392df2bff2add7f82750db265460"
     },
     "ghcr.io/lifadev/devcontainers/features/codex": {
       "version": "2026.5.28",
@@ -56,9 +56,9 @@
       "integrity": "sha256:d724c09cac9a3200a1563c73334272bacc4cf8fdacec94bb4bf7088e4648c140"
     },
     "ghcr.io/lifadev/devcontainers/features/python314": {
-      "version": "2026.5.11",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/python314@sha256:ce9b259558bce776e303df07da63f0d84c26fc9c33511279492a7900b6f6440b",
-      "integrity": "sha256:ce9b259558bce776e303df07da63f0d84c26fc9c33511279492a7900b6f6440b"
+      "version": "2026.5.31",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/python314@sha256:ef4e8a3933b97e57746b4748fe2fd9b68c5ae7d10b7bb3c993a15d0bb9b91268",
+      "integrity": "sha256:ef4e8a3933b97e57746b4748fe2fd9b68c5ae7d10b7bb3c993a15d0bb9b91268"
     },
     "ghcr.io/lifadev/devcontainers/features/ruff": {
       "version": "2026.5.28",
