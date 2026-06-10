@@ -1,9 +1,9 @@
 {
   "features": {
     "ghcr.io/lifadev/devcontainers/features/aws2": {
-      "version": "2026.6.8",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:5ff5cbc39ff6980df1599f9a66f4ac5549e4ee83a86a0dabfee9451c1813926a",
-      "integrity": "sha256:5ff5cbc39ff6980df1599f9a66f4ac5549e4ee83a86a0dabfee9451c1813926a"
+      "version": "2026.6.9",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:577a89ae1ee0d45c6e69b11408f4faf855890f9d03133565bda4730634140dff",
+      "integrity": "sha256:577a89ae1ee0d45c6e69b11408f4faf855890f9d03133565bda4730634140dff"
     },
     "ghcr.io/lifadev/devcontainers/features/base": {
       "version": "2025.4.12",
@@ -16,14 +16,14 @@
       "integrity": "sha256:520cff3b6f1ddb09c430f7349e260b387e2b26736f87878d1feb8702b42149f7"
     },
     "ghcr.io/lifadev/devcontainers/features/claude": {
-      "version": "2026.6.8",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:256c2089c9a638289563346274425aa0892d8ebd2112a51712d4e7eee1908ab6",
-      "integrity": "sha256:256c2089c9a638289563346274425aa0892d8ebd2112a51712d4e7eee1908ab6"
+      "version": "2026.6.9",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:8ad02693f6708050896d8e83e3d3579d61917d9cf4c5de51b2d53073f407f5cb",
+      "integrity": "sha256:8ad02693f6708050896d8e83e3d3579d61917d9cf4c5de51b2d53073f407f5cb"
     },
     "ghcr.io/lifadev/devcontainers/features/codex": {
-      "version": "2026.6.4",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/codex@sha256:bf6d2051aa4077b4d856c762a8a7738d96ef6529bd4c387e1558d44987874887",
-      "integrity": "sha256:bf6d2051aa4077b4d856c762a8a7738d96ef6529bd4c387e1558d44987874887"
+      "version": "2026.6.9",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/codex@sha256:093bbbaff54924c7c0d6e280e61e62c2f7f4e1f0496901c25effca4e72f94f3f",
+      "integrity": "sha256:093bbbaff54924c7c0d6e280e61e62c2f7f4e1f0496901c25effca4e72f94f3f"
     },
     "ghcr.io/lifadev/devcontainers/features/developer": {
       "version": "2026.1.22",
