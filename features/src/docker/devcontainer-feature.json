@@ -1,7 +1,7 @@
 {
   "id": "docker",
   "name": "docker",
-  "version": "2026.6.3",
+  "version": "2026.6.18",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
   "privileged": true,
   "postStartCommand": "sudo -E /opt/init/docker.sh",
@@ -38,19 +38,19 @@
         },
         {
           "name": "buildx",
-          "version": "0.34.1",
+          "version": "0.35.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/docker/buildx",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/docker/buildx/releases/download/v${VERSION}/buildx-v${VERSION}.linux-amd64",
-              "checksum": "f1332ddb9010bd0b72628266c3a906d9a6979848033df4c8d9bd2cd113bae12b"
+              "checksum": "d41ece72044243b4f58b343441ae37446d9c29a7d6b5e11c61847bbcf8f7dfda"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/docker/buildx/releases/download/v${VERSION}/buildx-v${VERSION}.linux-arm64",
-              "checksum": "c34e32dd6ea2653d960d6c099c9f09b9077e4a37504d2d31e5066eccc3904231"
+              "checksum": "c4248d6cbc4a619a7e0b4609c11e509ad4ac0b475e1c64817c0ac20c5d90c766"
             }
           ]
         },
