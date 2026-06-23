@@ -1,9 +1,9 @@
 {
   "features": {
     "ghcr.io/lifadev/devcontainers/features/aws2": {
-      "version": "2026.6.19",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:42c5568b14067af6430adce4844ba214a24e5613e5cc0d8fdfa5b3c5d3547f88",
-      "integrity": "sha256:42c5568b14067af6430adce4844ba214a24e5613e5cc0d8fdfa5b3c5d3547f88"
+      "version": "2026.6.22",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:6668481930fa53d8334352d23dfc2cf82ea5415c4d25cdc8f05855a2a97d7876",
+      "integrity": "sha256:6668481930fa53d8334352d23dfc2cf82ea5415c4d25cdc8f05855a2a97d7876"
     },
     "ghcr.io/lifadev/devcontainers/features/base": {
       "version": "2025.4.12",
@@ -16,14 +16,14 @@
       "integrity": "sha256:520cff3b6f1ddb09c430f7349e260b387e2b26736f87878d1feb8702b42149f7"
     },
     "ghcr.io/lifadev/devcontainers/features/claude": {
-      "version": "2026.6.21",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:2d620e7f7a126feaedf759fe26ca752f401c16dbfffc08d35a1ad1e570e3220b",
-      "integrity": "sha256:2d620e7f7a126feaedf759fe26ca752f401c16dbfffc08d35a1ad1e570e3220b"
+      "version": "2026.6.22",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:ea6bb49489cf206e355b0d972890799f7822d6ca31830561a7d6c307b0bbb6ed",
+      "integrity": "sha256:ea6bb49489cf206e355b0d972890799f7822d6ca31830561a7d6c307b0bbb6ed"
     },
     "ghcr.io/lifadev/devcontainers/features/codex": {
-      "version": "2026.6.18",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/codex@sha256:58691320b6bd6bc41342e6838be125389a22edb813af8cef629950c14b8349a5",
-      "integrity": "sha256:58691320b6bd6bc41342e6838be125389a22edb813af8cef629950c14b8349a5"
+      "version": "2026.6.22",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/codex@sha256:9764602bb4030ad33ec6935fc4bfc1f83d0e52f93f41919144de70e2b5e7d780",
+      "integrity": "sha256:9764602bb4030ad33ec6935fc4bfc1f83d0e52f93f41919144de70e2b5e7d780"
     },
     "ghcr.io/lifadev/devcontainers/features/developer": {
       "version": "2026.1.22",
