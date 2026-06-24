@@ -1,7 +1,7 @@
 {
   "id": "go",
   "name": "go",
-  "version": "2026.6.2",
+  "version": "2026.6.24",
   "containerEnv": {
     "PATH": "/opt/go/bin:$PATH"
   },
@@ -46,7 +46,7 @@
         },
         {
           "name": "dlv",
-          "version": "1.26.3",
+          "version": "1.27.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/go-delve/delve"
         },
