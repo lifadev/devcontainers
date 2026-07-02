@@ -1,7 +1,7 @@
 {
   "id": "docker",
   "name": "docker",
-  "version": "2026.6.26",
+  "version": "2026.7.2",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
   "privileged": true,
   "postStartCommand": "sudo -E /opt/init/docker.sh",
@@ -56,19 +56,19 @@
         },
         {
           "name": "compose",
-          "version": "5.2.0",
+          "version": "5.3.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/docker/compose",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/docker/compose/releases/download/v${VERSION}/docker-compose-linux-x86_64",
-              "checksum": "018f9612ecabc5f2d7aaa53d6f5f44453a87611e2d72c8ef84d7b1eca070e719"
+              "checksum": "fffb010206c952ee5e45d0cd05dc88d3ca063c4634d40eaad6b72677c4c7bbf0"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/docker/compose/releases/download/v${VERSION}/docker-compose-linux-aarch64",
-              "checksum": "739de570a0adf5eab12830db980f549fb5f44ad6b266e1e43e20f6f9df7cbcca"
+              "checksum": "ba0d9f5ce70086b3830448ce2f8a6405513c996065fe45d2f7c144a1f0d99398"
             }
           ]
         }
