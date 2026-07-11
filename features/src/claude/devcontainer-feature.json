@@ -1,7 +1,7 @@
 {
   "id": "claude",
   "name": "claude",
-  "version": "2026.7.10",
+  "version": "2026.7.11",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
   "containerEnv": {
     "CLAUDE_CONFIG_DIR": "/mnt/claude",
@@ -24,7 +24,7 @@
       "dependencies": [
         {
           "name": "cli",
-          "version": "2.1.206",
+          "version": "2.1.207",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/anthropics/claude-code"
         }
