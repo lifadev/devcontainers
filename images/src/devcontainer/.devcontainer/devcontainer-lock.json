@@ -1,9 +1,9 @@
 {
   "features": {
     "ghcr.io/lifadev/devcontainers/features/aws2": {
-      "version": "2026.7.10",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:1c64c0f7b1271632e9879cbf2b2444dc0634aec9f5b4391a45d97731e1975968",
-      "integrity": "sha256:1c64c0f7b1271632e9879cbf2b2444dc0634aec9f5b4391a45d97731e1975968"
+      "version": "2026.7.14",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:4ded93d3c2d06891abe9b746eff235b79d71b6ef3e5f121131afee9a831af3a2",
+      "integrity": "sha256:4ded93d3c2d06891abe9b746eff235b79d71b6ef3e5f121131afee9a831af3a2"
     },
     "ghcr.io/lifadev/devcontainers/features/base": {
       "version": "2025.4.12",
@@ -16,14 +16,14 @@
       "integrity": "sha256:520cff3b6f1ddb09c430f7349e260b387e2b26736f87878d1feb8702b42149f7"
     },
     "ghcr.io/lifadev/devcontainers/features/claude": {
-      "version": "2026.7.11",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:1f8c980a2dd9af183cd458ccd7b61ef3eb632b004caa8eedb00168c35a06c40c",
-      "integrity": "sha256:1f8c980a2dd9af183cd458ccd7b61ef3eb632b004caa8eedb00168c35a06c40c"
+      "version": "2026.7.14",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:dff6b34cf15ebf8aa4b44f1f6c05e0e9343aafcea95211953afb3f77f7d0dd20",
+      "integrity": "sha256:dff6b34cf15ebf8aa4b44f1f6c05e0e9343aafcea95211953afb3f77f7d0dd20"
     },
     "ghcr.io/lifadev/devcontainers/features/codex": {
-      "version": "2026.7.9",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/codex@sha256:ff7572f20e101d9efea9da2ca419a5c812737def47db24092aecf997ce8771b8",
-      "integrity": "sha256:ff7572f20e101d9efea9da2ca419a5c812737def47db24092aecf997ce8771b8"
+      "version": "2026.7.14",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/codex@sha256:c0f68477da62e4f56f362d572c7c536ddb95d0867d8b1bead9da5ab018c204e5",
+      "integrity": "sha256:c0f68477da62e4f56f362d572c7c536ddb95d0867d8b1bead9da5ab018c204e5"
     },
     "ghcr.io/lifadev/devcontainers/features/developer": {
       "version": "2026.1.22",
