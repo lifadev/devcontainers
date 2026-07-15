@@ -1,6 +1,6 @@
 {
   "python314": {
-    "image": "debian:trixie-20260623",
+    "image": "debian:trixie-20260713",
     "features": {
       "python314": {},
       "jupyter": {}
