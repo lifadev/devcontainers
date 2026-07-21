@@ -1,9 +1,9 @@
 {
   "features": {
     "ghcr.io/lifadev/devcontainers/features/aws2": {
-      "version": "2026.7.17",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:cbe4fa32b12cacd51814545f6f6154452ebe2948a4564a65d93c33130b7bba55",
-      "integrity": "sha256:cbe4fa32b12cacd51814545f6f6154452ebe2948a4564a65d93c33130b7bba55"
+      "version": "2026.7.20",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:23f9cafa5bda76b8ef10e5f93ff28a06a98a81b07523c81063f26b80c6a0d002",
+      "integrity": "sha256:23f9cafa5bda76b8ef10e5f93ff28a06a98a81b07523c81063f26b80c6a0d002"
     },
     "ghcr.io/lifadev/devcontainers/features/base": {
       "version": "2025.4.12",
@@ -16,9 +16,9 @@
       "integrity": "sha256:520cff3b6f1ddb09c430f7349e260b387e2b26736f87878d1feb8702b42149f7"
     },
     "ghcr.io/lifadev/devcontainers/features/claude": {
-      "version": "2026.7.18",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:58f4a73037956f669853f9f42dd9c36eeff7707947080f0ea3530c28df2f3350",
-      "integrity": "sha256:58f4a73037956f669853f9f42dd9c36eeff7707947080f0ea3530c28df2f3350"
+      "version": "2026.7.20",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:b8b2b8eb0f32b4e9cdb4a68bf0c5dcaddacb50f7fe908419a2129097afc2b0ec",
+      "integrity": "sha256:b8b2b8eb0f32b4e9cdb4a68bf0c5dcaddacb50f7fe908419a2129097afc2b0ec"
     },
     "ghcr.io/lifadev/devcontainers/features/codex": {
       "version": "2026.7.18",
@@ -76,9 +76,9 @@
       "integrity": "sha256:b07bf32d00198f6e88314bd97bed2a9cafc45eea90971ccef072f15ed8a098dc"
     },
     "ghcr.io/lifadev/devcontainers/features/uv": {
-      "version": "2026.7.15",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:aeab6d5cc3220b5411d876658063aae01c35d8c422a5090b74b9e3904ef47823",
-      "integrity": "sha256:aeab6d5cc3220b5411d876658063aae01c35d8c422a5090b74b9e3904ef47823"
+      "version": "2026.7.20",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/uv@sha256:56af9eb00adab9973126fd8d10bc0197b6156b196f0ca7228447049cf587690c",
+      "integrity": "sha256:56af9eb00adab9973126fd8d10bc0197b6156b196f0ca7228447049cf587690c"
     }
   }
 }
