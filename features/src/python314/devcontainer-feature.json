@@ -1,7 +1,7 @@
 {
   "id": "python314",
   "name": "python314",
-  "version": "2026.7.9",
+  "version": "2026.8.8",
   "containerEnv": {
     "PATH": "/opt/python314/bin:$PATH",
     "PYTHONDONTWRITEBYTECODE": "1"
@@ -14,14 +14,14 @@
       "dependencies": [
         {
           "name": "python",
-          "version": "3.14.6",
+          "version": "3.14.7",
           "hint": "tags/v?3\\.14(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/python/cpython",
           "artifacts": [
             {
               "architecture": "universal",
               "url": "https://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tar.xz",
-              "checksum": "143b1dddefaec3bd2e21e3b839b34a2b7fb9842272883c576420d605e9f30c63"
+              "checksum": "3b48dac8fb59f62eaa67ac83c1eb12bda1b7a08406dd286e252c11a66be27f81"
             }
           ]
         },
@@ -33,13 +33,13 @@
         },
         {
           "name": "pip",
-          "version": "26.1.2",
+          "version": "26.2.1",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/pypa/pip"
         },
         {
           "name": "setuptools",
-          "version": "83.0.0",
+          "version": "84.0.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?(\\.post[0-9]+)?",
           "repository": "github.com/pypa/setuptools"
         },
