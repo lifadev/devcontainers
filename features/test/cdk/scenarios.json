@@ -1,6 +1,6 @@
 {
   "node24": {
-    "image": "debian:trixie-20260713",
+    "image": "debian:trixie-20260824",
     "features": {
       "node24": {},
       "cdk": {}
