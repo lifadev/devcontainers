@@ -1,5 +1,5 @@
 {
-  "image": "debian:trixie-20260713",
+  "image": "debian:trixie-20260824",
   "features": {
     "ghcr.io/lifadev/devcontainers/features/aws2": {},
     "ghcr.io/lifadev/devcontainers/features/base": {},
@@ -37,7 +37,7 @@
     },
     "manifest": {
       "name": "devcontainer",
-      "version": "2026.7.28"
+      "version": "2026.9.6"
     }
   }
 }
