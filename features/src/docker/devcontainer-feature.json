@@ -1,7 +1,7 @@
 {
   "id": "docker",
   "name": "docker",
-  "version": "2026.7.17",
+  "version": "2026.9.7",
   "installsAfter": ["ghcr.io/lifadev/devcontainers/features/developer"],
   "privileged": true,
   "postStartCommand": "sudo -E /opt/init/docker.sh",
@@ -20,55 +20,55 @@
       "dependencies": [
         {
           "name": "cli",
-          "version": "29.6.2",
+          "version": "29.8.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/docker/cli",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://download.docker.com/linux/static/test/x86_64/docker-${VERSION}.tgz",
-              "checksum": "d6204aea92238e2453d5445c885b9d2e5eb8f82915568ec50edf9dbe12a3ac74"
+              "checksum": "cc21815cf1e2efed867dc9c8b96b46ffed8ea176ffab32b0aacb54726ded8f25"
             },
             {
               "architecture": "arm64",
               "url": "https://download.docker.com/linux/static/test/aarch64/docker-${VERSION}.tgz",
-              "checksum": "8d16d8b3b158c132a9fb9963d4b4345746f925e287e154c9ed880ac257baf292"
+              "checksum": "1462a696be6029bd478d7d60d7f3c31cdd15affd1178a4a278aaf4a1d1b7f8b5"
             }
           ]
         },
         {
           "name": "buildx",
-          "version": "0.35.0",
+          "version": "0.37.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/docker/buildx",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/docker/buildx/releases/download/v${VERSION}/buildx-v${VERSION}.linux-amd64",
-              "checksum": "d41ece72044243b4f58b343441ae37446d9c29a7d6b5e11c61847bbcf8f7dfda"
+              "checksum": "ae43fa08c796b44efc86d7a63c55f73f7c35f3101188dea7bf93bcd6f99577ba"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/docker/buildx/releases/download/v${VERSION}/buildx-v${VERSION}.linux-arm64",
-              "checksum": "c4248d6cbc4a619a7e0b4609c11e509ad4ac0b475e1c64817c0ac20c5d90c766"
+              "checksum": "d263ce31bd2c9e9210aaa2c7537c67802bccabcd342e4c9fe4907085ddb41aa5"
             }
           ]
         },
         {
           "name": "compose",
-          "version": "5.3.1",
+          "version": "5.5.1",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/docker/compose",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/docker/compose/releases/download/v${VERSION}/docker-compose-linux-x86_64",
-              "checksum": "f9ebc6ebdb19d769b793c245a736caaeb198c62587f13b25c660c13b4987f959"
+              "checksum": "db1889184726840f75c4f9c001048430d4f25b3be3cb084d3ddd762bc0aed576"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/docker/compose/releases/download/v${VERSION}/docker-compose-linux-aarch64",
-              "checksum": "aa611e811d0ea25897839c404bfb5bf93ce706dc51c500a4457890f5d0606a86"
+              "checksum": "732e3a84c1a0f67256ce80bc2598a24546b10ca05f9faa97efceb1171ece2ef7"
             }
           ]
         }
