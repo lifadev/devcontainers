@@ -1,25 +1,25 @@
 {
   "id": "cloudflared",
   "name": "cloudflared",
-  "version": "2026.9.8",
+  "version": "2026.9.10",
   "customizations": {
     "manifest": {
       "dependencies": [
         {
           "name": "cli",
-          "version": "2026.8.3",
+          "version": "2026.9.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/cloudflare/cloudflared",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/cloudflare/cloudflared/releases/download/${VERSION}/cloudflared-linux-amd64",
-              "checksum": "f29324fe934d1e100617484c78deef803c4dc2cd351d645bbde42e96b4fccc5e"
+              "checksum": "53b7a7a5420d188758d24341294acb0d1bca54296548ac05e38811a694ac6134"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/cloudflare/cloudflared/releases/download/${VERSION}/cloudflared-linux-arm64",
-              "checksum": "4bcfd35521a7cbc545ebfd5d57334a71ee180e2a64874981f374c81472118391"
+              "checksum": "98aca3173f73248fad6180fc75dade2d186a6e54fa807e088108cb4345de8efe"
             }
           ]
         }
