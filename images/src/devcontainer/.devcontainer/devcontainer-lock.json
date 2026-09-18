@@ -1,9 +1,9 @@
 {
   "features": {
     "ghcr.io/lifadev/devcontainers/features/aws2": {
-      "version": "2026.9.16",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:b825b4cb9ce5f0332b494f39a872130a432498e2ee24227a96c134961c50dae8",
-      "integrity": "sha256:b825b4cb9ce5f0332b494f39a872130a432498e2ee24227a96c134961c50dae8"
+      "version": "2026.9.17",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/aws2@sha256:bc9c0ac7426dcd06789111b238236b66c1de19ff5b5548836775d554f9089390",
+      "integrity": "sha256:bc9c0ac7426dcd06789111b238236b66c1de19ff5b5548836775d554f9089390"
     },
     "ghcr.io/lifadev/devcontainers/features/base": {
       "version": "2025.4.12",
@@ -16,9 +16,9 @@
       "integrity": "sha256:935e00f4fc91b1e6a54915fff9d396d0b99a43cdb5aee350fd5f1950bfa6a274"
     },
     "ghcr.io/lifadev/devcontainers/features/claude": {
-      "version": "2026.9.16",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:f050c41045d3010ef3279726c0856e8258c87b385d1a95496e95f94dfa327328",
-      "integrity": "sha256:f050c41045d3010ef3279726c0856e8258c87b385d1a95496e95f94dfa327328"
+      "version": "2026.9.17",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/claude@sha256:5a7b73c81abbdd5cc21eb1a65d9e99d35f4638316ca0422f38b24ccccfdd8ad8",
+      "integrity": "sha256:5a7b73c81abbdd5cc21eb1a65d9e99d35f4638316ca0422f38b24ccccfdd8ad8"
     },
     "ghcr.io/lifadev/devcontainers/features/codex": {
       "version": "2026.9.10",
@@ -61,9 +61,9 @@
       "integrity": "sha256:d2815e62c8ff46998ea41f51900fc3c0e34d3ad2358bf27b398573b53972e8b9"
     },
     "ghcr.io/lifadev/devcontainers/features/ruff": {
-      "version": "2026.9.10",
-      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:9d62133f32176bcbd0501a849c2a1c7d37e74b1e5cf8b78ceb2367f3d7127142",
-      "integrity": "sha256:9d62133f32176bcbd0501a849c2a1c7d37e74b1e5cf8b78ceb2367f3d7127142"
+      "version": "2026.9.17",
+      "resolved": "ghcr.io/lifadev/devcontainers/features/ruff@sha256:4f9980aa97f87928bc8a48f8d9df073e747f47981350af4dca628027d4d03b7d",
+      "integrity": "sha256:4f9980aa97f87928bc8a48f8d9df073e747f47981350af4dca628027d4d03b7d"
     },
     "ghcr.io/lifadev/devcontainers/features/rust": {
       "version": "2026.9.8",
