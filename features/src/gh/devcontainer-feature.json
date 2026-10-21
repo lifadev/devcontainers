@@ -1,25 +1,25 @@
 {
   "id": "gh",
   "name": "gh",
-  "version": "2026.9.16",
+  "version": "2026.10.21",
   "customizations": {
     "manifest": {
       "dependencies": [
         {
           "name": "cli",
-          "version": "2.101.0",
+          "version": "2.102.1",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/cli/cli",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/cli/cli/releases/download/v${VERSION}/gh_${VERSION}_linux_amd64.tar.gz",
-              "checksum": "9bca2d1c16825f109907a23307628a2f0698fbf99662b73a5cf0b020293072b8"
+              "checksum": "77b9e297e94c50336823d0f84de7ef1be60cba704601fa0d98f129f47a94987b"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/cli/cli/releases/download/v${VERSION}/gh_${VERSION}_linux_arm64.tar.gz",
-              "checksum": "b57e8063f18862647c9d22727c32e9da1b963f8bf9db648fe123a6975695640f"
+              "checksum": "5019b3cc6e8a03bb4d88600f8dbda2add8e6407705c159b0c63151036e77a1af"
             }
           ]
         }
