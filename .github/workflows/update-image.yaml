@@ -43,7 +43,7 @@ jobs:
           git checkout -b "image/$IMAGE/$(uuid -v4 | cut -d- -f2)"
 
           bash ./images/bin/update.sh "$IMAGE"
-          npx -y prettier -w "images/src/$IMAGE"
+          npx -y --ignore-scripts prettier -w "images/src/$IMAGE"
 
           if git diff --diff-filter=d --quiet && git diff --diff-filter=d --cached --quiet; then
             echo "skip=1" >>$GITHUB_OUTPUT

@@ -43,7 +43,7 @@ jobs:
           git checkout -b "feature/$FEATURE/$(uuid -v4 | cut -d- -f2)"
 
           bash ./features/bin/update.sh "$FEATURE"
-          npx -y prettier -w "features/src/$FEATURE"
+          npx -y --ignore-scripts prettier -w "features/src/$FEATURE"
 
           if git diff --diff-filter=d --quiet && git diff --diff-filter=d --cached --quiet; then
             echo "skip=1" >>$GITHUB_OUTPUT

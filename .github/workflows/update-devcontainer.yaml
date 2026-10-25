@@ -47,7 +47,7 @@ jobs:
             '.image = "ghcr.io/lifadev/devcontainers/devcontainer:\($VERSION)"' \
             $TARGET | sponge $TARGET
 
-          npx -y prettier -w $TARGET
+          npx -y --ignore-scripts prettier -w $TARGET
 
           if git diff --diff-filter=d --quiet && git diff --diff-filter=d --cached --quiet; then
             echo "skip=1" >>$GITHUB_OUTPUT

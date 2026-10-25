@@ -124,7 +124,7 @@ jobs:
           MAJOR="${VERSION%.*.*}"
           MINOR="${VERSION%.*}"
 
-          npx -y @devcontainers/cli build \
+          npx -y --ignore-scripts @devcontainers/cli build \
             --experimental-lockfile \
             --workspace-folder ./images/src/$IMAGE \
             --image-name "$REGISTRY/$NAMESPACE/$IMAGE:$VERSION-$ARCH" \

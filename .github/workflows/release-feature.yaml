@@ -107,7 +107,7 @@ jobs:
           cp \
             ./features/lib/install.sh \
             "./features/src/$FEATURE/dev-container-features-install-lib"
-          npx -y @devcontainers/cli features publish \
+          npx -y --ignore-scripts @devcontainers/cli features publish \
             --registry "$REGISTRY" \
             --namespace "$NAMESPACE" \
             "features/src/$FEATURE"

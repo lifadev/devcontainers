@@ -18,7 +18,7 @@ jobs:
         with: { fetch-depth: 0 }
 
       - name: Run Prettier
-        run: npx -y prettier -c .
+        run: npx -y --ignore-scripts prettier -c .
 
       - name: Run Shfmt
         run: |
