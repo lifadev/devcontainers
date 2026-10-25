@@ -120,7 +120,7 @@ update_dependency() {
     latest=$(
       gh api \
         -H "Accept: application/vnd.github+json" \
-        -H "X-GitHub-Api-Version: 2022-11-28" \
+        -H "X-GitHub-Api-Version: 2026-03-10" \
         "/repos/${repo#github.com/}/${hint%%/*}?page=$page&per_page=100" 2>/dev/null ||
         die "GitHub API call failed: $repo"
     ) || die "Failed to retrieve ${hint%%/*} from GitHub"
