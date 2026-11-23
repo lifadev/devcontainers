@@ -1,25 +1,25 @@
 {
   "id": "sam",
   "name": "sam",
-  "version": "2026.10.25",
+  "version": "2026.11.23",
   "customizations": {
     "manifest": {
       "dependencies": [
         {
           "name": "sam",
-          "version": "1.170.0",
+          "version": "1.174.0",
           "hint": "tags/v?[0-9]+\\.[0-9]+(\\.[0-9]+)?",
           "repository": "github.com/aws/aws-sam-cli",
           "artifacts": [
             {
               "architecture": "amd64",
               "url": "https://github.com/aws/aws-sam-cli/releases/download/v${VERSION}/aws-sam-cli-linux-x86_64.zip",
-              "checksum": "6e1e0a662b6e043f596e94dbd07b4a9666d089b3f2de4c6b03e5de83f0593d57"
+              "checksum": "6e0ca662e65460e0e5267eab9b07457f6d46fe04f93089973c0f81710bfa084b"
             },
             {
               "architecture": "arm64",
               "url": "https://github.com/aws/aws-sam-cli/releases/download/v${VERSION}/aws-sam-cli-linux-arm64.zip",
-              "checksum": "bf4d5cc14b5ac56d0bb32fb266e5163ed92673485fcff77ad9fe136e7f043b6c"
+              "checksum": "65901c10e2260aaacbb2b9447c017bb5d82490f294247278c63c1a61412dc8ef"
             }
           ]
         }
